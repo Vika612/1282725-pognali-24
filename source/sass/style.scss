@@ -1,1 +1,10 @@
-// Начните писать стили здесь
+/* GLOBAL */
+
+@import "global/fonts.scss";
+@import "global/var.scss";
+@import "global/mixin.scss";
+@import "global/global.scss";
+
+/* COMPONENTS */
+
+@import "components/container.scss";
