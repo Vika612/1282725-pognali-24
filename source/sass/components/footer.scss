@@ -1,0 +1,4 @@
+.footer__container {
+  @include border-radius-top;
+  background-color: $white-basic;
+}

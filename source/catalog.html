@@ -45,7 +45,7 @@
               <a class="user-menu__link" href="mailto:mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
             </li>
           </ul>
-          <a class="user-menu__auth-link" href="#!">Авторизация</a>
+          <a class="user-menu__auth-link button" href="#!">Авторизация</a>
         </div>
         <ul class="navigation__social-menu social">
           <li class="social__item social__item--fb">
@@ -64,9 +64,9 @@
   </header>
 
   <main class="main">
-    <header class="header-catalog header-inner">
-      <div class="header-catalog__container container">
-        <h1 class="header-catalog__title">Попутчики</h1>
+    <header class="header-catalog">
+      <div class="header-catalog__container container header-inner">
+        <h1 class="header-catalog__title title">Попутчики</h1>
         <a class="header-catalog__link" href="index.html">На главную</a>
       </div>
     </header>
@@ -78,7 +78,7 @@
         <div class="filter__direction">
           <ul class="filter__continents continents">
             <li class="continents__item">
-              <a class="continents__link" href="#">Европа</a>
+              <a class="continents__link continents__link--active" href="#">Европа</a>
             </li>
             <li class="continents__item">
               <a class="continents__link" href="#">Азия</a>
@@ -420,8 +420,9 @@
 
     <section class="companion-select">
       <div class="companion-select__container container">
-        <h2 class="companion-select__title">Подберите идеального попутчика</h2>
+
         <form class="companion-select__form" action="http://echo.htmlacademy.ru" method="POST">
+          <h2 class="companion-select__title subtitle subtitle--catalog">Подберите идеального попутчика</h2>
           <div class="companion-select__block criterions">
             <h3 class="criterions__title">хобби</h3>
             <ul class="criterions__list">
@@ -587,7 +588,7 @@
               <button class="likes__button" type="button" aria-label="Поставить лайк"></button>
               <span class="likes__amount">1,5 М</span>
             </div>
-            <a class="profile__link" href="#">Позвать!</a>
+            <a class="profile__link button button--catalog" href="#">Позвать!</a>
           </li>
           <li class="catalog__item profile">
             <div class="profile__img">
@@ -647,7 +648,7 @@
               <button class="likes__button" type="button" aria-label="Поставить лайк"></button>
               <span class="likes__amount">1500</span>
             </div>
-            <a class="profile__link" href="#">Позвать!</a>
+            <a class="profile__link button button--catalog" href="#">Позвать!</a>
           </li>
           <li class="catalog__item profile">
             <div class="profile__img">
@@ -711,7 +712,7 @@
               <button class="likes__button" type="button" aria-label="Поставить лайк"></button>
               <span class="likes__amount">170</span>
             </div>
-            <a class="profile__link" href="#">Позвать!</a>
+            <a class="profile__link button button--catalog" href="#">Позвать!</a>
           </li>
           <li class="catalog__item profile">
             <div class="profile__img">
@@ -770,7 +771,7 @@
               <button class="likes__button" type="button" aria-label="Поставить лайк"></button>
               <span class="likes__amount">23</span>
             </div>
-            <a class="profile__link" href="#">Позвать!</a>
+            <a class="profile__link button button--catalog" href="#">Позвать!</a>
           </li>
         </ul>
         <a class="catalog__link-more" href="#!">Показать еще</a>

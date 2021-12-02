@@ -1,0 +1,11 @@
+.flags-list {
+  @include reset-list;
+}
+
+.flags-list__item span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.1;
+  color: $blue-btn;
+  text-transform: uppercase;
+}

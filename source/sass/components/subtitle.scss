@@ -1,0 +1,17 @@
+.subtitle {
+  font-family: "Blogger Sans", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: $orange-special;
+
+  &--form {
+    color: $blue-light;
+  }
+
+  &--catalog {
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: $blue-light;
+  }
+}

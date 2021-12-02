@@ -1,0 +1,7 @@
+.directions__container {
+  @include border-radius-bottom;
+}
+
+.directions__list {
+  @include reset-list;
+}

@@ -45,7 +45,7 @@
               <a class="user-menu__link" href="mailto:mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
             </li>
           </ul>
-          <a class="user-menu__auth-link" href="#!">Авторизация</a>
+          <a class="user-menu__auth-link button" href="#!">Авторизация</a>
         </div>
         <ul class="navigation__social-menu social">
           <li class="social__item social__item--fb">
@@ -64,9 +64,9 @@
   </header>
 
   <main class="main">
-    <header class="header-form header-inner">
-      <div class="header-form__container container">
-        <h1 class="header-form__title">Направления</h1>
+    <header class="header-form">
+      <div class="header-form__container container header-inner">
+        <h1 class="header-form__title title">Направления</h1>
         <a class="header-form__link" href="index.html">На главную</a>
       </div>
     </header>
@@ -121,7 +121,7 @@
 
         <section class="plans">
           <div class="plans__container container">
-            <h2 class="plans__title">Мои планы:</h2>
+            <h2 class="plans__title subtitle subtitle--form">Мои планы:</h2>
             <ol class="plans__list">
               <li class="plans__item program">
                 <h3 class="program__title">Франция, Италия</h3>
@@ -147,7 +147,7 @@
 
         <section class="add-plan">
           <div class="add-plan__container container">
-            <h2 class="add-plan__title">Добавить план:</h2>
+            <h2 class="add-plan__title subtitle subtitle--form">Добавить план:</h2>
             <ul class="add-plan__indicators indicators">
               <li class="indicators__point"><span>Даты</span></li>
               <li class="indicators__point"><span>Маршрут</span></li>
@@ -356,7 +356,7 @@
                     </ul>
                   </div>
                 </div>
-                <a class="steps__link steps__link--next" href="#route-step">Следующий шаг</a>
+                <a class="steps__link steps__link--next button button--form" href="#route-step">Следующий шаг</a>
               </li>
 
               <li class="steps__item" id="route-step">
@@ -712,7 +712,7 @@
                     </li>
                   </ul>
                 </div>
-                <a class="steps__link steps__link--next" href="#entertainment-step">Следующий шаг</a>
+                <a class="steps__link steps__link--next button button--form" href="#entertainment-step">Следующий шаг</a>
                 <a class="steps__link steps__link--prev" href="#date-step">Предыдущий шаг</a>
               </li>
 
@@ -732,17 +732,17 @@
                   <ul class="entertainment-step__list action-plan">
                     <li class="action-plan__item">
                       <label for="bosnia">Босния и Герцеговина</label>
-                      <textarea name="bosnia" id="bosnia"></textarea>
+                      <textarea name="bosnia" id="bosnia" placeholder="План действий"></textarea>
                       <img src="img/flag-svg/bosnia-and-herzegovina.svg" width="70" height="47" alt="Флаг Боснии и Герцеговины">
                     </li>
                     <li class="selected-countries__item">
                       <label for="czechia">Чехия</label>
-                      <textarea name="czechia" id="czechia"></textarea>
+                      <textarea name="czechia" id="czechia">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                       <img src="img/flag-svg/czechia.svg" alt="Флаг Чехии">
                     </li>
                   </ul>
                 </div>
-                <button class="add-plan__submit" type="submit">Отправить</button>
+                <button class="add-plan__submit button button--form" type="submit">Отправить</button>
                 <a class="steps__link steps__link--prev" href="#entertainment-step">Предыдущий шаг</a>
               </li>
             </ol>

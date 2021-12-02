@@ -1,0 +1,8 @@
+.plans__container {
+  @include border-radius-top;
+  background-color: $grey-light;
+}
+
+.plans__list {
+  @include reset-list;
+}

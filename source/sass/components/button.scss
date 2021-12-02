@@ -1,0 +1,43 @@
+.button {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: "Blogger Sans", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+  color: $blue-btn;
+  background-color: $yellow-basic;
+  text-transform: uppercase;
+
+  &--main {
+    min-width: 270px;
+    padding: 23px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-transform: none;
+  }
+
+  &--form {
+    min-width: 220px;
+    padding: 6px 42px;
+    line-height: 1.7;
+    border-radius: 20px;
+  }
+
+  &--catalog {
+    min-width: 230px;
+    padding: 12px 78px 11px;
+    color: $blue-dark-deep;
+    border-radius: 25px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $orange-special;
+  }
+
+  &:active {
+    color: rgba($blue-btn, 0.3);
+  }
+}

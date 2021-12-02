@@ -1,0 +1,17 @@
+.profile {
+  background-color: $white-basic;
+  border-radius: 30px;
+}
+
+.profile__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: $blue-btn;
+}
+
+.profile__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.1;
+}

@@ -1,0 +1,18 @@
+.criterions__list {
+  @include reset-list;
+}
+
+.criterions__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.1;
+  color: $blue-btn;
+  text-transform: uppercase;
+}
+
+.criterions__item label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.3;
+  color: $black-basic;
+}

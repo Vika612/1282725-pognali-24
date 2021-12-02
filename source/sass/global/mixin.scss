@@ -3,3 +3,13 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin border-radius-top {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+@mixin border-radius-bottom {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}

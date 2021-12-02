@@ -1,0 +1,15 @@
+.about-service__container {
+  @include border-radius-bottom;
+  background-color: $blue-dark-main;
+}
+
+.about-service__text {
+  margin: 0;
+  color: $white-basic;
+}
+
+.about-service__slogan {
+  margin: 0;
+  font-weight: 700;
+  color: $white-basic;
+}

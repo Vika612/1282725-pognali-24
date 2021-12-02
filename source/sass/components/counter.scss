@@ -1,0 +1,17 @@
+.counter__label,
+.counter__note {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: $blue-btn;
+  text-transform: uppercase;
+}
+
+.counter__label {
+  letter-spacing: 0.09em;
+}
+
+.counter__note {
+  letter-spacing: 0.07em;
+  opacity: 0.3;
+}

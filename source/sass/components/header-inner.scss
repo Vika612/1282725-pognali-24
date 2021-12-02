@@ -1,0 +1,4 @@
+.header-inner {
+  @include border-radius-bottom;
+  background-color: $blue-dark;
+}
