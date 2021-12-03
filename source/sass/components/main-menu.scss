@@ -1,0 +1,22 @@
+.main-menu {
+  @include reset-list;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.main-menu__link {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.2;
+  color: $blue-dark-main;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $orange-special;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

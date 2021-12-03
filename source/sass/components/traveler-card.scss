@@ -1,0 +1,11 @@
+.traveler-card {
+  border-radius: 10px;
+}
+
+.traveler-card__info ul {
+  @include reset-list;
+}
+
+.traveler-card__info {
+  background-color: $white-basic;
+}

@@ -1,0 +1,8 @@
+.feedback__container {
+  @include border-radius-bottom;
+  background-color: $blue-dark;
+}
+
+.feedback__text {
+  color: $white-basic;
+}

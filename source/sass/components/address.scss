@@ -1,0 +1,32 @@
+.address__container {
+  @include border-radius-bottom;
+  background-color: $yellow-basic;
+}
+
+.address__info {
+  font-weight: 700;
+  font-style: normal;
+  color: $blue-btn;
+}
+
+.address__link {
+  padding: 22px;
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: $blue-btn;
+  border: 3px solid $blue-dark-deep;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $white-basic;
+    background-color: $blue-dark-main;
+  }
+
+  &:active {
+    color: rgba($white-basic, 0.3);
+  }
+}

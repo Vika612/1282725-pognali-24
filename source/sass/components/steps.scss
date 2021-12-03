@@ -1,0 +1,19 @@
+.steps {
+  @include reset-list;
+}
+
+.steps__item {
+  background-color: $white-basic;
+  border-radius: 10px;
+}
+
+.steps__subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: $blue-btn;
+}
+
+.steps__text {
+  font-weight: 400;
+}

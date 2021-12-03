@@ -1,0 +1,21 @@
+.social {
+  @include reset-list;
+  max-width: 105px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social__link {
+  display: flex;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,8 @@
+.add-plan__container {
+  @include border-radius-top;
+  background-color: $grey-dark;
+}
+
+.add-plan__submit {
+  border: none;
+}

@@ -1,0 +1,17 @@
+.fellow-travelers__container {
+  @include border-radius-bottom;
+  background-color: $blue-dark-main;
+}
+
+.fellow-travelers__text {
+  color: $white-basic;
+}
+
+.fellow-travelers__slogan {
+  font-weight: 700;
+  color: $white-basic;
+}
+
+.fellow-travelers__list {
+  @include reset-list;
+}
