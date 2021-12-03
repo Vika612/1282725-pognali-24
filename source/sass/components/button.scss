@@ -10,6 +10,15 @@
   background-color: $yellow-basic;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    background-color: $orange-special;
+  }
+
+  &:active {
+    color: rgba($blue-btn, 0.3);
+  }
+
   &--main {
     min-width: 270px;
     padding: 23px;
@@ -32,12 +41,10 @@
     border-radius: 25px;
   }
 
-  &:hover,
-  &:focus {
-    background-color: $orange-special;
-  }
-
-  &:active {
-    color: rgba($blue-btn, 0.3);
+  &--auth {
+    padding: 10px 80px;
+    line-height: 1.7;
+    color: $blue-dark-deep;
+    border-radius: 25px;
   }
 }

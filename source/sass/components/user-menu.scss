@@ -1,3 +1,58 @@
-.user-menu__contacts {
+.user-menu {
   @include reset-list;
+  margin-top: 52px;
+  margin-bottom: 40px;
+}
+
+.user-menu__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.1;
+  color: $blue-dark-main;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $orange-special;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.user-menu__link:hover svg,
+.user-menu__link:focus svg {
+  fill: $orange-special;
+}
+
+.user-menu__link::before {
+  width: 45px;
+  height: 45px;
+  background-color: $blue-bg;
+  border-radius: 50%;
+  content: "";
+}
+
+.user-menu__link span {
+  margin-left: 15px;
+}
+
+.user-menu__link svg {
+  position: absolute;
+  left: 13px;
+  fill: $yellow-basic;
+}
+
+.user-menu__link--phone svg {
+  width: 15px;
+  height: 15px;
+}
+
+.user-menu__link--mail svg {
+  width: 18px;
+  height: 12px;
 }

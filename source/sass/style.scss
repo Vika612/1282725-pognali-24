@@ -1,14 +1,24 @@
+/* GLOBAL */
 @import "global/fonts.scss";
 @import "global/var.scss";
 @import "global/mixin.scss";
 @import "global/global.scss";
+/* COMPONENTS */
 @import "components/container.scss";
 @import "components/title.scss";
 @import "components/subtitle.scss";
 @import "components/button.scss";
+@import "components/transport.scss";
+@import "components/hashtags.scss";
+@import "components/flags-list.scss";
+@import "components/header.scss";
+@import "components/logo.scss";
 @import "components/main-menu.scss";
 @import "components/user-menu.scss";
 @import "components/social.scss";
+@import "components/header-inner.scss";
+@import "components/footer.scss";
+/* INDEX */
 @import "components/intro.scss";
 @import "components/blockquote.scss";
 @import "components/process.scss";
@@ -22,17 +32,15 @@
 @import "components/feedback.scss";
 @import "components/address.scss";
 @import "components/map.scss";
-@import "components/header-inner.scss";
-@import "components/companion-select.scss";
+/* CATALOG */
 @import "components/filter.scss";
 @import "components/continents.scss";
+@import "components/companion-select.scss";
 @import "components/criterions.scss";
-@import "components/transport.scss";
-@import "components/hashtags.scss";
-@import "components/flags-list.scss";
 @import "components/catalog.scss";
 @import "components/profile.scss";
 @import "components/paginator.scss";
+/* FORM */
 @import "components/plans.scss";
 @import "components/program.scss";
 @import "components/add-plan.scss";
@@ -40,4 +48,3 @@
 @import "components/steps.scss";
 @import "components/counter.scss";
 @import "components/calendar.scss";
-@import "components/footer.scss";
