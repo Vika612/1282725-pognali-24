@@ -5,9 +5,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &--footer {
+    max-width: 135px;
+  }
 }
 
 .social__link {
+  position: relative;
   display: flex;
 
   &:hover,
@@ -16,6 +21,49 @@
   }
 
   &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+  }
+
+  &--fb::after {
+    width: 11px;
+    height: 21px;
+    background-image: url("../img/social-svg/fb.svg");
+  }
+
+  &--vk::after {
+    width: 23px;
+    height: 12px;
+    background-image: url("../img/social-svg/vk.svg");
+  }
+
+  &--insta::after {
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/social-svg/insta.svg");
+  }
+}
+
+.social__link--footer {
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  background-color: $yellow-basic;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    background-color: $orange-special;
+  }
+
+  &:active::after {
     opacity: 0.3;
   }
 }
