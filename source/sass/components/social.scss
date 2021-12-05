@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   &--footer {
     max-width: 135px;
@@ -26,7 +27,7 @@
 
   &::after {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     content: "";
   }
 
@@ -65,5 +66,73 @@
 
   &:active::after {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin: 0;
+
+    &--header {
+      max-width: 160px;
+    }
+
+    &--footer {
+      max-width: 200px;
+    }
+  }
+
+  .social--header .social__link {
+    &--fb::after {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk::after {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--insta::after {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .social--footer .social__link {
+    &--fb::after {
+      width: 14px;
+      height: 26px;
+    }
+
+    &--vk::after {
+      width: 28px;
+      height: 18px;
+    }
+
+    &--insta::after {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .social__link--header {
+    margin-left: 25px;
+  }
+
+  .social__link--footer {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social--header {
+    display: none;
+  }
+
+  .social--footer {
+    max-width: 700px;
+    padding-right: 40px;
   }
 }

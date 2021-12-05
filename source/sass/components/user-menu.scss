@@ -6,7 +6,6 @@
 
 .user-menu__link {
   position: relative;
-  width: 250px;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -58,4 +57,44 @@
 .user-menu__link--mail svg {
   width: 18px;
   height: 13px;
+}
+
+@media (min-width: $tablet-width) {
+  .user-menu {
+    margin-bottom: 125px;
+  }
+
+  .user-menu__link {
+    font-size: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  .user-menu__link span {
+    margin-left: 23px;
+  }
+
+  .user-menu__link svg {
+    top: 22px;
+    left: 21px;
+  }
+
+  .user-menu__link--phone svg {
+    width: 27px;
+    height: 26px;
+  }
+
+  .user-menu__link--mail svg {
+    width: 27px;
+    height: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-menu {
+    display: none;
+  }
 }

@@ -1,0 +1,17 @@
+@media (min-width: $tablet-width) {
+  .navigation__auth-link {
+    position: absolute;
+    top: -90px;
+    right: 0;
+    width: 188px;
+    padding: 15px 28px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .navigation__auth-link {
+    display: none;
+  }
+}

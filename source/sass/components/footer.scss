@@ -1,4 +1,68 @@
 .footer__container {
   @include border-radius-top;
+  padding-top: 37px;
+  padding-bottom: 20px;
   background-color: $white-basic;
+}
+
+// .footer__logo {
+//   text-align: center;
+// }
+
+.footer__social-menu {
+  margin-top: 33px;
+  margin-bottom: 50px;
+}
+
+.footer__author-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: $grey-special;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    width: 27px;
+    height: 33px;
+    background-image: url("../img/logo-academy.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__container {
+    padding-top: 46px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__social-menu {
+    margin: 0;
+  }
+
+  .footer__author-link {
+    width: 154px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__container {
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
 }

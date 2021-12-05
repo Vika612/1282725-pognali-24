@@ -1,12 +1,44 @@
-.header__container {
-  padding-bottom: 40px;
+.header {
   background-color: $white-basic;
 }
 
+.header__logo {
+  padding-top: 27px;
+  padding-bottom: 31px;
+}
+
 .header__navigation {
-  padding: 40px 0 0 0;
+  position: relative;
+  padding: 37px 0 40px 0;
 }
 
 .header__toggle {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header__logo {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .header__navigation {
+    padding: 50px 60px 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    background-color: $blue-dark-deep;
+  }
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header__navigation {
+    padding: 0;
+  }
 }
