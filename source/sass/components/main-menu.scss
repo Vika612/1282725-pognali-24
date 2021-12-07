@@ -55,12 +55,23 @@
 
 @media (min-width: $desktop-width) {
   .main-menu {
+    position: relative;
     max-width: 700px;
     margin: 0;
     margin-left: 145px;
     padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
+
+    &::before {
+      position: absolute;
+      left: -105px;
+      top: 20px;
+      width: 60px;
+      height: 2px;
+      background-color: $white-basic;
+      content: "";
+    }
   }
 
   .main-menu__item {

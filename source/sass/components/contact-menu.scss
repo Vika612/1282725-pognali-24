@@ -1,5 +1,10 @@
 .contact-menu {
   display: flex;
+
+  &--catalog,
+  &--form {
+    display: none;
+  }
 }
 
 .contact-menu__list {
@@ -76,9 +81,14 @@
 @media (min-width: $desktop-width) {
   .contact-menu {
     position: absolute;
-    top: 47px;
+    top: 70px;
     right: 60px;
     display: flex;
+
+    &--catalog,
+    &--form {
+      top: 47px;
+    }
   }
 
   .contact-menu__link {

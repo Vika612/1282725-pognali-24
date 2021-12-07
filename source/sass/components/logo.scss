@@ -1,11 +1,19 @@
+.logo {
+  position: relative;
+  z-index: 1;
+}
+
 .logo__link img {
   display: none;
 }
 
 .logo__link svg {
   width: 96px;
-  height: 15px;
   fill: $blue-dark-main;
+
+  &--header svg {
+    fill: $blue-dark-main;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -44,9 +52,9 @@
     right: 0;
     width: 128px;
     height: 19px;
-  }
 
-  .logo__link--header svg {
-    fill: $white-basic;
+    &--header svg {
+      fill: $white-basic;
+    }
   }
 }

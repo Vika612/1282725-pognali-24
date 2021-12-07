@@ -1,0 +1,59 @@
+.menu-toggle {
+  position: absolute;
+  top: 4px;
+  right: 26px;
+  width: 25px;
+  height: 11px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  transition: 0.3s ease;
+
+  &::before,
+  &::after {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: $grey;
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.menu-toggle.active {
+  top: 0;
+  height: 20px;
+
+  &::before {
+    top: 7px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 7px;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .menu-toggle.active {
+    top: 13px;
+    left: 48%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu-toggle {
+    display: none;
+  }
+}
