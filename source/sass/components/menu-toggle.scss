@@ -46,6 +46,7 @@
 }
 
 @media (min-width: $tablet-width) {
+  .menu-toggle,
   .menu-toggle.active {
     top: 13px;
     left: 48%;
