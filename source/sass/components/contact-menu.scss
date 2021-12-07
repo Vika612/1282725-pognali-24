@@ -80,10 +80,11 @@
 
 @media (min-width: $desktop-width) {
   .contact-menu {
-    position: absolute;
+    position: fixed;
     top: 70px;
-    right: 60px;
+    right: 180px;
     display: flex;
+    z-index: 5;
 
     &--catalog,
     &--form {

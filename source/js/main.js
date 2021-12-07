@@ -13,3 +13,15 @@ if (menuToggle) {
     menuToggle.classList.toggle('active');
   });
 }
+
+/* SCROLL */
+
+const header = document.querySelector('.header');
+
+  window.onscroll = () => {
+    if (window.pageYOffset > 50) {
+      header.classList.add('header--scroll');
+    } else {
+      header.classList.remove('header--scroll');
+    }
+  };

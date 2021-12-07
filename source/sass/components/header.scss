@@ -1,10 +1,19 @@
 .header {
+  width: 100%;
+  max-width: 1440px;
   padding-top: 20px;
   padding-bottom: 31px;
   background-color: $white-basic;
 
   &--js {
     background-color: $blue-dark-deep;
+  }
+
+  &--scroll {
+    position: fixed;
+    background-color: $white-basic;
+    transition: all 0.7s ease;
+    z-index: 3;
   }
 }
 
@@ -32,6 +41,10 @@
   fill: $white-basic;
 }
 
+.header--scroll .logo__link--header svg {
+  fill: $blue-dark-main;
+}
+
 @media (min-width: $tablet-width) {
   .header {
     padding-top: 45px;
@@ -50,6 +63,10 @@
 @media (min-width: $desktop-width) {
   .header {
     background-color: $blue-dark-deep;
+
+    &--scroll {
+      background-color: $white-basic;
+    }
   }
 
   .header__container {
@@ -62,11 +79,15 @@
     display: none;
   }
 
-  .header--js .header__navigation {
-    display: block;
-  }
-
   .header--js .main-menu {
     display: flex;
+  }
+
+  .header--scroll .main-menu__link {
+    color: $blue-dark-main;
+  }
+
+  .header--scroll .main-menu::before {
+    background-color: $blue-dark-main;
   }
 }
