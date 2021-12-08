@@ -1,9 +1,60 @@
 .logo {
-  padding: 26px 0 28px;
+  position: relative;
+  z-index: 1;
 }
 
-.logo svg {
+.logo__link img {
+  display: none;
+}
+
+.logo__link svg {
   width: 96px;
-  height: 15px;
   fill: $blue-dark-main;
+
+  &--header svg {
+    fill: $blue-dark-main;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    position: relative;
+    width: 156px;
+  }
+
+  .logo__link img {
+    display: block;
+    width: 166px;
+    height: 42px;
+  }
+
+  .logo__link svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -15px;
+    width: 106px;
+    height: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    width: 200px;
+  }
+
+  .logo__link img {
+    width: 200px;
+    height: 50px;
+  }
+
+  .logo__link svg {
+    right: 0;
+    width: 128px;
+    height: 19px;
+
+    &--header svg {
+      fill: $white-basic;
+    }
+  }
 }

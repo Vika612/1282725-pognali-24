@@ -6,3 +6,9 @@
   line-height: 1;
   color: $white-basic;
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 60px;
+  }
+}

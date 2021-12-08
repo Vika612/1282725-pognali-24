@@ -19,8 +19,17 @@
     color: $orange-special;
   }
 
-  &:active {
+  &:active svg,
+  &:active span {
     opacity: 0.3;
+  }
+
+  &::before {
+    width: 45px;
+    height: 45px;
+    background-color: $blue-bg;
+    border-radius: 50%;
+    content: "";
   }
 }
 
@@ -29,30 +38,63 @@
   fill: $orange-special;
 }
 
-.user-menu__link::before {
-  width: 45px;
-  height: 45px;
-  background-color: $blue-bg;
-  border-radius: 50%;
-  content: "";
-}
-
 .user-menu__link span {
   margin-left: 15px;
 }
 
 .user-menu__link svg {
   position: absolute;
-  left: 13px;
+  top: 17px;
+  left: 14px;
   fill: $yellow-basic;
 }
 
 .user-menu__link--phone svg {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 14px;
 }
 
 .user-menu__link--mail svg {
   width: 18px;
-  height: 12px;
+  height: 13px;
+}
+
+@media (min-width: $tablet-width) {
+  .user-menu {
+    margin-bottom: 125px;
+  }
+
+  .user-menu__link {
+    font-size: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  .user-menu__link span {
+    margin-left: 23px;
+  }
+
+  .user-menu__link svg {
+    top: 22px;
+    left: 21px;
+  }
+
+  .user-menu__link--phone svg {
+    width: 27px;
+    height: 26px;
+  }
+
+  .user-menu__link--mail svg {
+    width: 27px;
+    height: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-menu {
+    display: none;
+  }
 }
