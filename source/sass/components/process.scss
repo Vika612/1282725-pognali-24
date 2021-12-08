@@ -1,3 +1,117 @@
 .process {
   @include reset-list;
+  counter-reset: action;
+}
+
+.process__item {
+  min-height: 80px;
+  margin-top: -30px;
+  padding: 22px 21px 52px 24px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: $blue-dark-deep;
+  border-radius: 10px;
+  counter-increment: action;
+
+  &::after {
+    content: counter(action);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    color: $white-basic;
+  }
+
+  &--1 {
+    background-color: $orange-dark;
+  }
+
+  &--2 {
+    background-color: $yellow-dark;
+  }
+
+  &--3 {
+    background-color: $orange-special;
+  }
+
+  &--4 {
+    padding-bottom: 22px;
+    background-color: $yellow-basic;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .process {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process__item {
+    margin: 0;
+    padding: 31px 30px 23px 33px;
+    flex-direction: column;
+    font-size: 24px;
+
+    &::after {
+      padding-top: 8px;
+      font-size: 30px;
+    }
+
+    &--1 {
+      margin-right: -20px;
+      border-radius: 20px 0 0 0;
+    }
+
+    &--2 {
+      border-radius: 20px 20px 0 0;
+    }
+
+    &--3 {
+      margin-right: -20px;
+      border-radius: 0 0 0 20px;
+    }
+
+    &--4 {
+      border-radius: 0 0 20px 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .process {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .process__item {
+    margin-right: -45px;
+    padding: 30px 30px 29px 31px;
+    flex-direction: row;
+    border-radius: 20px;
+
+    &::after {
+      padding: 0;
+      font-size: 24px;
+    }
+
+    &--1 {
+      padding-right: 95px;
+    }
+
+    &--2 {
+      margin-left: -15px;
+      padding-right: 75px;
+    }
+
+    &--3 {
+      padding-right: 60px;
+    }
+
+    &--4 {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
 }
