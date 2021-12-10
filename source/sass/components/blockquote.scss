@@ -14,3 +14,30 @@
   font-style: normal;
   color: $white-basic;
 }
+
+@media (min-width: $tablet-width) {
+  .blockquote {
+    max-width: 310px;
+    margin: 0;
+    padding: 0 0 0 35px;
+  }
+
+  .blockquote__text {
+    margin-bottom: 44px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .blockquote__author {
+    max-width: 200px;
+    font-size: 21px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .blockquote {
+    max-width: 286px;
+    padding: 10px 0 0 0;
+  }
+}

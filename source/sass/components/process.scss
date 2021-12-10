@@ -45,10 +45,11 @@
 @media (min-width: $tablet-width) {
   .process {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .process__item {
+    min-width: 345px;
     margin: 0;
     padding: 31px 30px 23px 33px;
     flex-direction: column;
@@ -81,11 +82,13 @@
 
 @media (min-width: $desktop-width) {
   .process {
+    max-width: 1320px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .process__item {
+    min-width: 315px;
     margin-right: -45px;
     padding: 30px 30px 29px 31px;
     flex-direction: row;
