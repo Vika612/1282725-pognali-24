@@ -7,11 +7,11 @@
 
 .about-service__container {
   position: relative;
-  padding: 310px 50px 82px 50px;
+  padding: 71px 50px 82px 50px;
   background-image: url("../img/about-mobile.png");
   background-repeat: no-repeat;
   background-size: 92% 353px;
-  background-position: 20px 274px;
+  background-position: 18px 38px;
 }
 
 .about-service__title {
@@ -36,10 +36,10 @@
 
 @media (min-width: $tablet-width) {
   .about-service__container {
-    padding: 290px 50px 89px 75px;
+    padding: 139px 50px 89px 75px;
     background-image: url("../img/about-tablet.png");
     background-size: 376px 548px;
-    background-position: 98% 296px;
+    background-position: 98% 145px;
   }
 
   .about-service__title {
@@ -75,10 +75,10 @@
 
 @media (min-width: $desktop-width) {
   .about-service__container {
-    padding: 103px 50px 163px 131px;
+    padding: 32px 50px 163px 131px;
     background-image: url("../img/about-desk.png");
     background-size: 630px 665px;
-    background-position: 93% 56px;
+    background-position: 93% -16px;
   }
 
   .about-service__title {

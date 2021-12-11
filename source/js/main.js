@@ -19,7 +19,7 @@ if (menuToggle) {
 const header = document.querySelector('.header');
 
   window.onscroll = () => {
-    if (window.pageYOffset > 50) {
+    if (window.pageYOffset > 700) {
       header.classList.add('header--scroll');
     } else {
       header.classList.remove('header--scroll');

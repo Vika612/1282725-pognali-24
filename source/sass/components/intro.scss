@@ -1,105 +1,215 @@
 .intro {
-  padding-bottom: 290px;
+  position: relative;
   background-color: $blue-dark-deep;
+  z-index: -1;
 }
 
-.intro__container {
+.intro__title-wrapper {
   position: relative;
-  width: 100%;
-  height: 405px;
   padding-top: 23px;
-  background-image: url("../img/globe-back-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: 100%;
+  padding-bottom: 263px;
+
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: 569px;
+    background-image: url("../img/globe-back-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: left 94px;
+    background-size: 100% 100%;
+    content: "";
+    z-index: 20;
+  }
 
   &::before {
     position: absolute;
     bottom: 0;
-    right: 47px;
+    left: 55%;
+    transform: translate(-50%);
     width: 192px;
     height: 255px;
     background-image: url("../img/traveller-mobile.png");
     background-repeat: no-repeat;
+    background-position: 0 0;
     content: "";
+    z-index: 30;
   }
 }
 
 .intro__title {
   position: relative;
-  padding: 0 10px;
-  padding-bottom: 265px;
+  padding: 0 30px;
   text-align: center;
   line-height: 1.1;
+  z-index: 40;
 }
 
+
 .intro__user-menu {
-  position: absolute;
+  position: relative;
   margin-top: -22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 40;
+}
+
+.intro__blockquote-wrapper {
+  padding: 10px;
+}
+
+.intro__blockquote {
+  padding-right: 35px;
 }
 
 .intro__process {
-  position: relative;
-  z-index: 1;
+  padding: 0 25px;
 }
 
 @media (min-width: $tablet-width) {
   .intro {
-    padding-bottom: 0;
+    background-color: $blue-dark;
   }
 
-  .intro__container {
-    height: 850px;
-    padding-top: 32px;
-    background-image: url("../img/globe-back-tablet.jpg");
-    background-position: 0 250px;
+  .intro__title-wrapper {
+    padding-top: 31px;
+    padding-bottom: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .intro__blockquote-wrapper {
+    position: relative;
+    padding: 72px 0 330px;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+      height: 612px;
+      background-image: url("../img/globe-back-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 100% 100%;
+      content: "";
+      z-index: 20;
+    }
 
     &::before {
-      bottom: 128px;
-      right: 111px;
+      position: absolute;
+      bottom: 139px;
+      left: 61.5%;
+      transform: translate(-50%);
       width: 372px;
       height: 451px;
       background-image: url("../img/traveller-tablet.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      content: "";
+      z-index: 30;
     }
   }
 
   .intro__title {
-    padding: 0 125px 87px;
+    padding: 0 185px 0;
     line-height: 1.16;
   }
 
+  .intro__blockquote {
+    position: relative;
+    max-width: 350px;
+    padding: 0 30px;
+    z-index: 30;
+  }
+
   .intro__process {
-    position: absolute;
-    bottom: -153px;
+    position: relative;
+    margin-top: -139px;
+    padding: 0 40px;
+    z-index: 30;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .intro {
+    background-color: $blue-dark-deep;
+  }
+
   .intro__container {
+    position: relative;
+    padding: 40px 40px 224px 60px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: 640px;
-    padding-top: 70px;
-    background-image: url("../img/globe-back-desktop.jpg");
-    background-size: 100% 100%;
-    background-position: 100%;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+      height: 750px;
+      background-image: url("../img/globe-back-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: left -100px;
+      background-size: 100% 100%;
+      content: "";
+      display: block;
+    }
 
     &::before {
-      top: -32px;
-      left: 42%;
+      position: absolute;
+      bottom: 100px;
+      left: 57%;
+      transform: translate(-50%);
       width: 431px;
       height: 640px;
       background-image: url("../img/traveller-desktop.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      content: "";
+      z-index: 40;
+      display: block;
     }
   }
 
   .intro__title {
-    max-width: 563px;
-    padding: 0 58px 0 67px;
+    max-width: 600px;
+    padding: 0 100px 0 67px;
     text-align: left;
   }
 
+  .intro__user-menu {
+    margin-top: 0;
+  }
+
+  .intro__blockquote-wrapper {
+    padding: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .intro__blockquote {
+    max-width: 270px;
+    padding: 0;
+    padding-top: 24px;
+  }
+
   .intro__process {
-    bottom: 153px;
+    margin-top: 100px;
+    padding: 0;
+    z-index: 40;
   }
 }

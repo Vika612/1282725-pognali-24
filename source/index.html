@@ -76,8 +76,10 @@
     <main class="main">
       <h1 class="visually-hidden">Приложение для путешественников: выбор направлений и попутчиков</h1>
       <section class="intro">
-        <div class="intro__container container">
-          <h2 class="intro__title title">В путешествие с крутыми попутчиками!</h2>
+        <div class="intro__container">
+          <div class="intro__title-wrapper">
+            <h2 class="intro__title title">В путешествие с крутыми попутчиками!</h2>
+          </div>
           <div class="intro__user-menu contact-menu">
             <ul class="contact-menu__list">
               <li class="contact-menu__item">
@@ -89,20 +91,24 @@
             </ul>
             <a class="contact-menu__auth-link button button--auth" href="#!">Авторизация</a>
           </div>
-          <blockquote class="intro__blockquote blockquote">
-            <p class="blockquote__text">
-              «Лучшее приложение, что я видел в жизни!»
-            </p>
-            <cite class="blockquote__author">
-              Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»
-            </cite>
-          </blockquote>
-          <ol class="intro__process process">
-            <li class="process__item process__item--1">Выберите<br> направление</li>
-            <li class="process__item process__item--2">Изучите идеи<br> путешественников</li>
-            <li class="process__item process__item--3">Находите тех,<br> кто похож на вас</li>
-            <li class="process__item process__item--4">Путешествуйте<br> вместе!</li>
-          </ol>
+          <div class="intro__blockquote-wrapper">
+            <blockquote class="intro__blockquote">
+              <p class="blockquote__text">
+                «Лучшее приложение,<br> что я видел в жизни!»
+              </p>
+              <cite class="blockquote__author">
+                Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»
+              </cite>
+            </blockquote>
+          </div>
+          <div class="intro__process">
+            <ol class="process">
+              <li class="process__item process__item--1">Выберите<br> направление</li>
+              <li class="process__item process__item--2">Изучите идеи<br> путешественников</li>
+              <li class="process__item process__item--3">Находите тех,<br> кто похож на вас</li>
+              <li class="process__item process__item--4">Путешествуйте<br> вместе!</li>
+            </ol>
+          </div>
         </div>
       </section>
 
