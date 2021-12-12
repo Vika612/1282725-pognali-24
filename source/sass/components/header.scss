@@ -13,12 +13,13 @@
     position: fixed;
     background-color: $white-basic;
     transition: all 0.7s ease;
-    z-index: 3;
+    z-index: 60;
   }
 }
 
 .header__container {
   position: relative;
+  z-index: 30;
 }
 
 .header__navigation {

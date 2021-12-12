@@ -1,7 +1,5 @@
 .intro {
-  position: relative;
   background-color: $blue-dark-deep;
-  z-index: -1;
 }
 
 .intro__title-wrapper {
@@ -17,7 +15,7 @@
     transform: translate(-50%);
     width: 100%;
     height: 569px;
-    background-image: url("../img/globe-back-mobile.jpg");
+    background-image: url("../img/globe-back-mobile.png");
     background-repeat: no-repeat;
     background-position: left 94px;
     background-size: 100% 100%;
@@ -68,6 +66,7 @@
 
 .intro__process {
   padding: 0 25px;
+  background-color: $blue-dark-main;
 }
 
 @media (min-width: $tablet-width) {
@@ -96,7 +95,7 @@
       transform: translate(-50%);
       width: 100%;
       height: 612px;
-      background-image: url("../img/globe-back-tablet.jpg");
+      background-image: url("../img/globe-back-tablet.png");
       background-repeat: no-repeat;
       background-position: left bottom;
       background-size: 100% 100%;
@@ -128,13 +127,14 @@
     position: relative;
     max-width: 350px;
     padding: 0 30px;
-    z-index: 30;
+    z-index: 40;
   }
 
   .intro__process {
     position: relative;
     margin-top: -139px;
     padding: 0 40px;
+    background-color: transparent;
     z-index: 30;
   }
 }
@@ -146,6 +146,7 @@
 
   .intro__container {
     position: relative;
+    margin-bottom: -100px;
     padding: 40px 40px 224px 60px;
     display: flex;
     flex-wrap: wrap;
@@ -158,12 +159,13 @@
       transform: translate(-50%);
       width: 100%;
       height: 750px;
-      background-image: url("../img/globe-back-desktop.jpg");
+      background-image: url("../img/globe-back-desktop.png");
       background-repeat: no-repeat;
       background-position: left -100px;
       background-size: 100% 100%;
       content: "";
       display: block;
+      z-index: 30;
     }
 
     &::before {
@@ -183,13 +185,9 @@
   }
 
   .intro__title {
-    max-width: 600px;
+    max-width: 650px;
     padding: 0 100px 0 67px;
     text-align: left;
-  }
-
-  .intro__user-menu {
-    margin-top: 0;
   }
 
   .intro__blockquote-wrapper {
