@@ -1,5 +1,7 @@
 .intro {
+  position: relative;
   background-color: $blue-dark-deep;
+  z-index: -1;
 }
 
 .intro__title-wrapper {
@@ -141,6 +143,7 @@
 
 @media (min-width: $desktop-width) {
   .intro {
+    position: static;
     background-color: $blue-dark-deep;
   }
 
