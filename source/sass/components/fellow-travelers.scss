@@ -1,5 +1,12 @@
+.fellow-travelers {
+  position: relative;
+  margin-top: -60px;
+  z-index: -1;
+}
+
 .fellow-travelers__container {
   @include border-radius-bottom;
+  padding-top: 200px;
   background-color: $blue-dark-main;
 }
 

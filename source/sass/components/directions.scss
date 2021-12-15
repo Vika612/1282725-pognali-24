@@ -1,7 +1,114 @@
-.directions__container {
+.directions {
   @include border-radius-bottom;
+  background-color: $grey-basic;
 }
 
-.directions__list {
-  @include reset-list;
+.directions__container {
+  padding: 70px 25px 30px;
+}
+
+.directions__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 25px;
+}
+
+.directions__text {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0 45px 25px 25px;
+}
+
+.directions__link {
+  margin-top: 27px;
+  text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .directions__container {
+    padding: 70px 75px 80px;
+  }
+
+  .directions__wrapper {
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      right: -35px;
+      width: 288px;
+      height: 574px;
+      background-image: url("../img/flags-back.png");
+      content: "";
+      z-index: -1;
+    }
+  }
+
+  .directions__title {
+    margin-bottom: 60px;
+    padding: 0;
+  }
+
+  .directions__text {
+    max-width: 400px;
+    margin-bottom: 77px;
+    padding: 0 50px 25px 0;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .directions__list {
+    z-index: 20;
+  }
+
+  .directions__link {
+    margin-top: 45px;
+    padding: 31px 32px 27px;
+    font-size: 24px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .directions__container {
+    padding: 160px 130px 137px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .directions__wrapper {
+    position: relative;
+    max-width: 450px;
+    order: 2;
+
+    &::before {
+      position: absolute;
+      top: -70px;
+      right: -70px;
+    }
+  }
+
+  .directions__title {
+    margin-bottom: 66px;
+  }
+
+  .directions__text {
+    max-width: 450px;
+    margin-bottom: 68px;
+    padding: 0 100px 25px 0;
+  }
+
+  .directions__list {
+    flex-basis: 50%;
+    order: 1;
+  }
+
+  .directions__link {
+    width: 275px;
+    margin: -82px 174px 0 auto;
+    order: 3;
+    z-index: 10;
+  }
 }
