@@ -1,0 +1,17 @@
+.main__address {
+  position: relative;
+  margin-bottom: -80px;
+  z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .main__address {
+    margin-bottom: -35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__address {
+    margin-bottom: -105px;
+  }
+}

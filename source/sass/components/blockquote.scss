@@ -1,8 +1,3 @@
-.blockquote {
-  margin: 0;
-  padding: 45px 90px 110px 25px;
-}
-
 .blockquote__text {
   margin: 0;
   margin-bottom: 20px;
@@ -13,4 +8,23 @@
   font-weight: 700;
   font-style: normal;
   color: $white-basic;
+}
+
+@media (min-width: $tablet-width) {
+  .blockquote__text {
+    margin-bottom: 44px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .blockquote__author {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .blockquote {
+    padding: 10px 0 0 0;
+  }
 }

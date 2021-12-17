@@ -1,23 +1,43 @@
 .address__container {
   @include border-radius-bottom;
+  padding-top: 50px;
+  padding-bottom: 35px;
   background-color: $yellow-basic;
 }
 
 .address__info {
+  position: relative;
+  margin-bottom: 31px;
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-style: normal;
   color: $blue-btn;
+  text-transform: uppercase;
+
+  &::before {
+    width: 45px;
+    height: 45px;
+    padding-right: 62px;
+    background-image: url("../img/map-mark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    content: "";
+  }
 }
 
 .address__link {
-  padding: 22px;
-  display: block;
+  padding: 17px 20px 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-weight: 700;
   font-size: 18px;
   line-height: 1;
   color: $blue-btn;
   border: 3px solid $blue-dark-deep;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
 
   &:hover,
@@ -28,5 +48,72 @@
 
   &:active {
     color: rgba($white-basic, 0.3);
+  }
+}
+
+.address__link-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right: 0;
+  border-left-color: $blue-btn;
+}
+
+.address__link:hover .address__link-arrow,
+.address__link:focus .address__link-arrow {
+  border-left-color: $white-basic;
+}
+
+.address__link:active .address__link-arrow {
+  border-left-color: rgba($white-basic, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .address__container {
+    padding: 85px 75px;
+  }
+
+  .address__info {
+    margin-bottom: 43px;
+    font-size: 28px;
+    line-height: 1;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      padding-right: 94px;
+    }
+  }
+
+  .address__link {
+    padding: 26px 34px 23px;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address__container {
+    padding: 115px 135px 56px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .address__info {
+    margin-bottom: 0;
+    margin-right: 144px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      padding-right: 120px;
+    }
+  }
+
+  .address__link {
+    width: 324px;
+    padding: 28px 31px 28px 36px;
   }
 }

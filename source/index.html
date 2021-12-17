@@ -76,46 +76,47 @@
     <main class="main">
       <h1 class="visually-hidden">Приложение для путешественников: выбор направлений и попутчиков</h1>
       <section class="intro">
-        <div class="intro__top">
-          <h2 class="intro__title title">В путешествие с крутыми попутчиками!</h2>
-        </div>
-
-        <div class="intro__info">
-          <div class="intro__container container">
-            <div class="intro__user-menu contact-menu">
-              <ul class="contact-menu__list">
-                <li class="contact-menu__item">
-                  <a class="contact-menu__link contact-menu__link--phone" href="tel:88005558628"><span>8 800 555-86-28</span></a>
-                </li>
-                <li class="contact-menu__item">
-                  <a class="contact-menu__link contact-menu__link--email" href="mailto:mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
-                </li>
-              </ul>
-              <a class="contact-menu__auth-link button button--auth" href="#!">Авторизация</a>
-            </div>
-            <blockquote class="intro__blockquote blockquote">
+        <div class="intro__container">
+          <div class="intro__title-wrapper">
+            <h2 class="intro__title title">В путешествие с крутыми попутчиками!</h2>
+          </div>
+          <div class="intro__user-menu contact-menu">
+            <ul class="contact-menu__list">
+              <li class="contact-menu__item">
+                <a class="contact-menu__link contact-menu__link--phone" href="tel:88005558628"><span>8 800 555-86-28</span></a>
+              </li>
+              <li class="contact-menu__item">
+                <a class="contact-menu__link contact-menu__link--email" href="mailto:mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
+              </li>
+            </ul>
+            <a class="contact-menu__auth-link button button--auth" href="#!">Авторизация</a>
+          </div>
+          <div class="intro__blockquote-wrapper">
+            <blockquote class="intro__blockquote">
               <p class="blockquote__text">
-                «Лучшее приложение, что я видел в жизни!»
+                «Лучшее приложение,<br> что я видел в жизни!»
               </p>
               <cite class="blockquote__author">
-                Мурат Эльтазин главный редактор газеты «гаджетлайф»
+                Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»
               </cite>
             </blockquote>
-            <ol class="intro__process process">
-              <li class="process__item">Выберите направление</li>
-              <li class="process__item">Изучите идеи путешественников</li>
-              <li class="process__item">Находите тех, кто похож на вас</li>
-              <li class="process__item">Путешествуйте вместе!</li>
+          </div>
+          <div class="intro__process">
+            <ol class="process">
+              <li class="process__item process__item--1">Выберите<br> направление</li>
+              <li class="process__item process__item--2">Изучите идеи<br> путешественников</li>
+              <li class="process__item process__item--3">Находите тех,<br> кто похож на вас</li>
+              <li class="process__item process__item--4">Путешествуйте<br> вместе!</li>
             </ol>
           </div>
         </div>
       </section>
 
-      <section class="about-service">
+      <section class="main__about-service about-service">
         <div class="about-service__container container">
           <h2 class="about-service__title subtitle">О сервисе</h2>
           <p class="about-service__text">
-            Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+            Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
           </p>
           <p class="about-service__slogan">
             А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
@@ -124,40 +125,48 @@
         </div>
       </section>
 
-      <section class="directions">
+      <section class="main__directions directions">
         <div class="directions__container container">
-          <h2 class="directions__title subtitle">Направления</h2>
-          <p class="directions__text">
-            Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-          </p>
-          <ul class="directions__list">
-            <li class="directions__item country">
+          <div class="directions__wrapper">
+            <h2 class="directions__title subtitle">Направления</h2>
+            <p class="directions__text">
+              Мы не продаем туры<br> и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+            </p>
+          </div>
+          <ul class="directions__list country">
+            <li class="country__item">
               <div class="country__image">
                 <img src="img/thailand.jpg" width="270" height="110" alt="Тайланд">
               </div>
-              <div class="country__info">
-                <h3 class="country__title"><a href="#!">Таиланд</a></h3>
-                <p class="country__slogan">Джунгли зовут!</p>
+              <div class="country__info country__info--thailand">
+                <div>
+                  <h3 class="country__title"><a href="#!">Таиланд</a></h3>
+                  <p class="country__slogan">Джунгли зовут!</p>
+                </div>
                 <span class="country__likes">18321</span>
               </div>
             </li>
-            <li class="directions__item country">
+            <li class="country__item">
               <div class="country__image">
                 <img src="img/france.jpg" width="270" height="110" alt="Франция">
               </div>
-              <div class="country__info">
-                <h3 class="country__title"><a href="#!">Франция</a></h3>
-                <p class="country__slogan">Трэ бьен, манифик!</p>
+              <div class="country__info country__info--france">
+                <div>
+                  <h3 class="country__title"><a href="#!">Франция</a></h3>
+                  <p class="country__slogan">Трэ бьен, манифик!</p>
+                </div>
                 <span class="country__likes">12518</span>
               </div>
             </li>
-            <li class="directions__item country">
+            <li class="country__item">
               <div class="country__image">
                 <img src="img/czech.jpg" width="270" height="110" alt="Чехия">
               </div>
-              <div class="country__info">
-                <h3 class="country__title"><a href="#!">Чехия</a></h3>
-                <p class="country__slogan">Закоулки старой Европы</p>
+              <div class="country__info country__info--czech">
+                <div>
+                  <h3 class="country__title"><a href="#!">Чехия</a></h3>
+                  <p class="country__slogan">Закоулки старой Европы</p>
+                </div>
                 <span class="country__likes">5326</span>
               </div>
             </li>
@@ -166,7 +175,7 @@
         </div>
       </section>
 
-      <section class="fellow-travelers">
+      <section class="main__fellow-travelers fellow-travelers">
         <div class="fellow-travelers__container container">
           <h2 class="fellow-travelers__title subtitle">Попутчики</h2>
           <p class="fellow-travelers__text">
@@ -284,7 +293,7 @@
         </div>
       </section>
 
-      <section class="add-profile">
+      <section class="main__add-profile add-profile">
         <div class="add-profile__container container">
           <h2 class="add-profile__title subtitle">Добавьте свой профиль</h2>
           <ul class="add-profile__list tariffs">
@@ -329,7 +338,7 @@
         </div>
       </section>
 
-      <section class="feedback">
+      <section class="main__feedback feedback">
         <div class="feedback__container container">
           <h2 class="feedback__title subtitle">Заинтересовались?</h2>
           <p class="feedback__text">
@@ -356,13 +365,13 @@
         </div>
       </section>
 
-      <section class="address">
+      <section class="main__address address">
         <div class="address__container container">
           <h2 class="visually-hidden">Как к нам добраться</h2>
           <address class="address__info">
             ул. Большая Конюшенная, 19/8
           </address>
-          <a class="address__link" href="https://goo.gl/maps/8ENwqQHfpUMqEsxP6" target="_blank">Проложить маршрут</a>
+          <a class="address__link" href="https://goo.gl/maps/8ENwqQHfpUMqEsxP6" target="_blank">Проложить маршрут<span class="address__link-arrow"></span></a>
         </div>
       </section>
 

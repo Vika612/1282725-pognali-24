@@ -13,12 +13,13 @@
     position: fixed;
     background-color: $white-basic;
     transition: all 0.7s ease;
-    z-index: 3;
+    z-index: 60;
   }
 }
 
 .header__container {
   position: relative;
+  z-index: 30;
 }
 
 .header__navigation {
@@ -49,6 +50,14 @@
   .header {
     padding-top: 45px;
     padding-bottom: 45px;
+
+    &--js {
+      background-color: $blue-dark;
+    }
+
+    &--scroll {
+      background-color: $white-basic;
+    }
   }
 
   .header__navigation {

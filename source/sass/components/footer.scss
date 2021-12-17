@@ -1,3 +1,9 @@
+.footer {
+  position: relative;
+  margin-top: -90px;
+  z-index: 1;
+}
+
 .footer__container {
   @include border-radius-top;
   padding-top: 37px;

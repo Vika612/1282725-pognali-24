@@ -16,3 +16,9 @@
     color: $blue-light;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .subtitle {
+    font-size: 45px;
+  }
+}
