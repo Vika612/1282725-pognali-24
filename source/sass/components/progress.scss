@@ -1,0 +1,49 @@
+.progress {
+  position: relative;
+  display: block;
+}
+
+.progress__result {
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.progress__result-num {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: $white-basic;
+}
+
+.progress__result-note {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: $white-basic;
+
+  &::before {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 30px;
+    height: 1px;
+    background-color: $white-basic;
+    opacity: 0.3;
+    content: "";
+  }
+}
+
+.progress__ring {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.progress__ring circle {
+  fill: rgba(0, 0, 0, 0.6);
+}

@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container container">
+      <div class="header__container">
         <div class="header__logo logo">
           <a class="logo__link logo__link--header">
             <img src="img/logo_full.svg" width="166" height="42" alt="">
@@ -177,13 +177,15 @@
 
       <section class="main__fellow-travelers fellow-travelers">
         <div class="fellow-travelers__container container">
-          <h2 class="fellow-travelers__title subtitle">Попутчики</h2>
-          <p class="fellow-travelers__text">
-            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-          </p>
-          <p class="fellow-travelers__slogan">
-            Теперь можно легко найти единомышленников!
-          </p>
+          <div class="fellow-travelers__wrapper">
+            <h2 class="fellow-travelers__title subtitle">Попутчики</h2>
+            <p class="fellow-travelers__text">
+              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+            </p>
+            <p class="fellow-travelers__slogan">
+              Теперь можно легко найти единомышленников!
+            </p>
+          </div>
           <ul class="fellow-travelers__list">
             <li class="fellow-travelers__item traveler-card">
               <div class="traveler-card__img">
@@ -206,12 +208,12 @@
                 </ul>
                 <a class="traveler-card__title" href="#!">Таня Фирсова</a>
                 <ul class="traveler-card__hashtags hashtags">
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#ЗОЖ</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#ПП</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#Фитнес</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#пляж</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#авокадо</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#смузи</a></li>
+                  <li class="hashtags__item">#ЗОЖ</li>
+                  <li class="hashtags__item">#ПП</li>
+                  <li class="hashtags__item">#Фитнес</li>
+                  <li class="hashtags__item">#пляж</li>
+                  <li class="hashtags__item">#авокадо</li>
+                  <li class="hashtags__item">#смузи</li>
                 </ul>
                 <ul class="traveler-card__transport transport">
                   <li class="transport__item transport__item--plane transport__item--active">
@@ -231,11 +233,11 @@
               <div class="traveler-card__progress progress">
                 <h3 class="traveler-card__subtitle visually-hidden">левел</h3>
                 <div class="progress__result">
-                  <span>99</span>
-                  <span>level</span>
+                  <span class="progress__result-num">99</span>
+                  <span class="progress__result-note">level</span>
                 </div>
                 <svg class="progress__ring" width="80" height="80">
-                  <circle stroke="#FF8D30" stroke-width="4" cx="40" cy="40" r="27" fill="transparent"/>
+                  <circle stroke="#FF8D30" stroke-width="4" cx="40" cy="40" r="28" fill="transparent"/>
                 </svg>
               </div>
             </li>
@@ -256,11 +258,11 @@
                 </ul>
                 <a class="traveler-card__title" href="#!">Петя Демин</a>
                 <ul class="traveler-card__hashtags hashtags">
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#бургер</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#бар</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#футбол</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#концерт</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="#!">#крафт</a></li>
+                  <li class="hashtags__item">#бургер</li>
+                  <li class="hashtags__item">#бар</li>
+                  <li class="hashtags__item">#футбол</li>
+                  <li class="hashtags__item">#концерт</li>
+                  <li class="hashtags__item">#крафт</li>
                 </ul>
                 <ul class="traveler-card__transport transport">
                   <li class="transport__item transport__item--plane transport__item--active">
@@ -280,11 +282,11 @@
               <div class="traveler-card__progress progress">
                 <h3 class="traveler-card__subtitle visually-hidden">левел</h3>
                 <div class="progress__result">
-                  <span>80</span>
-                  <span>level</span>
+                  <span class="progress__result-num">80</span>
+                  <span class="progress__result-note">level</span>
                 </div>
                 <svg class="progress__ring" width="80" height="80">
-                  <circle stroke="#FF8D30" stroke-width="4" cx="40" cy="40" r="27" fill="transparent"/>
+                  <circle stroke="#FF8D30" stroke-width="4" cx="40" cy="40" r="28" fill="transparent"/>
                 </svg>
               </div>
             </li>

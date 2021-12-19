@@ -1,24 +1,48 @@
 .fellow-travelers {
   position: relative;
   margin-top: -60px;
-  z-index: -1;
 }
 
 .fellow-travelers__container {
   @include border-radius-bottom;
-  padding-top: 200px;
+  padding: 130px 25px 30px;
   background-color: $blue-dark-main;
 }
 
+.fellow-travelers__wrapper {
+  margin-bottom: 50px;
+  padding: 0 25px;
+}
+
+.fellow-travelers__title {
+  margin-bottom: 20px;
+}
+
 .fellow-travelers__text {
+  margin: 0;
+  margin-bottom: 20px;
   color: $white-basic;
 }
 
 .fellow-travelers__slogan {
+  margin: 0;
   font-weight: 700;
   color: $white-basic;
 }
 
 .fellow-travelers__list {
   @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fellow-travelers__item {
+  margin-bottom: 10px;
+}
+
+.fellow-travelers__link {
+  margin-top: 10px;
+  padding: 22px 23px;
+  text-align: left;
 }

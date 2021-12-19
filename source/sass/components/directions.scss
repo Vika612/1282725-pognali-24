@@ -1,6 +1,8 @@
 .directions {
   @include border-radius-bottom;
+  position: relative;
   background-color: $grey-basic;
+  z-index: 1;
 }
 
 .directions__container {

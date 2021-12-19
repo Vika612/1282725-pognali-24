@@ -1,5 +1,7 @@
 .logo {
-  position: relative;
+  position: absolute;
+  top: 20px;
+  left: 26px;
   z-index: 1;
 }
 
@@ -18,8 +20,8 @@
 
 @media (min-width: $tablet-width) {
   .logo {
-    position: relative;
-    width: 156px;
+    top: 45px;
+    left: 37px;
   }
 
   .logo__link img {
@@ -32,7 +34,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -15px;
+    right: -5px;
     width: 106px;
     height: 16px;
   }

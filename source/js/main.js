@@ -4,13 +4,16 @@
 
 const headerBody = document.querySelector('.header');
 const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('.navigation');
 
 headerBody.classList.add('header--js');
+navigation.classList.add('header__navigation--closed');
 
 if (menuToggle) {
   menuToggle.addEventListener('click', function () {
-    headerBody.classList.toggle('header--js');
     menuToggle.classList.toggle('active');
+    navigation.classList.toggle('header__navigation--closed');
+    headerBody.classList.toggle('header--opened');
   });
 }
 
