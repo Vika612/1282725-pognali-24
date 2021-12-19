@@ -151,7 +151,7 @@
   .intro__container {
     position: relative;
     margin-bottom: -100px;
-    padding: 40px 40px 224px 60px;
+    padding: 0 33px 224px 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -174,7 +174,7 @@
 
     &::before {
       position: absolute;
-      bottom: 100px;
+      bottom: 103px;
       left: 57%;
       transform: translate(-50%);
       width: 431px;
@@ -189,7 +189,7 @@
   }
 
   .intro__title {
-    max-width: 650px;
+    max-width: 600px;
     padding: 0 100px 0 67px;
     text-align: left;
   }

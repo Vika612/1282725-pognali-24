@@ -21,7 +21,7 @@
 @media (min-width: $tablet-width) {
   .logo {
     top: 45px;
-    left: 37px;
+    left: 36px;
   }
 
   .logo__link img {
@@ -43,6 +43,7 @@
 @media (min-width: $desktop-width) {
   .logo {
     width: 200px;
+    left: 55px;
   }
 
   .logo__link img {
@@ -51,9 +52,9 @@
   }
 
   .logo__link svg {
-    right: 0;
+    right: -6px;
     width: 128px;
-    height: 19px;
+    height: 20px;
 
     &--header svg {
       fill: $white-basic;
