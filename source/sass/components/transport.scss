@@ -49,3 +49,27 @@
     background-image: url("../img/transport-svg/icon-run.svg");
   }
 }
+
+@media (min-width: $tablet-width) {
+  .transport__item {
+    &--plane::before {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--bus::before {
+      width: 18px;
+      height: 20px;
+    }
+
+    &--bike::before {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--run::before {
+      width: 22px;
+      height: 24px;
+    }
+  }
+}

@@ -1,8 +1,12 @@
-.logo {
+.logo--header {
   position: absolute;
   top: 20px;
   left: 26px;
   z-index: 1;
+}
+
+.logo--footer {
+  position: relative;
 }
 
 .logo__link img {
@@ -19,7 +23,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .logo {
+  .logo--header {
     top: 45px;
     left: 36px;
   }

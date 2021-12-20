@@ -5,8 +5,26 @@
 
 .fellow-travelers__container {
   @include border-radius-bottom;
+  position: relative;
   padding: 130px 25px 30px;
   background-color: $blue-dark-main;
+  background-image: url("../img/smolov-back.png");
+  background-repeat: no-repeat;
+  background-size: 143px 143px;
+  background-position: 86% 97px;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 113px;
+    height: 132px;
+    background-color: $blue-decor;
+    border-radius: 20px;
+    content: "";
+    z-index: -1;
+  }
 }
 
 .fellow-travelers__wrapper {
@@ -32,9 +50,24 @@
 
 .fellow-travelers__list {
   @include reset-list;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 10;
+
+  &::after {
+    position: absolute;
+    top: -32px;
+    left: -25px;
+    width: 62px;
+    height: 71px;
+    background-image: url("../img/rogovaya-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    z-index: -1;
+  }
 }
 
 .fellow-travelers__item {
@@ -45,4 +78,119 @@
   margin-top: 10px;
   padding: 22px 23px;
   text-align: left;
+}
+
+br {
+  display: none;
+}
+
+@media (min-width: 580px) {
+  .fellow-travelers__list {
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .fellow-travelers__container {
+    padding: 201px 75px 30px;
+    background-image: url("../img/rogovaya-back.png");
+    background-repeat: no-repeat;
+    background-size: 285px 285px;
+    background-position: 85% 140px;
+
+    &::before {
+      top: 132px;
+      left: 41px;
+      width: 212px;
+      height: 212px;
+    }
+  }
+
+  .fellow-travelers__wrapper {
+    position: relative;
+    max-width: 480px;
+    margin-bottom: 62px;
+    padding: 0;
+    z-index: 20;
+  }
+
+  .fellow-travelers__title {
+    margin-bottom: 56px;
+  }
+
+  .fellow-travelers__text {
+    margin-bottom: 39px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .fellow-travelers__slogan {
+    font-size: 21px;
+    line-height: 1.1;
+  }
+
+  .fellow-travelers__list {
+    column-gap: 40px;
+
+    &::after {
+      top: -86px;
+      left: -35px;
+      width: 143px;
+      height: 143px;
+      background-image: url("../img/smolov-back.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      z-index: -1;
+    }
+  }
+
+  .fellow-travelers__link {
+    margin-top: 71px;
+    padding: 27px 31px;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 20px;
+  }
+
+  br {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fellow-travelers__container {
+    padding: 190px 60px 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    background-position: 16.5% 446px;
+
+    &::before {
+      top: 129px;
+      left: 61px;
+    }
+  }
+
+  .fellow-travelers__wrapper {
+    max-width: 500px;
+    margin-bottom: 0;
+    padding: 0 0 0 70px;
+  }
+
+  .fellow-travelers__list {
+    column-gap: 60px;
+
+    &::after {
+      top: 4px;
+      left: -202px;
+    }
+  }
+
+  .fellow-travelers__link {
+    width: 280px;
+    margin-top: -84px;
+    margin-left: 72px;
+    z-index: 30;
+  }
 }

@@ -1,6 +1,9 @@
 .traveler-card {
   position: relative;
-  width: 270px;
+  max-width: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .traveler-card__img {
@@ -49,12 +52,14 @@
 }
 
 .traveler-card__title {
+  max-width: 250px;
   margin-bottom: 15px;
   display: block;
   font-weight: 700;
   font-size: 21px;
   line-height: 1;
   color: $blue-btn;
+  text-align: center;
 
   &:hover,
   &:focus {
@@ -76,4 +81,31 @@
   left: 17px;
   width: 60px;
   height: 60px;
+}
+
+@media (min-width: $tablet-width) {
+  .traveler-card__img {
+    width: 285px;
+    height: 285px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .traveler-card__img img {
+    width: 100%;
+  }
+
+  .traveler-card__info {
+    padding: 30px 20px 25px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .traveler-card__title {
+    margin-bottom: 23px;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .traveler-card__hashtags {
+    margin-bottom: 20px;
+  }
 }

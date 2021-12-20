@@ -13,3 +13,14 @@
   line-height: 1.2;
   color: $grey-special;
 }
+
+@media (min-width: $tablet-width) {
+  .hashtags {
+    max-width: 230px;
+  }
+
+  .hashtags__item {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+}
