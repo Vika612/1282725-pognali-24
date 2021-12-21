@@ -1,4 +1,13 @@
+.navigation__user-menu {
+  margin-top: 52px;
+  margin-bottom: 40px;
+}
+
 @media (min-width: $tablet-width) {
+  .navigation__user-menu {
+    margin-bottom: 125px;
+  }
+
   .navigation__auth-link {
     position: absolute;
     top: -91px;
@@ -11,6 +20,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .navigation__user-menu {
+    display: none;
+  }
+
   .navigation__auth-link {
     display: none;
   }

@@ -1,6 +1,7 @@
 .address__container {
   @include border-radius-bottom;
-  padding-top: 50px;
+  margin-top: -50px;
+  padding-top: 80px;
   padding-bottom: 35px;
   background-color: $yellow-basic;
 }
@@ -38,6 +39,7 @@
   color: $blue-btn;
   border: 3px solid $blue-dark-deep;
   border-radius: 10px;
+  outline: none;
   cursor: pointer;
 
   &:hover,
@@ -71,7 +73,7 @@
 
 @media (min-width: $tablet-width) {
   .address__container {
-    padding: 85px 75px;
+    padding: 100px 75px 85px;
   }
 
   .address__info {
@@ -96,7 +98,7 @@
 
 @media (min-width: $desktop-width) {
   .address__container {
-    padding: 115px 135px 56px;
+    padding: 106px 135px 56px;
     display: flex;
     justify-content: flex-end;
   }
