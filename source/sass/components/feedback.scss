@@ -1,10 +1,14 @@
-.feedback__container {
+.feedback {
   @include border-radius-bottom;
   position: relative;
-  padding: 70px 25px 28px;
+  margin-top: -60px;
   background-color: $blue-dark;
-  text-align: center;
   z-index: 10;
+}
+
+.feedback__container {
+  padding: 133px 25px 28px;
+  text-align: center;
 }
 
 .feedback__title {
@@ -47,7 +51,7 @@
 
 @media (min-width: $tablet-width) {
   .feedback__container {
-    padding: 44px 75px 56px;
+    padding: 136px 75px 56px;
   }
 
   .feedback__text,
@@ -78,7 +82,7 @@
 
 @media (min-width: $desktop-width) {
   .feedback__container {
-    padding: 44px 135px 98px;
+    padding: 169px 135px 98px;
   }
 
   .feedback__text {

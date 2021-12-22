@@ -4,6 +4,8 @@
 
 .country__item {
   margin-bottom: 11px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .country__image {
@@ -126,6 +128,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    border-radius: 20px;
   }
 
   .country__image img {
