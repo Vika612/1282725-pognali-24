@@ -16,15 +16,10 @@
   padding: 0 30px 0;
 }
 
-.feedback__text,
-.feedback__note {
-  margin: 0;
-  padding: 0 35px 0;
-  color: $white-basic;
-}
-
 .feedback__text {
   margin-bottom: 27px;
+  padding: 0 35px 0;
+  color: $white-basic;
 }
 
 .feedback__text a {
@@ -47,6 +42,8 @@
 
 .feedback__note {
   margin-bottom: 18px;
+  padding: 0 20px 0;
+  color: $white-basic;
 }
 
 @media (min-width: $tablet-width) {
@@ -77,6 +74,10 @@
   .feedback__note {
     margin-bottom: 46px;
     letter-spacing: 0.01em;
+
+    br {
+      display: none;
+    }
   }
 }
 

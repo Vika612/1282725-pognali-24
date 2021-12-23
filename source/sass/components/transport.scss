@@ -7,69 +7,71 @@
 
 .transport__item {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
-  opacity: 0.15;
 
-  &--active {
+  svg {
+    opacity: 0.15;
+  }
+
+  &--active svg {
     opacity: 1;
+  }
+
+  &--plane svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  &--bus svg {
+    width: 17px;
+    height: 19px;
+  }
+
+  &--bike svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--run svg {
+    width: 21px;
+    height: 23px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 40px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    color: $white-basic;
+    background-color: $blue-tooltip;
+    border-radius: 4px;
+    display: none;
+    content: attr(data-transport);
+    z-index: 50;
   }
 
   &::before {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-repeat: no-repeat;
-    background-size: contain;
+    top: 35px;
+    width: 10px;
+    height: 10px;
+    background-color: $blue-tooltip;
+    transform: rotate(45deg);
+    display: none;
     content: "";
-  }
-
-  &--plane::before {
-    width: 21px;
-    height: 21px;
-    background-image: url("../img/transport-svg/icon-plane.svg");
-  }
-
-  &--bus::before {
-    width: 17px;
-    height: 19px;
-    background-image: url("../img/transport-svg/icon-bus.svg");
-  }
-
-  &--bike::before {
-    width: 24px;
-    height: 24px;
-    background-image: url("../img/transport-svg/icon-bicycle.svg");
-  }
-
-  &--run::before {
-    width: 21px;
-    height: 23px;
-    background-image: url("../img/transport-svg/icon-run.svg");
   }
 }
 
-@media (min-width: $tablet-width) {
-  .transport__item {
-    &--plane::before {
-      width: 23px;
-      height: 22px;
-    }
-
-    &--bus::before {
-      width: 18px;
-      height: 20px;
-    }
-
-    &--bike::before {
-      width: 25px;
-      height: 25px;
-    }
-
-    &--run::before {
-      width: 22px;
-      height: 24px;
-    }
+.transport__item:hover {
+  &::after,
+  &::before {
+    display: block;
   }
 }
