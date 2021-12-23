@@ -28,3 +28,26 @@ const header = document.querySelector('.header');
       header.classList.remove('header--scroll');
     }
   };
+
+
+  /* MODAL */
+
+const openBtn = document.querySelector('.add-profile__link');
+const closeBtn = document.querySelector('.modal__close');
+const popup = document.querySelector('.modal');
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    popup.classList.add('modal--show');
+  });
+
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    popup.classList.remove('modal--show');
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape') {
+      popup.classList.remove('modal--show');
+    }
+  });
