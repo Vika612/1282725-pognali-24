@@ -10,8 +10,12 @@
   padding: 71px 50px 82px 50px;
   background-image: url("../img/about-mobile.png");
   background-repeat: no-repeat;
-  background-size: 92% 353px;
+  background-size: 292px 353px;
   background-position: 18px 38px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 }
 
 .about-service__title {
@@ -44,6 +48,10 @@
     background-image: url("../img/about-tablet.png");
     background-size: 376px 548px;
     background-position: 98% 145px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
   }
 
   .about-service__title {
@@ -87,6 +95,10 @@
     background-image: url("../img/about-desk.png");
     background-size: 630px 665px;
     background-position: 93% 82px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desk@2x.png");
+    }
   }
 
   .about-service__title {
