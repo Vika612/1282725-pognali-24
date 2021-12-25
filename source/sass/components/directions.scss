@@ -44,6 +44,12 @@
       background-image: url("../img/flags-back.png");
       content: "";
       z-index: -1;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        &::before {
+          background-image: url("../img/flags-back@2x.png");
+        }
+      }
     }
   }
 
