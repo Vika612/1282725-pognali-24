@@ -1,0 +1,160 @@
+.tariffs {
+  @include reset-list;
+  counter-reset: rates;
+}
+
+.tariffs__item {
+  position: relative;
+  margin-bottom: 5px;
+  padding: 10px 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 1px;
+    background-color: $grey-border;
+    content: "";
+  }
+}
+
+.tariffs__item:last-child {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 1px;
+    background-color: $grey-border;
+    content: "";
+  }
+}
+
+.tariffs__service,
+.tariffs__price {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.tariffs__service {
+  margin-bottom: 9px;
+  padding-right: 14px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  counter-increment: rates;
+
+  &::before {
+    content: counter(rates);
+    font-weight: 400;
+    color: $white-basic;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    content: "";
+    z-index: -1;
+  }
+
+  &--1 {
+    &::after {
+      background-color: $orange-dark;
+    }
+  }
+
+  &--2 {
+    &::after {
+      background-color: $orange-special;
+    }
+  }
+
+  &--3 {
+    &::after {
+      background-color: $yellow-basic;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: -60px;
+      right: -35px;
+      width: 198px;
+      height: 285px;
+      background-color: $grey-dropdown;
+      border-radius: 20px;
+      content: "";
+      z-index: -1;
+    }
+  }
+
+  .tariffs__item {
+    margin-bottom: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      left: 90px;
+      width: 560px;
+    }
+  }
+
+  .tariffs__item:last-child {
+    &::after {
+      left: 90px;
+      width: 560px;
+    }
+  }
+
+  .tariffs__item p {
+    font-size: 28px;
+  }
+
+  .tariffs__service {
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 28px;
+    flex-direction: row;
+
+    &::before {
+      margin-right: 48px;
+    }
+
+    &::after {
+      left: 0;
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs {
+    padding-right: 275px;
+
+    &::after {
+      position: absolute;
+      top: -50px;
+      right: 115px;
+      width: 446px;
+      height: 300px;
+      background-color: $grey-dropdown;
+      border-radius: 20px;
+      content: "";
+      z-index: -1;
+    }
+  }
+}

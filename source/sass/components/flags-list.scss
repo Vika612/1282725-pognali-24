@@ -1,5 +1,11 @@
 .flags-list {
   @include reset-list;
+  max-width: 270px;
+}
+
+.flags-list__item {
+  width: 35px;
+  height: 25px;
 }
 
 .flags-list__item span {

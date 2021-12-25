@@ -1,6 +1,12 @@
-.logo {
-  position: relative;
+.logo--header {
+  position: absolute;
+  top: 20px;
+  left: 26px;
   z-index: 1;
+}
+
+.logo--footer {
+  position: relative;
 }
 
 .logo__link img {
@@ -17,9 +23,9 @@
 }
 
 @media (min-width: $tablet-width) {
-  .logo {
-    position: relative;
-    width: 156px;
+  .logo--header {
+    top: 45px;
+    left: 36px;
   }
 
   .logo__link img {
@@ -32,7 +38,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -15px;
+    right: -5px;
     width: 106px;
     height: 16px;
   }
@@ -41,6 +47,7 @@
 @media (min-width: $desktop-width) {
   .logo {
     width: 200px;
+    left: 55px;
   }
 
   .logo__link img {
@@ -49,9 +56,9 @@
   }
 
   .logo__link svg {
-    right: 0;
+    right: -6px;
     width: 128px;
-    height: 19px;
+    height: 20px;
 
     &--header svg {
       fill: $white-basic;

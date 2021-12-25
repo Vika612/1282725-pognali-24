@@ -1,7 +1,5 @@
 .user-menu {
   @include reset-list;
-  margin-top: 52px;
-  margin-bottom: 40px;
 }
 
 .user-menu__link {
@@ -13,6 +11,7 @@
   line-height: 1.1;
   color: $blue-dark-main;
   text-transform: uppercase;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -33,6 +32,10 @@
   }
 }
 
+.user-menu__link--feedback {
+  color: $yellow-basic;
+}
+
 .user-menu__link:hover svg,
 .user-menu__link:focus svg {
   fill: $orange-special;
@@ -44,14 +47,14 @@
 
 .user-menu__link svg {
   position: absolute;
-  top: 17px;
+  top: 14px;
   left: 14px;
   fill: $yellow-basic;
 }
 
 .user-menu__link--phone svg {
-  width: 16px;
-  height: 14px;
+  width: 18px;
+  height: 17px;
 }
 
 .user-menu__link--mail svg {
@@ -60,10 +63,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .user-menu {
-    margin-bottom: 125px;
-  }
-
   .user-menu__link {
     font-size: 28px;
 
@@ -94,7 +93,30 @@
 }
 
 @media (min-width: $desktop-width) {
-  .user-menu {
-    display: none;
+  .user-menu--feedback {
+    .user-menu__link--phone svg {
+      top: 23px;
+      left: 27px;
+      width: 36px;
+      height: 34px;
+    }
+
+    .user-menu__link--mail svg {
+      top: 29px;
+      left: 26px;
+      width: 36px;
+      height: 25px;
+    }
+  }
+
+  .user-menu__link--feedback {
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .user-menu__link--feedback span {
+    margin-left: 29px;
   }
 }

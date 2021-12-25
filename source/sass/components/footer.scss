@@ -6,8 +6,7 @@
 
 .footer__container {
   @include border-radius-top;
-  padding-top: 37px;
-  padding-bottom: 20px;
+  padding: 37px 25px 20px;
   background-color: $white-basic;
 }
 
@@ -49,8 +48,7 @@
 
 @media (min-width: $tablet-width) {
   .footer__container {
-    padding-top: 46px;
-    padding-bottom: 32px;
+    padding: 46px 40px 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +66,6 @@
 
 @media (min-width: $desktop-width) {
   .footer__container {
-    padding-top: 47px;
-    padding-bottom: 43px;
+    padding: 47px 60px 43px 0;
   }
 }

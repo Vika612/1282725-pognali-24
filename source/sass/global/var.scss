@@ -12,6 +12,8 @@ $grey-tariffe: #e6e8f1;
 $grey-light: #dfe3f0;
 $grey-dark: #d4d9eb;
 $grey: #cccccc;
+$grey-border: #e1e3e9;
+$grey-btn: #f3f4f8;
 
 /* BLUE */
 
@@ -21,6 +23,9 @@ $blue-dark-main: #192144;
 $blue-dark-deep: #161c35;
 $blue-btn: #1d2e5b;
 $blue-bg: #121936;
+$blue-decor: #141b3b;
+$blue-link: #132576;
+$blue-tooltip: #101d41;
 
 /* YELLOW / ORANGE */
 
@@ -35,4 +40,5 @@ $orange-deep-dark: #f26926;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
-$retina-dppx: 2dppx;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

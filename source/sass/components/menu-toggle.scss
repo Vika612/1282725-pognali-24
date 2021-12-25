@@ -1,6 +1,6 @@
 .menu-toggle {
   position: absolute;
-  top: 4px;
+  top: 24px;
   right: 26px;
   width: 25px;
   height: 11px;
@@ -9,6 +9,7 @@
   cursor: pointer;
   z-index: 3;
   transition: 0.3s ease;
+  display: none;
 
   &::before,
   &::after {
@@ -31,7 +32,7 @@
 }
 
 .menu-toggle.active {
-  top: 0;
+  top: 27px;
   height: 20px;
 
   &::before {
@@ -48,8 +49,8 @@
 @media (min-width: $tablet-width) {
   .menu-toggle,
   .menu-toggle.active {
-    top: 13px;
-    left: 48%;
+    top: 60px;
+    left: 48.5%;
   }
 }
 

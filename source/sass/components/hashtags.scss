@@ -1,10 +1,26 @@
 .hashtags {
   @include reset-list;
+  max-width: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.hashtags__link {
+.hashtags__item {
+  margin-right: 5px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.2;
   color: $grey-special;
+}
+
+@media (min-width: $tablet-width) {
+  .hashtags {
+    max-width: 230px;
+  }
+
+  .hashtags__item {
+    font-size: 20px;
+    line-height: 1.1;
+  }
 }
