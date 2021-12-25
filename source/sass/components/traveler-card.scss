@@ -3,7 +3,7 @@
   max-width: 285px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .traveler-card__img {
@@ -95,7 +95,7 @@
   }
 
   .traveler-card__info {
-    padding: 33px 20px 25px;
+    padding: 33px 20px 21px;
     border-radius: 0 0 20px 20px;
   }
 
