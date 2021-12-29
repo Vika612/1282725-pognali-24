@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
-  <header class="header">
-    <div class="header__container container">
+  <header class="header header--inner">
+    <div class="header__container">
       <div class="header__logo logo logo--header">
         <a class="logo__link logo__link--header" href="index.html">
           <picture>
@@ -100,9 +100,15 @@
 
     <section class="filter">
       <div class="filter__container container">
-        <h2 class="filter__title">Фильтрация по странам:</h2>
-        <button class="filter__toggle" aria-label="Открыть/закрыть фильтр"></button>
-        <div class="filter__direction">
+        <div class="filter__wrapper">
+          <button class="filter__toggle filter-toggle" aria-label="Открыть/закрыть фильтр">
+            <span></span>
+          </button>
+          <h2 class="filter__title">
+            <span class="filter__title-filter">Фильтрация по странам:</span>
+            <span class="filter__title-show">Показать все</span>
+            <span class="filter__title-close">Свернуть</span>
+          </h2>
           <ul class="filter__continents continents">
             <li class="continents__item">
               <a class="continents__link continents__link--active" href="#">Европа</a>
@@ -117,40 +123,38 @@
               <a class="continents__link" href="#">Острова</a>
             </li>
           </ul>
-          <button class="filter__toggle filter-toggle" aria-label="Открыть/закрыть фильтр">
-            <span>Показать все</span>
-            <span>Свернуть</span>
-          </button>
+        </div>
+        <div class="filter__direction">
           <div class="filter__dropdown-filter dropdown-filter">
             <ul class="dropdown-filter__alphabet alphabet-filter">
-              <li><a href="#!" aria-label="Открыть список стран на букву А">А</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Б">Б</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву В">В</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Г">Г</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Д">Д</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Е">Е</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву З">З</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву И">И</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву К">К</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Л">Л</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву М">М</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Н">Н</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву О">О</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву П">П</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Р">Р</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву С">С</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Т">Т</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву У">У</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ф">Ф</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Х">Х</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ч">Ч</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ш">Ш</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Э">Э</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ю">Ю</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Я">Я</a></li>
+              <li><a class="alphabet-filter__link alphabet-filter__link--active" href="#!" aria-label="Открыть список стран на букву А">А</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Б">Б</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву В">В</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Г">Г</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Д">Д</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Е">Е</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву З">З</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву И">И</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву К">К</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Л">Л</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву М">М</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Н">Н</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву О">О</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву П">П</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Р">Р</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву С">С</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Т">Т</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву У">У</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Ф">Ф</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Х">Х</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Ч">Ч</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Ш">Ш</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Э">Э</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Ю">Ю</a></li>
+              <li><a class="alphabet-filter__link" href="#!" aria-label="Открыть список стран на букву Я">Я</a></li>
             </ul>
             <ul class="dropdown-filter__countries countries-filter">
-              <li class="countries-filter__item">
+              <li class="countries-filter__item countries-filter__item--open">
                 <h4 class="countries-filter__subtitle">A</h4>
                   <ul class="countries-filter__sublist country-select">
                     <li><a href="#!">Австралия</a></li>

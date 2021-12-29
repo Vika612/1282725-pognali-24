@@ -1,0 +1,66 @@
+.alphabet-filter {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  border: 0.5px solid $grey-alphabet;
+}
+
+.alphabet-filter__link {
+  padding: 12px 16px 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: $blue-light;
+  background-color: $white-basic;
+  border: 0.5px solid $grey-alphabet;
+
+  &:hover,
+  &:focus {
+    border: 0.5px solid $blue-light;
+  }
+
+  &:active,
+  &--active {
+    color: $white-basic;
+    background-color: $blue-light;
+    border: 0.5px solid $blue-light;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .alphabet-filter {
+    flex-basis: 58%;
+    gap: 24px 27px;
+    border: none;
+  }
+
+  .alphabet-filter__link {
+    padding: 0;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1;
+    justify-content: flex-start;
+    color: $blue-dark-main;
+    opacity: 0.3;
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      border: none;
+      opacity: 0.6;
+    }
+
+    &:active,
+    &--active {
+      background-color: transparent;
+      border: none;
+      color: $blue-dark-main;
+      opacity: 1;
+    }
+  }
+}

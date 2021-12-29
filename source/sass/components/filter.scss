@@ -1,11 +1,125 @@
-.filter__container {
+.filter {
+  @include border-radius-bottom;
   background-color: $grey-dropdown;
 }
 
+.filter__container {
+  position: relative;
+  margin: -20px 0 20px;
+  padding: 43px 25px 15px;
+}
+
+.filter__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .filter__title {
+  margin: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1;
   color: $blue-dark-main;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.filter__title-filter {
+  position: relative;
+  margin-right: 24px;
+  padding-left: 27px;
+  display: block;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/filter.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+  }
+}
+
+.filter__title-show,
+.filter__title-close {
+  display: none;
+}
+
+.filter__continents {
+  flex-basis: 100%;
+  margin-top: 33px;
+  padding: 0 25px 0;
+  // display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__container {
+    margin-bottom: 40px;
+    padding: 83px 72px 55px 72px;
+  }
+
+  .filter__title {
+    font-size: 20px;
+  }
+
+  .filter__title-filter {
+    display: none;
+  }
+
+  .filter__title-show {
+    margin-right: 25px;
+    display: block;
+  }
+
+  .filter__continents {
+    max-width: 395px;
+    margin: 0 43px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    background-color: $grey-basic;
+  }
+
+  .filter__container {
+    padding: 80px 60px 76px;
+  }
+
+  .filter__wrapper {
+    padding: 0 20px 0;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .filter__title-filter {
+    margin-right: 30px;
+    padding-left: 45px;
+    display: block;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 23px;
+      height: 15px;
+    }
+  }
+
+  .filter__title-show {
+    display: none;
+  }
+
+  .filter__continents {
+    max-width: 900px;
+    margin: 0;
+  }
 }

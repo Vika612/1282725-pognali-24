@@ -1,0 +1,77 @@
+.filter__toggle {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filter__toggle span {
+  position: absolute;
+  top: 4px;
+  width: 3px;
+  height: 3px;
+  display: block;
+  background-color: $blue-dark-main;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: $blue-dark-main;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &::before {
+    left: -7px;
+  }
+
+  &::after {
+    left: 7px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter__toggle {
+    width: 30px;
+  }
+
+  .filter__toggle span {
+    width: 6px;
+    height: 6px;
+
+    &::before,
+    &::after {
+      top: 0;
+      width: 6px;
+      height: 6px;
+    }
+
+    &::before {
+      left: -12px;
+    }
+
+    &::after {
+      left: 12px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__toggle {
+    display: none;
+  }
+}
