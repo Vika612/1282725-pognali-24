@@ -4,10 +4,10 @@
 
 .countries-filter__item {
   display: none;
+}
 
-  &--open {
-    display: block;
-  }
+.countries-filter__item.active {
+  display: block;
 }
 
 .countries-filter__subtitle {

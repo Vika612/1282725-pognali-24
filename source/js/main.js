@@ -17,6 +17,27 @@ if (menuToggle) {
   });
 }
 
+/* TABS */
+
+const tabNavs = document.querySelectorAll('.alphabet-filter__link');
+
+tabNavs.forEach((tabNav) => {
+
+  tabNav.addEventListener('click', (e) => {
+    e.preventDefault();
+    const activeTabAttr = e.target.dataset.tab;
+
+    document.querySelector('.alphabet-filter__link.active').classList.remove('active');
+    document.querySelector('.countries-filter__item.active').classList.remove('active');
+
+    tabNav.classList.add('active');
+
+    const activeScreen = `.countries-filter__item--${activeTabAttr}`;
+
+    document.querySelector(activeScreen).classList.add('active');
+  });
+});
+
 /* SCROLL */
 
 const header = document.querySelector('.header');
