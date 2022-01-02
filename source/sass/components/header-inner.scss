@@ -8,6 +8,7 @@
   background-color: $blue-dark;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  z-index: 20;
 
   &::after {
     position: absolute;

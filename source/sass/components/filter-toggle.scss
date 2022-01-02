@@ -1,7 +1,11 @@
-.filter__toggle {
-  position: relative;
+.filter-toggle {
+  position: absolute;
+  top: 45px;
+  right: 25px;
   width: 20px;
-  height: 16px;
+  height: 20px;
+  padding: 0;
+  display: flex;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -14,64 +18,58 @@
   &:active {
     opacity: 0.3;
   }
-}
 
-.filter__toggle span {
-  position: absolute;
-  top: 4px;
-  width: 3px;
-  height: 3px;
-  display: block;
-  background-color: $blue-dark-main;
-  border-radius: 50%;
-
-  &::before,
   &::after {
     position: absolute;
-    width: 3px;
-    height: 3px;
-    background-color: $blue-dark-main;
-    border-radius: 50%;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/open-filter.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
     content: "";
   }
+}
 
-  &::before {
-    left: -7px;
-  }
-
-  &::after {
-    left: 7px;
-  }
+.filter-toggle.active::after {
+  top: 0;
+  right: 0;
+  height: 14px;
+  background-image: url("../img/close.svg");
 }
 
 @media (min-width: $tablet-width) {
-  .filter__toggle {
-    width: 30px;
+  .filter-toggle {
+    top: 115px;
+    right: 72px;
+    width: 176px;
+
+    &::after {
+      top: 4px;
+      right: 0;
+      width: 30px;
+    }
   }
 
-  .filter__toggle span {
-    width: 6px;
-    height: 6px;
+  .filter-toggle::before {
+    position: absolute;
+    top: -3px;
+    left: -10px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1;
+    text-transform: uppercase;
+    content: "показать все";
+  }
 
-    &::before,
-    &::after {
-      top: 0;
-      width: 6px;
-      height: 6px;
-    }
-
-    &::before {
-      left: -12px;
-    }
-
-    &::after {
-      left: 12px;
-    }
+  .filter-toggle.active::before {
+    content: "свернуть";
   }
 }
 
 @media (min-width: $desktop-width) {
-  .filter__toggle {
-    display: none;
+  .filter-toggle {
+    right: 75px;
   }
 }
