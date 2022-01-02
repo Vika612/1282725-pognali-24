@@ -31,6 +31,28 @@ if (menuToggle) {
 }
 
 
+/* LEVEL */
+
+const progressBars = document.querySelectorAll('.progress__level');
+
+function setProgress (element) {
+  const radius = element.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+  const percent = element.dataset.level;
+
+  element.style.strokeDasharray = `${circumference}`;
+
+  const offset = circumference - circumference * percent / 100;
+  element.style.strokeDashoffset = offset;
+}
+
+if (progressBars) {
+  for (let i = 0; i < progressBars.length; i++) {
+    setProgress(progressBars[i]);
+  }
+}
+
+
 /* TABS */
 
 const tabNavs = document.querySelectorAll('.alphabet-filter__link');

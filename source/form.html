@@ -103,14 +103,14 @@
         <section class="profile-form">
           <div class="profile-form__container container">
             <h2 class="visually-hidden">Немного о себе</h2>
-            <div class="profile-form__progress progress">
+            <div class="profile-form__progress progress progress--form">
               <h3 class="profile-form__subtitle visually-hidden">левел</h3>
               <div class="progress__result">
-                <span>80</span>
-                <span>level</span>
+                <span class="progress__result-num progress__result-num--form">80</span>
+                <span class="progress__result-note progress__result-note--form">level</span>
               </div>
-              <svg class="progress__ring" width="100" height="100">
-                <circle stroke="#FF8D30" stroke-width="4" cx="50" cy="50" r="47" fill="transparent"/>
+              <svg width="100" height="100" viewbox="0 0 100 100">
+                <circle class="progress__level" cx="50" cy="50" r="47" data-level="80"/>
               </svg>
             </div>
             <div class="profile-form__avatar">
@@ -121,8 +121,8 @@
               <label for="hashtags">тэги</label>
               <textarea name="hashtags" id="hashtags">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
+            <h3 class="profile-form__subtitle">транспорт</h3>
             <div class="profile-form__transport">
-              <h3 class="profile-form__subtitle">транспорт</h3>
               <ul class="profile-form__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <input type="checkbox" name="plane" id="plane">
