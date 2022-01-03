@@ -3,15 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="путешествие, попутчики, направления">
     <title>HTML Academy: Погнали</title>
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
-  <header class="header">
-    <div class="header__container container">
+  <header class="header header--inner">
+    <div class="header__container">
       <div class="header__logo logo logo--header">
         <a class="logo__link logo__link--header" href="index.html">
-          <img src="img/logo_full.svg" width="166" height="42" alt="">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <img src="img/logo-tablet.svg" width="166" height="42" alt="Логотип">
+          </picture>
           <svg width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M94.9113 6.18874C95.6371 5.72747 96 5.01634 96 4.05535C96 2.79967 95.4774 1.81306 94.4322 1.09552C93.4161 0.365174 92.2185 0 90.8394 0C89.4894 0 88.2555 0.397207 87.1378 1.19162C86.0345 1.97322 85.4829 3.01749 85.4829 4.32443C85.4829 4.81133 85.6353 5.21494 85.9402 5.53527C86.245 5.84278 86.6805 5.99654 87.2467 5.99654C87.7983 5.99654 88.2193 5.84278 88.5096 5.53527C88.8144 5.21494 88.9668 4.81133 88.9668 4.32443C88.9378 3.95285 89.0612 3.57486 89.337 3.19047C89.6128 2.79326 90.1136 2.59466 90.8394 2.59466C91.4491 2.60747 91.8846 2.76123 92.1459 3.05593C92.4217 3.35063 92.5451 3.64533 92.5161 3.94003C92.5161 4.14504 92.4435 4.35005 92.2983 4.55506C92.1532 4.76007 92.0008 4.92024 91.8411 5.03556C91.6959 5.15088 91.4564 5.31745 91.1225 5.53527C90.7886 5.75309 90.5564 5.90685 90.4257 5.99654C89.6709 6.54751 89.2935 7.27785 89.2935 8.18758C89.2935 8.63604 89.4531 9.01403 89.7725 9.32155C90.1064 9.61625 90.5491 9.7636 91.1007 9.7636C91.6524 9.7636 92.0878 9.61625 92.4072 9.32155C92.7411 9.01403 92.908 8.63604 92.908 8.18758C92.908 7.99539 92.9443 7.816 93.0169 7.64943C93.0895 7.48286 93.2056 7.32911 93.3653 7.18816C93.5395 7.04722 93.6846 6.9319 93.8008 6.84221C93.9314 6.75252 94.1201 6.6372 94.3669 6.49625C94.6282 6.35531 94.8097 6.2528 94.9113 6.18874Z"/>
             <path d="M76.3053 10.2354L80.1618 5.46351C80.5573 4.88748 81.0941 4.56674 81.7722 4.50128C82.4502 4.42273 83.0435 4.58638 83.5521 4.99221C84.0606 5.39805 84.3008 5.94135 84.2725 6.62211V13.4559C84.2725 13.8879 84.103 14.2545 83.764 14.5556C83.4391 14.8436 83.0435 14.9876 82.5774 14.9876C82.1112 14.9876 81.7086 14.8436 81.3696 14.5556C81.0447 14.2545 80.8822 13.8879 80.8822 13.4559V9.21424L77.0257 13.9861C76.6302 14.5622 76.0934 14.8829 75.4153 14.9484C74.7373 15.0269 74.144 14.8633 73.6354 14.4574C73.1269 14.0516 72.8867 13.5083 72.915 12.8275V6.01336C72.915 5.58133 73.0774 5.21477 73.4023 4.91367C73.7413 4.61256 74.144 4.46201 74.6101 4.46201C75.0763 4.46201 75.4718 4.61256 75.7967 4.91367C76.1358 5.21477 76.3053 5.58133 76.3053 6.01336V10.2354Z"/>
@@ -92,348 +99,343 @@
     </header>
 
     <section class="filter">
-      <div class="filter__container container">
+      <div class="filter__container">
         <h2 class="filter__title">Фильтрация по странам:</h2>
-        <button class="filter__toggle" aria-label="Открыть/закрыть фильтр"></button>
-        <div class="filter__direction">
-          <ul class="filter__continents continents">
-            <li class="continents__item">
-              <a class="continents__link continents__link--active" href="#">Европа</a>
+        <button class="filter__toggle filter-toggle" aria-label="Открыть/закрыть фильтр">
+        </button>
+        <ul class="filter__continents continents">
+          <li class="continents__item">
+            <a class="continents__link continents__link--active" href="#">Европа</a>
+          </li>
+          <li class="continents__item">
+            <a class="continents__link" href="#">Азия</a>
+          </li>
+          <li class="continents__item">
+            <a class="continents__link" href="#">Америка</a>
+          </li>
+          <li class="continents__item">
+            <a class="continents__link" href="#">Острова</a>
+          </li>
+        </ul>
+        <div class="filter__dropdown-filter dropdown-filter">
+          <ul class="dropdown-filter__alphabet alphabet-filter">
+            <li><a class="alphabet-filter__link active" data-tab="А" href="#!" aria-label="Открыть список стран на букву А">А</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Б" href="#!" aria-label="Открыть список стран на букву Б">Б</a></li>
+            <li><a class="alphabet-filter__link" data-tab="В"  href="#!" aria-label="Открыть список стран на букву В">В</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Г" href="#!" aria-label="Открыть список стран на букву Г">Г</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Д" href="#!" aria-label="Открыть список стран на букву Д">Д</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Е" href="#!" aria-label="Открыть список стран на букву Е">Е</a></li>
+            <li><a class="alphabet-filter__link" data-tab="З" href="#!" aria-label="Открыть список стран на букву З">З</a></li>
+            <li><a class="alphabet-filter__link" data-tab="И" href="#!" aria-label="Открыть список стран на букву И">И</a></li>
+            <li><a class="alphabet-filter__link" data-tab="К" href="#!" aria-label="Открыть список стран на букву К">К</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Л" href="#!" aria-label="Открыть список стран на букву Л">Л</a></li>
+            <li><a class="alphabet-filter__link" data-tab="М" href="#!" aria-label="Открыть список стран на букву М">М</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Н" href="#!" aria-label="Открыть список стран на букву Н">Н</a></li>
+            <li><a class="alphabet-filter__link" data-tab="О" href="#!" aria-label="Открыть список стран на букву О">О</a></li>
+            <li><a class="alphabet-filter__link" data-tab="П" href="#!" aria-label="Открыть список стран на букву П">П</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Р" href="#!" aria-label="Открыть список стран на букву Р">Р</a></li>
+            <li><a class="alphabet-filter__link" data-tab="С" href="#!" aria-label="Открыть список стран на букву С">С</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Т" href="#!" aria-label="Открыть список стран на букву Т">Т</a></li>
+            <li><a class="alphabet-filter__link" data-tab="У" href="#!" aria-label="Открыть список стран на букву У">У</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Ф" href="#!" aria-label="Открыть список стран на букву Ф">Ф</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Х" href="#!" aria-label="Открыть список стран на букву Х">Х</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Ч" href="#!" aria-label="Открыть список стран на букву Ч">Ч</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Ш" href="#!" aria-label="Открыть список стран на букву Ш">Ш</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Э" href="#!" aria-label="Открыть список стран на букву Э">Э</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Ю" href="#!" aria-label="Открыть список стран на букву Ю">Ю</a></li>
+            <li><a class="alphabet-filter__link" data-tab="Я" href="#!" aria-label="Открыть список стран на букву Я">Я</a></li>
+          </ul>
+          <ul class="dropdown-filter__countries countries-filter">
+            <li class="countries-filter__item countries-filter__item--А active">
+              <h4 class="countries-filter__subtitle">A</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Австралия</a></li>
+                  <li><a href="#!">Австрия</a></li>
+                  <li><a href="#!">Азербайджан</a></li>
+                  <li><a href="#!">Албания</a></li>
+                  <li><a href="#!">Алжир</a></li>
+                  <li><a href="#!">Ангола</a></li>
+                  <li><a href="#!">Андорра</a></li>
+                  <li><a href="#!">Антигуа и Барбуда</a></li>
+                  <li><a href="#!">Аргентина</a></li>
+                  <li><a href="#!">Армения</a></li>
+                  <li><a href="#!">Афганистан</a></li>
+                </ul>
             </li>
-            <li class="continents__item">
-              <a class="continents__link" href="#">Азия</a>
+            <li class="countries-filter__item countries-filter__item--Б">
+              <h4 class="countries-filter__subtitle">Б</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Багамские Острова</a></li>
+                  <li><a href="#!">Бангладеш</a></li>
+                  <li><a href="#!">Барбадос</a></li>
+                  <li><a href="#!">Бахрейн</a></li>
+                  <li><a href="#!">Белоруссия</a></li>
+                  <li><a href="#!">Белиз</a></li>
+                  <li><a href="#!">Бельгия</a></li>
+                  <li><a href="#!">Бенин</a></li>
+                  <li><a href="#!">Болгария</a></li>
+                  <li><a href="#!">Боливия</a></li>
+                  <li><a href="#!">Босния и Герцеговина</a></li>
+                  <li><a href="#!">Ботсвана</a></li>
+                  <li><a href="#!">Бразилия</a></li>
+                  <li><a href="#!">Бруней</a></li>
+                  <li><a href="#!">Буркина-Фасо</a></li>
+                  <li><a href="#!">Бурунди</a></li>
+                  <li><a href="#!">Бутан</a></li>
+                </ul>
             </li>
-            <li class="continents__item">
-              <a class="continents__link" href="#">Америка</a>
+            <li class="countries-filter__item countries-filter__item--В">
+              <h4 class="countries-filter__subtitle">В</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Вануату</a></li>
+                  <li><a href="#!">Великобритания</a></li>
+                  <li><a href="#!">Венгрия</a></li>
+                  <li><a href="#!">Венесуэла</a></li>
+                  <li><a href="#!">Восточный Тимор</a></li>
+                  <li><a href="#!">Вьетнам</a></li>
+                </ul>
             </li>
-            <li class="continents__item">
-              <a class="continents__link" href="#">Острова</a>
+            <li class="countries-filter__item countries-filter__item--Г">
+              <h4 class="countries-filter__subtitle">Г</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Габон</a></li>
+                  <li><a href="#!">Гаити</a></li>
+                  <li><a href="#!">Гайана</a></li>
+                  <li><a href="#!">Гамбия</a></li>
+                  <li><a href="#!">Гана</a></li>
+                  <li><a href="#!">Гватемала</a></li>
+                  <li><a href="#!">Гвинея</a></li>
+                  <li><a href="#!">Гвинея-Бисау</a></li>
+                  <li><a href="#!">Германия</a></li>
+                  <li><a href="#!">Гондурас</a></li>
+                  <li><a href="#!">Гренада</a></li>
+                  <li><a href="#!">Греция</a></li>
+                  <li><a href="#!">Грузия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Д">
+              <h4 class="countries-filter__subtitle">Д</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Дания</a></li>
+                  <li><a href="#!">Джибути</a></li>
+                  <li><a href="#!">Доминика</a></li>
+                  <li><a href="#!">Доминикана</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Е">
+              <h4 class="countries-filter__subtitle">Е</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Египет</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--З">
+              <h4 class="countries-filter__subtitle">З</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Замбия</a></li>
+                  <li><a href="#!">Зимбабве</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--И">
+              <h4 class="countries-filter__subtitle">И</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Израиль</a></li>
+                  <li><a href="#!">Индия</a></li>
+                  <li><a href="#!">Индонезия</a></li>
+                  <li><a href="#!">Иордания</a></li>
+                  <li><a href="#!">Ирак</a></li>
+                  <li><a href="#!">Иран</a></li>
+                  <li><a href="#!">Ирландия</a></li>
+                  <li><a href="#!">Исландия</a></li>
+                  <li><a href="#!">Испания</a></li>
+                  <li><a href="#!">Италия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--К">
+              <h4 class="countries-filter__subtitle">К</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Кабо-Верде</a></li>
+                  <li><a href="#!">Казахстан</a></li>
+                  <li><a href="#!">Камбоджа</a></li>
+                  <li><a href="#!">Камерун</a></li>
+                  <li><a href="#!">Канада</a></li>
+                  <li><a href="#!">Катар</a></li>
+                  <li><a href="#!">Кения</a></li>
+                  <li><a href="#!">Кипр</a></li>
+                  <li><a href="#!">Киргизия</a></li>
+                  <li><a href="#!">Кирибати</a></li>
+                  <li><a href="#!">Китай</a></li>
+                  <li><a href="#!">Колумбия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Л">
+              <h4 class="countries-filter__subtitle">Л</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Лаос</a></li>
+                  <li><a href="#!">Латвия</a></li>
+                  <li><a href="#!">Лесото</a></li>
+                  <li><a href="#!">Либерия</a></li>
+                  <li><a href="#!">Ливан</a></li>
+                  <li><a href="#!">Ливия</a></li>
+                  <li><a href="#!">Литва</a></li>
+                  <li><a href="#!">Лихтенштейн</a></li>
+                  <li><a href="#!">Люксембург</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--М">
+              <h4 class="countries-filter__subtitle">М</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Маврикий</a></li>
+                  <li><a href="#!">Мавритания</a></li>
+                  <li><a href="#!">Мадагаскар</a></li>
+                  <li><a href="#!">Малави</a></li>
+                  <li><a href="#!">Малайзия</a></li>
+                  <li><a href="#!">Мали</a></li>
+                  <li><a href="#!">Мальдивы</a></li>
+                  <li><a href="#!">Мальта</a></li>
+                  <li><a href="#!">Марокко</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Н">
+              <h4 class="countries-filter__subtitle">Н</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Намибия</a></li>
+                  <li><a href="#!">Науру</a></li>
+                  <li><a href="#!">Непал</a></li>
+                  <li><a href="#!">Нигер</a></li>
+                  <li><a href="#!">Нигерия</a></li>
+                  <li><a href="#!">Нидерланды</a></li>
+                  <li><a href="#!">Никарагуа</a></li>
+                  <li><a href="#!">Новая Зеландия</a></li>
+                  <li><a href="#!">Норвегия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--О">
+              <h4 class="countries-filter__subtitle">О</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">ОАЭ</a></li>
+                  <li><a href="#!">Оман</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--П">
+              <h4 class="countries-filter__subtitle">П</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Пакистан</a></li>
+                  <li><a href="#!">Палау</a></li>
+                  <li><a href="#!">Панама</a></li>
+                  <li><a href="#!">Папуа - Новая Гвинея</a></li>
+                  <li><a href="#!">Парагвай</a></li>
+                  <li><a href="#!">Перу</a></li>
+                  <li><a href="#!">Польша</a></li>
+                  <li><a href="#!">Португалия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Р">
+              <h4 class="countries-filter__subtitle">Р</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Руанда</a></li>
+                  <li><a href="#!">Румыния</a></li>
+                  <li><a href="#!">Россия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--С">
+              <h4 class="countries-filter__subtitle">C</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Сальвадор</a></li>
+                  <li><a href="#!">Самоа</a></li>
+                  <li><a href="#!">Сан-Марино</a></li>
+                  <li><a href="#!">Саудовская Аравия</a></li>
+                  <li><a href="#!">Сейшелы</a></li>
+                  <li><a href="#!">Сенегал</a></li>
+                  <li><a href="#!">Сербия</a></li>
+                  <li><a href="#!">Сингапур</a></li>
+                  <li><a href="#!">Сирия</a></li>
+                  <li><a href="#!">Словакия</a></li>
+                  <li><a href="#!">Словения</a></li>
+                  <li><a href="#!">США</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Т">
+              <h4 class="countries-filter__subtitle">Т</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Таджикистан</a></li>
+                  <li><a href="#!">Таиланд</a></li>
+                  <li><a href="#!">Танзания</a></li>
+                  <li><a href="#!">Того</a></li>
+                  <li><a href="#!">Тонга</a></li>
+                  <li><a href="#!">Тринидад и Тобаго</a></li>
+                  <li><a href="#!">Тувалу</a></li>
+                  <li><a href="#!">Тунис</a></li>
+                  <li><a href="#!">Туркмения</a></li>
+                  <li><a href="#!">Турция</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--У">
+              <h4 class="countries-filter__subtitle">У</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Уганда</a></li>
+                  <li><a href="#!">Узбекистан</a></li>
+                  <li><a href="#!">Украина</a></li>
+                  <li><a href="#!">Уругвай</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Ф">
+              <h4 class="countries-filter__subtitle">Ф</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Фиджи</a></li>
+                  <li><a href="#!">Филиппины</a></li>
+                  <li><a href="#!">Финляндия</a></li>
+                  <li><a href="#!">Франция</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Х">
+              <h4 class="countries-filter__subtitle">Х</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Хорватия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Ч">
+              <h4 class="countries-filter__subtitle">Ч</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Чад</a></li>
+                  <li><a href="#!">Черногория</a></li>
+                  <li><a href="#!">Чехия</a></li>
+                  <li><a href="#!">Чили</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Ш">
+              <h4 class="countries-filter__subtitle">Ш</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Швейцария</a></li>
+                  <li><a href="#!">Швеция</a></li>
+                  <li><a href="#!">Шри-Ланка</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Э">
+              <h4 class="countries-filter__subtitle">Э</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Эквадор</a></li>
+                  <li><a href="#!">Эритрея</a></li>
+                  <li><a href="#!">Эсватини</a></li>
+                  <li><a href="#!">Эстония</a></li>
+                  <li><a href="#!">Эфиопия</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Ю">
+              <h4 class="countries-filter__subtitle">Ю</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">ЮАР</a></li>
+                  <li><a href="#!">Южный Судан</a></li>
+                </ul>
+            </li>
+            <li class="countries-filter__item countries-filter__item--Я">
+              <h4 class="countries-filter__subtitle">Я</h4>
+                <ul class="countries-filter__sublist country-select">
+                  <li><a href="#!">Ямайка</a></li>
+                  <li><a href="#!">Япония</a></li>
+                </ul>
             </li>
           </ul>
-          <button class="filter__toggle filter-toggle" aria-label="Открыть/закрыть фильтр">
-            <span>Показать все</span>
-            <span>Свернуть</span>
-          </button>
-          <div class="filter__dropdown-filter dropdown-filter">
-            <ul class="dropdown-filter__alphabet alphabet-filter">
-              <li><a href="#!" aria-label="Открыть список стран на букву А">А</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Б">Б</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву В">В</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Г">Г</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Д">Д</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Е">Е</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву З">З</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву И">И</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву К">К</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Л">Л</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву М">М</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Н">Н</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву О">О</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву П">П</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Р">Р</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву С">С</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Т">Т</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву У">У</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ф">Ф</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Х">Х</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ч">Ч</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ш">Ш</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Э">Э</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Ю">Ю</a></li>
-              <li><a href="#!" aria-label="Открыть список стран на букву Я">Я</a></li>
-            </ul>
-            <ul class="dropdown-filter__countries countries-filter">
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">A</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Австралия</a></li>
-                    <li><a href="#!">Австрия</a></li>
-                    <li><a href="#!">Азербайджан</a></li>
-                    <li><a href="#!">Албания</a></li>
-                    <li><a href="#!">Алжир</a></li>
-                    <li><a href="#!">Ангола</a></li>
-                    <li><a href="#!">Андорра</a></li>
-                    <li><a href="#!">Антигуа и Барбуда</a></li>
-                    <li><a href="#!">Аргентина</a></li>
-                    <li><a href="#!">Армения</a></li>
-                    <li><a href="#!">Афганистан</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Б</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Багамские Острова</a></li>
-                    <li><a href="#!">Бангладеш</a></li>
-                    <li><a href="#!">Барбадос</a></li>
-                    <li><a href="#!">Бахрейн</a></li>
-                    <li><a href="#!">Белоруссия</a></li>
-                    <li><a href="#!">Белиз</a></li>
-                    <li><a href="#!">Бельгия</a></li>
-                    <li><a href="#!">Бенин</a></li>
-                    <li><a href="#!">Болгария</a></li>
-                    <li><a href="#!">Боливия</a></li>
-                    <li><a href="#!">Босния и Герцеговина</a></li>
-                    <li><a href="#!">Ботсвана</a></li>
-                    <li><a href="#!">Бразилия</a></li>
-                    <li><a href="#!">Бруней</a></li>
-                    <li><a href="#!">Буркина-Фасо</a></li>
-                    <li><a href="#!">Бурунди</a></li>
-                    <li><a href="#!">Бутан</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">В</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Вануату</a></li>
-                    <li><a href="#!">Великобритания</a></li>
-                    <li><a href="#!">Венгрия</a></li>
-                    <li><a href="#!">Венесуэла</a></li>
-                    <li><a href="#!">Восточный Тимор</a></li>
-                    <li><a href="#!">Вьетнам</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Г</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Габон</a></li>
-                    <li><a href="#!">Гаити</a></li>
-                    <li><a href="#!">Гайана</a></li>
-                    <li><a href="#!">Гамбия</a></li>
-                    <li><a href="#!">Гана</a></li>
-                    <li><a href="#!">Гватемала</a></li>
-                    <li><a href="#!">Гвинея</a></li>
-                    <li><a href="#!">Гвинея-Бисау</a></li>
-                    <li><a href="#!">Германия</a></li>
-                    <li><a href="#!">Гондурас</a></li>
-                    <li><a href="#!">Гренада</a></li>
-                    <li><a href="#!">Греция</a></li>
-                    <li><a href="#!">Грузия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Д</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Дания</a></li>
-                    <li><a href="#!">Джибути</a></li>
-                    <li><a href="#!">Доминика</a></li>
-                    <li><a href="#!">Доминикана</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Е</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Египет</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">З</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Замбия</a></li>
-                    <li><a href="#!">Зимбабве</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">И</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Израиль</a></li>
-                    <li><a href="#!">Индия</a></li>
-                    <li><a href="#!">Индонезия</a></li>
-                    <li><a href="#!">Иордания</a></li>
-                    <li><a href="#!">Ирак</a></li>
-                    <li><a href="#!">Иран</a></li>
-                    <li><a href="#!">Ирландия</a></li>
-                    <li><a href="#!">Исландия</a></li>
-                    <li><a href="#!">Испания</a></li>
-                    <li><a href="#!">Италия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">К</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Кабо-Верде</a></li>
-                    <li><a href="#!">Казахстан</a></li>
-                    <li><a href="#!">Камбоджа</a></li>
-                    <li><a href="#!">Камерун</a></li>
-                    <li><a href="#!">Канада</a></li>
-                    <li><a href="#!">Катар</a></li>
-                    <li><a href="#!">Кения</a></li>
-                    <li><a href="#!">Кипр</a></li>
-                    <li><a href="#!">Киргизия</a></li>
-                    <li><a href="#!">Кирибати</a></li>
-                    <li><a href="#!">Китай</a></li>
-                    <li><a href="#!">Колумбия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Л</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Лаос</a></li>
-                    <li><a href="#!">Латвия</a></li>
-                    <li><a href="#!">Лесото</a></li>
-                    <li><a href="#!">Либерия</a></li>
-                    <li><a href="#!">Ливан</a></li>
-                    <li><a href="#!">Ливия</a></li>
-                    <li><a href="#!">Литва</a></li>
-                    <li><a href="#!">Лихтенштейн</a></li>
-                    <li><a href="#!">Люксембург</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">М</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Маврикий</a></li>
-                    <li><a href="#!">Мавритания</a></li>
-                    <li><a href="#!">Мадагаскар</a></li>
-                    <li><a href="#!">Малави</a></li>
-                    <li><a href="#!">Малайзия</a></li>
-                    <li><a href="#!">Мали</a></li>
-                    <li><a href="#!">Мальдивы</a></li>
-                    <li><a href="#!">Мальта</a></li>
-                    <li><a href="#!">Марокко</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Н</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Намибия</a></li>
-                    <li><a href="#!">Науру</a></li>
-                    <li><a href="#!">Непал</a></li>
-                    <li><a href="#!">Нигер</a></li>
-                    <li><a href="#!">Нигерия</a></li>
-                    <li><a href="#!">Нидерланды</a></li>
-                    <li><a href="#!">Никарагуа</a></li>
-                    <li><a href="#!">Новая Зеландия</a></li>
-                    <li><a href="#!">Норвегия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">О</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">ОАЭ</a></li>
-                    <li><a href="#!">Оман</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">П</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Пакистан</a></li>
-                    <li><a href="#!">Палау</a></li>
-                    <li><a href="#!">Панама</a></li>
-                    <li><a href="#!">Папуа - Новая Гвинея</a></li>
-                    <li><a href="#!">Парагвай</a></li>
-                    <li><a href="#!">Перу</a></li>
-                    <li><a href="#!">Польша</a></li>
-                    <li><a href="#!">Португалия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Р</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Руанда</a></li>
-                    <li><a href="#!">Румыния</a></li>
-                    <li><a href="#!">Россия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">C</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Сальвадор</a></li>
-                    <li><a href="#!">Самоа</a></li>
-                    <li><a href="#!">Сан-Марино</a></li>
-                    <li><a href="#!">Саудовская Аравия</a></li>
-                    <li><a href="#!">Сейшелы</a></li>
-                    <li><a href="#!">Сенегал</a></li>
-                    <li><a href="#!">Сербия</a></li>
-                    <li><a href="#!">Сингапур</a></li>
-                    <li><a href="#!">Сирия</a></li>
-                    <li><a href="#!">Словакия</a></li>
-                    <li><a href="#!">Словения</a></li>
-                    <li><a href="#!">США</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Т</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Таджикистан</a></li>
-                    <li><a href="#!">Таиланд</a></li>
-                    <li><a href="#!">Танзания</a></li>
-                    <li><a href="#!">Того</a></li>
-                    <li><a href="#!">Тонга</a></li>
-                    <li><a href="#!">Тринидад и Тобаго</a></li>
-                    <li><a href="#!">Тувалу</a></li>
-                    <li><a href="#!">Тунис</a></li>
-                    <li><a href="#!">Туркмения</a></li>
-                    <li><a href="#!">Турция</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">У</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Уганда</a></li>
-                    <li><a href="#!">Узбекистан</a></li>
-                    <li><a href="#!">Украина</a></li>
-                    <li><a href="#!">Уругвай</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Ф</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Фиджи</a></li>
-                    <li><a href="#!">Филиппины</a></li>
-                    <li><a href="#!">Финляндия</a></li>
-                    <li><a href="#!">Франция</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Х</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Хорватия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Ч</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Чад</a></li>
-                    <li><a href="#!">Черногория</a></li>
-                    <li><a href="#!">Чехия</a></li>
-                    <li><a href="#!">Чили</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Ш</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Швейцария</a></li>
-                    <li><a href="#!">Швеция</a></li>
-                    <li><a href="#!">Шри-Ланка</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Э</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Эквадор</a></li>
-                    <li><a href="#!">Эритрея</a></li>
-                    <li><a href="#!">Эсватини</a></li>
-                    <li><a href="#!">Эстония</a></li>
-                    <li><a href="#!">Эфиопия</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Ю</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">ЮАР</a></li>
-                    <li><a href="#!">Южный Судан</a></li>
-                  </ul>
-              </li>
-              <li class="countries-filter__item">
-                <h4 class="countries-filter__subtitle">Я</h4>
-                  <ul class="countries-filter__sublist country-select">
-                    <li><a href="#!">Ямайка</a></li>
-                    <li><a href="#!">Япония</a></li>
-                  </ul>
-              </li>
-            </ul>
-            <button class="dropdown-filter__close" type="button">Cвернуть</button>
-          </div>
+          <button class="dropdown-filter__close" type="button">Cвернуть</button>
         </div>
       </div>
     </section>
@@ -560,8 +562,8 @@
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#авокадо</a></li>
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#смузи</a></li>
             </ul>
+            <h3 class="profile__subtitle">хочет посетить:</h3>
             <div class="profile__countries">
-              <h3 class="profile__subtitle">хочет посетить:</h3>
               <ul class="profile__flags flags-list">
                 <li class="flags-list__item">
                   <img src="img/flag-svg/sri-lanka.svg" width="35" height="25" alt="Флаг Шри-Ланки">
@@ -577,8 +579,8 @@
                 </li>
               </ul>
             </div>
+            <h3 class="profile__subtitle">транспорт:</h3>
             <div class="profile__transport">
-              <h3 class="profile__subtitle">транспорт:</h3>
               <ul class="profile__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__tooltip">Авиаперелет</span>
@@ -594,14 +596,14 @@
                 </li>
               </ul>
             </div>
-            <div class="profile__progress progress">
-              <h3 class="profile__subtitle">левел:</h3>
+            <h3 class="profile__subtitle">левел:</h3>
+            <div class="profile__progress progress progress--catalog">
               <div class="progress__result">
-                <span>99</span>
-                <span>level</span>
+                <span class="progress__result-num progress__result-num--catalog">99</span>
+                <span class="progress__result-note progress__result-note--catalog">level</span>
               </div>
-              <svg class="progress__ring" width="60" height="60">
-                <circle stroke="#FF8D30" stroke-width="4" cx="30" cy="30" r="20" fill="transparent"/>
+              <svg width="46" height="46" viewbox="0 0 46 46">
+                <circle class="progress__level" cx="23" cy="23" r="22" data-level="96"/>
               </svg>
             </div>
             <div class="profile__likes likes">
@@ -624,8 +626,8 @@
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#концерт</a></li>
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#крафт</a></li>
             </ul>
+            <h3 class="profile__subtitle">хочет посетить:</h3>
             <div class="profile__countries">
-              <h3 class="profile__subtitle">хочет посетить:</h3>
               <ul class="profile__flags flags-list">
                 <li class="flags-list__item">
                   <img src="img/flag-svg/belgium.svg" width="35" height="25" alt="Флаг Бельгии">
@@ -637,8 +639,8 @@
                 </li>
               </ul>
             </div>
+            <h3 class="profile__subtitle">транспорт:</h3>
             <div class="profile__transport">
-              <h3 class="profile__subtitle">транспорт:</h3>
               <ul class="profile__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__tooltip">Авиаперелет</span>
@@ -654,14 +656,14 @@
                 </li>
               </ul>
             </div>
-            <div class="profile__progress progress">
-              <h3 class="profile__subtitle">левел:</h3>
+            <h3 class="profile__subtitle">левел:</h3>
+            <div class="profile__progress progress progress--catalog">
               <div class="progress__result">
-                <span>80</span>
-                <span>level</span>
+                <span class="progress__result-num progress__result-num--catalog">80</span>
+                <span class="progress__result-note progress__result-note--catalog">level</span>
               </div>
-              <svg class="progress__ring" width="60" height="60">
-                <circle stroke="#FF8D30" stroke-width="4" cx="30" cy="30" r="22" fill="transparent"/>
+              <svg width="46" height="46" viewbox="0 0 46 46">
+                <circle class="progress__level" cx="23" cy="23" r="22" data-level="80"/>
               </svg>
             </div>
             <div class="profile__likes likes">
@@ -684,8 +686,8 @@
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#кроссовки</a></li>
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#суприм</a></li>
             </ul>
+            <h3 class="profile__subtitle">хочет посетить:</h3>
             <div class="profile__countries">
-              <h3 class="profile__subtitle">хочет посетить:</h3>
               <ul class="profile__flags flags-list">
                 <li class="flags-list__item">
                   <img src="img/flag-svg/usa.svg" width="35" height="25" alt="Флаг Соединенных Штатов Америки">
@@ -701,8 +703,8 @@
                 </li>
               </ul>
             </div>
+            <h3 class="profile__subtitle">транспорт:</h3>
             <div class="profile__transport">
-              <h3 class="profile__subtitle">транспорт:</h3>
               <ul class="profile__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__tooltip">Авиаперелет</span>
@@ -718,14 +720,14 @@
                 </li>
               </ul>
             </div>
-            <div class="profile__progress progress">
-              <h3 class="profile__subtitle">левел:</h3>
+            <h3 class="profile__subtitle">левел:</h3>
+            <div class="profile__progress progress progress--catalog">
               <div class="progress__result">
-                <span>25</span>
-                <span>level</span>
+                <span class="progress__result-num progress__result-num--catalog">25</span>
+                <span class="progress__result-note progress__result-note--catalog">level</span>
               </div>
-              <svg class="progress__ring" width="60" height="60">
-                <circle stroke="#FF8D30" stroke-width="4" cx="30" cy="30" r="22" fill="transparent"/>
+              <svg width="46" height="46" viewbox="0 0 46 46">
+                <circle class="progress__level" cx="23" cy="23" r="22" data-level="25"/>
               </svg>
             </div>
             <div class="profile__likes likes">
@@ -747,8 +749,8 @@
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#учеба</a></li>
               <li class="hashtags__item"><a class="hashtags__link" href="#!">#линкедин</a></li>
             </ul>
+            <h3 class="profile__subtitle">хочет посетить:</h3>
             <div class="profile__countries">
-              <h3 class="profile__subtitle">хочет посетить:</h3>
               <ul class="profile__flags flags-list">
                 <li class="flags-list__item">
                   <img src="img/flag-svg/uk.svg" width="35" height="25" alt="Флаг Великобритании">
@@ -760,8 +762,8 @@
                 </li>
               </ul>
             </div>
+            <h3 class="profile__subtitle">транспорт:</h3>
             <div class="profile__transport">
-              <h3 class="profile__subtitle">транспорт:</h3>
               <ul class="profile__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
                   <span class="transport__tooltip">Авиаперелет</span>
@@ -777,14 +779,14 @@
                 </li>
               </ul>
             </div>
-            <div class="profile__progress progress">
-              <h3 class="profile__subtitle">левел:</h3>
+            <h3 class="profile__subtitle">левел:</h3>
+            <div class="profile__progress progress progress--catalog">
               <div class="progress__result">
-                <span>50</span>
-                <span>level</span>
+                <span class="progress__result-num progress__result-num--catalog">50</span>
+                <span class="progress__result-note progress__result-note--catalog">level</span>
               </div>
-              <svg class="progress__ring" width="60" height="60">
-                <circle stroke="#FF8D30" stroke-width="4" cx="30" cy="30" r="22" fill="transparent"/>
+              <svg width="46" height="46" viewbox="0 0 46 46">
+                <circle class="progress__level" cx="23" cy="23" r="22" data-level="50"/>
               </svg>
             </div>
             <div class="profile__likes likes">
@@ -813,7 +815,10 @@
     <div class="footer__container container">
       <div class="footer__logo logo logo--footer">
         <a class="logo__link" href="index.html">
-          <img src="img/logo_full.svg" width="166" height="42" alt="">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <img src="img/logo-tablet.svg" width="166" height="42" alt="Логотип">
+          </picture>
           <svg width="96" height="15" viewBox="0 0 96 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M94.9113 6.18874C95.6371 5.72747 96 5.01634 96 4.05535C96 2.79967 95.4774 1.81306 94.4322 1.09552C93.4161 0.365174 92.2185 0 90.8394 0C89.4894 0 88.2555 0.397207 87.1378 1.19162C86.0345 1.97322 85.4829 3.01749 85.4829 4.32443C85.4829 4.81133 85.6353 5.21494 85.9402 5.53527C86.245 5.84278 86.6805 5.99654 87.2467 5.99654C87.7983 5.99654 88.2193 5.84278 88.5096 5.53527C88.8144 5.21494 88.9668 4.81133 88.9668 4.32443C88.9378 3.95285 89.0612 3.57486 89.337 3.19047C89.6128 2.79326 90.1136 2.59466 90.8394 2.59466C91.4491 2.60747 91.8846 2.76123 92.1459 3.05593C92.4217 3.35063 92.5451 3.64533 92.5161 3.94003C92.5161 4.14504 92.4435 4.35005 92.2983 4.55506C92.1532 4.76007 92.0008 4.92024 91.8411 5.03556C91.6959 5.15088 91.4564 5.31745 91.1225 5.53527C90.7886 5.75309 90.5564 5.90685 90.4257 5.99654C89.6709 6.54751 89.2935 7.27785 89.2935 8.18758C89.2935 8.63604 89.4531 9.01403 89.7725 9.32155C90.1064 9.61625 90.5491 9.7636 91.1007 9.7636C91.6524 9.7636 92.0878 9.61625 92.4072 9.32155C92.7411 9.01403 92.908 8.63604 92.908 8.18758C92.908 7.99539 92.9443 7.816 93.0169 7.64943C93.0895 7.48286 93.2056 7.32911 93.3653 7.18816C93.5395 7.04722 93.6846 6.9319 93.8008 6.84221C93.9314 6.75252 94.1201 6.6372 94.3669 6.49625C94.6282 6.35531 94.8097 6.2528 94.9113 6.18874Z"/>
             <path d="M76.3053 10.2354L80.1618 5.46351C80.5573 4.88748 81.0941 4.56674 81.7722 4.50128C82.4502 4.42273 83.0435 4.58638 83.5521 4.99221C84.0606 5.39805 84.3008 5.94135 84.2725 6.62211V13.4559C84.2725 13.8879 84.103 14.2545 83.764 14.5556C83.4391 14.8436 83.0435 14.9876 82.5774 14.9876C82.1112 14.9876 81.7086 14.8436 81.3696 14.5556C81.0447 14.2545 80.8822 13.8879 80.8822 13.4559V9.21424L77.0257 13.9861C76.6302 14.5622 76.0934 14.8829 75.4153 14.9484C74.7373 15.0269 74.144 14.8633 73.6354 14.4574C73.1269 14.0516 72.8867 13.5083 72.915 12.8275V6.01336C72.915 5.58133 73.0774 5.21477 73.4023 4.91367C73.7413 4.61256 74.144 4.46201 74.6101 4.46201C75.0763 4.46201 75.4718 4.61256 75.7967 4.91367C76.1358 5.21477 76.3053 5.58133 76.3053 6.01336V10.2354Z"/>

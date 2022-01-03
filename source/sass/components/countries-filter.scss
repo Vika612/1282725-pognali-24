@@ -1,0 +1,39 @@
+.countries-filter {
+  @include reset-list;
+}
+
+.countries-filter__item {
+  display: none;
+}
+
+.countries-filter__item.active {
+  display: block;
+}
+
+.countries-filter__subtitle {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .countries-filter {
+    width: 100%;
+    padding: 0 36px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 50px 10px;
+  }
+
+  .countries-filter__item {
+    display: block;
+  }
+
+  .countries-filter__subtitle {
+    margin: 0;
+    margin-bottom: 30px;
+    display: block;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1;
+  }
+}

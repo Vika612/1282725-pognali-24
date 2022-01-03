@@ -22,6 +22,10 @@
 @import "components/header-inner.scss";
 @import "components/main.scss";
 @import "components/footer.scss";
+@import "components/alphabet-filter.scss";
+@import "components/countries-filter.scss";
+@import "components/dropdown-filter.scss";
+@import "components/country-select.scss";
 /* INDEX */
 @import "components/intro.scss";
 @import "components/contact-menu.scss";
@@ -40,10 +44,11 @@
 @import "components/address.scss";
 @import "components/map.scss";
 /* CATALOG */
-@import "components/filter.scss";
 @import "components/continents.scss";
 @import "components/companion-select.scss";
 @import "components/criterions.scss";
+@import "components/filter-toggle.scss";
+@import "components/filter.scss";
 @import "components/catalog.scss";
 @import "components/profile.scss";
 @import "components/paginator.scss";

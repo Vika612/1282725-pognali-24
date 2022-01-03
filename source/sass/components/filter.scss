@@ -1,11 +1,130 @@
-.filter__container {
+.filter {
+  @include border-radius-bottom;
   background-color: $grey-dropdown;
 }
 
+.filter__container {
+  position: relative;
+  margin: -20px 0 20px;
+  padding: 44px 25px 15px;
+}
+
 .filter__title {
+  position: relative;
+  margin: 0;
+  padding-right: 17px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1;
   color: $blue-dark-main;
   text-transform: uppercase;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/filter.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+  }
+}
+
+.filter__toggle,
+.filter__container .dropdown-filter__close {
+  display: none;
+}
+
+.filter__continents {
+  flex-basis: 100%;
+  padding: 32px 25px 0;
+}
+
+.filter__container--closed .filter__continents,
+.filter__container--closed .filter__dropdown-filter {
+  display: none;
+}
+
+.filter__container--js .filter__dropdown-filter {
+  @include border-radius-bottom;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 25px 0;
+  background-color: $grey-dropdown;
+  z-index: 40;
+}
+
+.filter__container--js .filter__toggle,
+.filter__container--js .dropdown-filter__close {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__container {
+    margin: -50px 0 20px;
+    padding: 114px 73px 52px;
+  }
+
+  .filter__title {
+    display: none;
+  }
+
+  .filter__continents {
+    max-width: 470px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filter__container--closed .filter__continents {
+    display: flex;
+  }
+
+  .filter__container--js .filter__dropdown-filter {
+    padding: 0 74px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__container {
+    padding: 111px 60px 100px;
+    background-color: $grey-basic;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .filter__title {
+    margin: 0 13px 0 20px;
+    padding-left: 45px;
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+
+    &::before {
+      top: 0;
+      width: 23px;
+      height: 15px;
+    }
+  }
+
+  .filter__continents {
+    max-width: 800px;
+  }
+
+  .filter__dropdown-filter {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  .filter__container--js .filter__dropdown-filter {
+    margin-top: 0;
+    padding: 0;
+    background-color: $grey-basic;
+  }
 }

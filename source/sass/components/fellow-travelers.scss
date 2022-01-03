@@ -32,7 +32,7 @@
 }
 
 .fellow-travelers__wrapper {
-  margin-bottom: 50px;
+  margin-bottom: 52px;
   padding: 0 25px;
 }
 
@@ -176,7 +176,7 @@
 
 @media (min-width: $desktop-width) {
   .fellow-travelers__container {
-    padding: 190px 60px 130px;
+    padding: 194px 60px 126px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -193,6 +193,10 @@
     max-width: 500px;
     margin-bottom: 0;
     padding: 0 0 0 70px;
+  }
+
+  .fellow-travelers__title {
+    margin-bottom: 52px;
   }
 
   .fellow-travelers__list {

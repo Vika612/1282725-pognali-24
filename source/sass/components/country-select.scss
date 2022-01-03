@@ -1,0 +1,40 @@
+.country-select {
+  @include reset-list;
+  padding: 0 25px 0;
+}
+
+.country-select li a {
+  font-weight: 400;
+  color: $grey-special;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .country-select {
+    padding: 0 15px 0;
+  }
+
+  .country-select li a {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-select {
+    padding: 0;
+  }
+
+  .country-select li a {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

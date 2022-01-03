@@ -85,6 +85,10 @@
     right: 181px;
     display: flex;
     z-index: 100;
+
+    &--catalog {
+      top: 45px;
+    }
   }
 
   .contact-menu__link {

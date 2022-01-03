@@ -8,6 +8,10 @@
   background-color: $blue-dark-deep;
 }
 
+.header--inner {
+  background-color: $blue-dark;
+}
+
 .header--js .menu-toggle {
   display: block;
 }
@@ -22,7 +26,7 @@
 .header__container {
   position: relative;
   padding-top: 73px;
-  z-index: 30;
+  z-index: 50;
 }
 
 .header__navigation {

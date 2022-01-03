@@ -1,15 +1,30 @@
 .progress {
   position: relative;
-  display: block;
+
+  &--index {
+    width: 60px;
+    height: 60px;
+  }
+
+  &--catalog {
+    width: 46px;
+    height: 46px;
+  }
+
+  &--form {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .progress__result {
   position: absolute;
-  top: 14px;
-  left: 17px;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  z-index: 10;
+  align-items: center;
 }
 
 .progress__result-num {
@@ -17,6 +32,15 @@
   font-size: 24px;
   line-height: 1;
   color: $white-basic;
+
+  &--catalog {
+    color: $blue-light;
+  }
+
+  &--form {
+    font-size: 38px;
+    color: $blue-dark-deep;
+  }
 }
 
 .progress__result-note {
@@ -36,26 +60,83 @@
     opacity: 0.3;
     content: "";
   }
+
+  &--catalog {
+    display: none;
+  }
+
+  &--form {
+    font-size: 18px;
+    color: $grey-special;
+
+    &::before {
+      left: -10px;
+      width: 51px;
+      background-color: $grey-special;
+      opacity: 0.3;
+    }
+  }
 }
 
-.progress__ring {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-}
+.progress__level {
+  fill: none;
+  stroke: $orange-dark;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
 
-.progress__ring circle {
-  fill: rgba(0, 0, 0, 0.6);
+  &--index {
+    fill: rgba($black-basic, 0.6);
+    stroke-width: 4px;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .progress__result {
-    top: 18px;
-    left: 22px;
+  .progress {
+    &--catalog {
+      width: 60px;
+      height: 60px;
+
+      svg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &--form {
+      width: 95px;
+      height: 95px;
+
+      svg {
+        width: 95px;
+        height: 95px;
+      }
+    }
   }
 
-  .progress__ring {
-    top: -7px;
-    left: -5px;
+  .progress__result-note--catalog {
+    display: block;
+    color: $black-basic;
+    opacity: 0.4;
+
+    &::before {
+      background-color: $black-basic;
+      opacity: 0.2;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .progress__result-num--form {
+    color: $white-basic;
+  }
+
+  .progress__result-note--form {
+    color: $white-basic;
+
+    &::before {
+      height: 2px;
+    }
   }
 }

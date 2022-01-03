@@ -35,7 +35,7 @@
 
 .traveler-card__flags {
   position: absolute;
-  top: -12px;
+  top: -9px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -107,5 +107,11 @@
 
   .traveler-card__hashtags {
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .traveler-card__flags {
+    top: -12px;
   }
 }
