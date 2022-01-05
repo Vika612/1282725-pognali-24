@@ -3,6 +3,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  &--catalog .transport__item {
+    width: 32px;
+    height: 32px;
+    background-color: $grey-basic;
+    border-radius: 50%;
+  }
+
+  &--form .transport__item {
+    width: 32px;
+    height: 32px;
+    background-color: $white-basic;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
 .transport__item {
@@ -15,6 +30,10 @@
 
   svg {
     opacity: 0.15;
+  }
+
+  & > input:checked + svg {
+    opacity: 1;
   }
 
   &--active svg {
@@ -73,5 +92,14 @@
   &::after,
   &::before {
     display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .transport {
+    &--form .transport__item {
+      width: 44px;
+      height: 44px;
+    }
   }
 }

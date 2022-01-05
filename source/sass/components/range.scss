@@ -1,0 +1,108 @@
+.range__inputs {
+  max-width: 220px;
+  display: flex;
+  background-color: $white-basic;
+}
+
+.range__value-group {
+  display: flex;
+  justify-content: center;
+  border: 1px solid $grey-alphabet;
+  border-radius: 4px;
+}
+
+.range__value-group input {
+  width: 50%;
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.07em;
+  border: none;
+  outline: none;
+}
+
+.range__value-group input::-webkit-outer-spin-button,
+.range__value-group input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range__scale {
+  position: relative;
+  width: 220px;
+  margin-top: 23px;
+  height: 2px;
+  background-color: rgba($blue-light, 0.2);
+}
+
+.range__bar {
+  position: absolute;
+  width: 145px;
+  top: 0;
+  left: 66px;
+  height: 2px;
+  background-color: $blue-light;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: $blue-light;
+  outline: none;
+  cursor: pointer;
+
+  &--min {
+    top: -4px;
+    left: 0;
+  }
+
+  &--max {
+    top: -4px;
+    left: 143px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range__inputs {
+    max-width: 150px;
+    margin-left: 61px;
+  }
+
+  .range__value-group input {
+    padding: 10px 0;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+  }
+
+  .range__scale {
+    width: 281px;
+    margin-top: 23px;
+  }
+
+  .range__bar {
+    width: 166px;
+    top: 0;
+    left: 105px;
+    height: 3px;
+    background-color: $blue-light;
+  }
+
+  .range__toggle {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+
+    &--min {
+      top: -5px;
+      left: -4px;
+    }
+
+    &--max {
+      top: -5px;
+      left: 165px;
+    }
+  }
+}

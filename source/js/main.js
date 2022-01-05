@@ -102,6 +102,22 @@ if (openBtn) {
 }
 
 
+/* ACCORDION */
+
+const accTitles = document.querySelectorAll('.criterions__title');
+
+for (let i = 0; i < accTitles.length; i++) {
+  let acc = accTitles[i];
+  acc.addEventListener('click', function (evt) {
+    if (evt.target.checked) {
+      for (let j = 0; j < accTitles.length; j++) {
+        accTitles[j].checked = accTitles[j] === evt.target ? true : false;
+      }
+    }
+  });
+}
+
+
 /* FILTER */
 
 const filterContainer = document.querySelector('.filter__container');
