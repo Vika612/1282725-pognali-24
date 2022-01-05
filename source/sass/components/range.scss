@@ -13,7 +13,7 @@
 
 .range__value-group input {
   width: 50%;
-  padding: 10px 12px;
+  padding: 10px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.07em;
@@ -65,7 +65,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .range__inputs {
     max-width: 150px;
     margin-left: 61px;

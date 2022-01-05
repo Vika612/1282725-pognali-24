@@ -1,5 +1,6 @@
 .companion-select {
-  margin-bottom: 30px;
+  width: 270px;
+  margin: 0 auto 30px;
 }
 
 .companion-select__form {
@@ -10,6 +11,7 @@
 
 .companion-select__title {
   margin-bottom: 23px;
+  font-size: 22px;
 }
 
 .companion-select__button {
@@ -40,7 +42,11 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .companion-select {
+    min-width: 688px;
+  }
+
   .companion-select__form {
     padding: 36px 33px 40px;
   }
@@ -53,5 +59,15 @@
   .companion-select__button {
     margin-top: 17px;
     font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion-select {
+    width: 285px;
+  }
+
+  .companion-select__form {
+    padding: 46px;
   }
 }

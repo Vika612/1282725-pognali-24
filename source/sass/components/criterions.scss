@@ -8,7 +8,9 @@
 .criterions__title {
   margin: 0;
   padding: 12px 0 11px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1;
@@ -16,6 +18,14 @@
   border-top: 1px solid $orange-border;
   text-transform: uppercase;
   cursor: pointer;
+
+  &::after {
+    width: 10px;
+    height: 6px;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
 
   &:hover,
   &:focus {
@@ -70,7 +80,11 @@
   display: block;
 }
 
-.criterions__input:hover + .criterions__label {
+.criterions__label:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.criterions__label:hover::before {
   opacity: 0.6;
 }
 
@@ -91,7 +105,11 @@
   flex-direction: column-reverse;
 }
 
-@media (min-width: $tablet-width) {
+.criterions input:checked + .criterions__title::after {
+  background-image: url("../img/arrow-up.svg");
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .criterions {
     margin-bottom: 25px;
     display: grid;
