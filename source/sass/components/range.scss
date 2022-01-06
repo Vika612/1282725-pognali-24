@@ -1,28 +1,56 @@
 .range__inputs {
   max-width: 220px;
   display: flex;
-  background-color: $white-basic;
 }
 
 .range__value-group {
   display: flex;
   justify-content: center;
+  background-color: $white-basic;
   border: 1px solid $grey-alphabet;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
+
+  &--min {
+    position: relative;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: -2.5px;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 15px;
+    background-color: $white-basic;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 20px;
+    height: 1px;
+    background-color: $grey-alphabet;
+    content: "";
+  }
 }
 
-.range__value-group input {
-  width: 50%;
-  padding: 10px;
+.range__input {
+  width: 100%;
+  padding: 10px 35px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.07em;
   border: none;
   outline: none;
+  border-radius: 4px;
 }
 
-.range__value-group input::-webkit-outer-spin-button,
-.range__value-group input::-webkit-inner-spin-button {
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -52,15 +80,28 @@
   border-radius: 50%;
   background-color: $blue-light;
   outline: none;
+  border: none;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    width: 19px;
+    height: 19px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
+
   &--min {
-    top: -4px;
+    top: 50%;
     left: 0;
   }
 
   &--max {
-    top: -4px;
+    top: 50%;
     left: 143px;
   }
 }
@@ -96,12 +137,10 @@
     padding: 0;
 
     &--min {
-      top: -5px;
       left: -4px;
     }
 
     &--max {
-      top: -5px;
       left: 165px;
     }
   }

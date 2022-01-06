@@ -22,9 +22,21 @@
   &--main {
     min-width: 270px;
     padding: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 18px;
     border-radius: 10px;
     text-transform: none;
+
+    &::after {
+      width: 11px;
+      height: 13px;
+      background-image: url("../img/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+    }
   }
 
   &--form {
@@ -47,4 +59,8 @@
     color: $blue-dark-deep;
     border-radius: 25px;
   }
+}
+
+.button--main:active::after {
+  opacity: 0.3;
 }

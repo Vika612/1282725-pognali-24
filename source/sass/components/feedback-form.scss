@@ -42,9 +42,12 @@
 
 .feedback-form__button {
   width: 60px;
-  height: 62px;
+  height: 64px;
   margin-left: -60px;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $yellow-basic;
   border: none;
   outline: none;
@@ -57,9 +60,19 @@
   }
 
   &:active {
-    span {
+    span,
+    &::after {
       opacity: 0.3;
     }
+  }
+
+  &::after {
+    width: 14px;
+    height: 16px;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
   }
 }
 
@@ -94,10 +107,11 @@
   .feedback-form__button {
     width: 330px;
     margin-left: -295px;
+    padding: 0 35px;
+    justify-content: space-between;
   }
 
   .feedback-form__button span {
-    padding-left: 35px;
     display: block;
     font-weight: 700;
     font-size: 22px;
