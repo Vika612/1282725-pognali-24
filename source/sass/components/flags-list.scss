@@ -1,6 +1,10 @@
 .flags-list {
   @include reset-list;
   max-width: 270px;
+
+  &--catalog {
+    padding: 0 5px;
+  }
 }
 
 .flags-list__item {
@@ -9,9 +13,26 @@
 }
 
 .flags-list__item span {
+  display: inline-block;
+  vertical-align: bottom;
   font-weight: 500;
   font-size: 15px;
-  line-height: 1.1;
+  line-height: 1;
   color: $blue-btn;
   text-transform: uppercase;
+}
+
+.flags-list--catalog .flags-list__item {
+  width: 100%;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flags-list--catalog .flags-list__item img {
+  width: 26px;
+  height: 18px;
+  margin-right: 14px;
+  display: inline-block;
 }

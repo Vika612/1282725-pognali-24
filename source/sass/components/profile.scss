@@ -1,17 +1,78 @@
 .profile {
+  position: relative;
+  padding: 15px 20px 20px;
   background-color: $white-basic;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .profile__title {
+  max-width: 300px;
+  min-height: 40px;
+  margin: -76px 0 0;
+  padding: 0 84px 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1;
   color: $blue-btn;
 }
 
+.profile__hashtags {
+  margin: 15px 0 9px;
+}
+
 .profile__subtitle {
+  position: relative;
+  margin: 0;
+  margin-bottom: 8px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 1px;
+    border-top: 1px solid $grey-basic;
+    content: "";
+  }
+}
+
+.profile__subtitle span {
+  position: relative;
+  padding: 0 5px;
+  display: inline-block;
+  vertical-align: middle;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.1;
+  background-color: $white-basic;
+  z-index: 10;
+}
+
+.profile__countries {
+  min-height: 63px;
+}
+
+.profile__panel {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__transport-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.profile__progress-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.profile__progress-block .profile__subtitle {
+  margin-bottom: 0;
 }

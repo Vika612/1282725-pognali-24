@@ -152,6 +152,10 @@
     &:focus {
       opacity: 1;
     }
+
+    &::after {
+      display: none;
+    }
   }
 
   .criterions__item {

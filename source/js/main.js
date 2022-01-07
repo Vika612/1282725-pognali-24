@@ -124,7 +124,8 @@ const filterContainer = document.querySelector('.filter__container');
 const filterToggle = document.querySelector('.filter-toggle');
 const filterClose = document.querySelector('.dropdown-filter__close');
 
-filterContainer.classList.add('filter__container--closed');
+if (filterContainer) {
+  filterContainer.classList.add('filter__container--closed');
 filterContainer.classList.add('filter__container--js');
 
 filterToggle.addEventListener('click', () => {
@@ -136,3 +137,4 @@ filterClose.addEventListener('click', () => {
   filterContainer.classList.add('filter__container--closed');
   filterToggle.classList.toggle('active');
 });
+}
