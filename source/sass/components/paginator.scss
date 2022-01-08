@@ -1,3 +1,55 @@
+.paginator {
+  position: relative;
+  width: 100%;
+  margin-bottom: 45px;
+  padding: 18px 64px;
+  background-color: $white-basic;
+  border-radius: 20px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid $grey-basic;
+    content: "";
+  }
+}
+
 .paginator__pages {
   @include reset-list;
+  display: none;
+}
+
+.paginator__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paginator__link {
+  width: 20px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--prev {
+    background-image: url("../img/arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../img/arrow-right.svg");
+    background-position: 100% 0;
+  }
 }
