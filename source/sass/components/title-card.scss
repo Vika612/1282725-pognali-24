@@ -41,6 +41,9 @@
 
 @media (min-width: $tablet-width) {
   .title-card {
+    max-width: 255px;
+    padding-right: 30px;
+
     &::before {
       width: 8px;
       height: 8px;

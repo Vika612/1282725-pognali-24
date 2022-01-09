@@ -4,14 +4,23 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  &--catalog .transport__item {
+  &--catalog .transport__item,
+  &--filter .transport__item {
     width: 32px;
     height: 32px;
     background-color: $grey-basic;
     border-radius: 50%;
+
+    &::after {
+      top: 40px;
+    }
+
+    &::before {
+      top: 35px;
+    }
   }
 
-  &--form .transport__item {
+  &--filter .transport__item {
     width: 32px;
     height: 32px;
     background-color: $white-basic;
@@ -81,7 +90,7 @@
 
   &::after {
     position: absolute;
-    top: 40px;
+    top: -37px;
     padding: 10px;
     font-weight: 400;
     font-size: 16px;
@@ -92,12 +101,11 @@
     border-radius: 4px;
     display: none;
     content: attr(data-transport);
-    z-index: 50;
   }
 
   &::before {
     position: absolute;
-    top: 35px;
+    top: -5px;
     width: 10px;
     height: 10px;
     background-color: $blue-tooltip;
@@ -116,13 +124,31 @@
 
 @media (min-width: $tablet-width) {
   .transport {
-    &--form .transport__item {
-      width: 44px;
-      height: 44px;
-    }
-
     &--catalog {
       flex-direction: column;
+    }
+  }
+
+  .transport__item {
+    &::before {
+      top: 27px;
+    }
+
+    &::after {
+      top: 32px;
+    }
+  }
+
+  .transport--filter .transport__item {
+    width: 44px;
+    height: 44px;
+
+    &::after {
+      top: 50px;
+    }
+
+    &::before {
+      top: 45px;
     }
   }
 

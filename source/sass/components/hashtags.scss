@@ -21,10 +21,11 @@
 
 @media (min-width: $tablet-width) {
   .hashtags {
-    max-width: 230px;
+    max-width: 240px;
   }
 
   .hashtags__item {
+    margin-right: 6px;
     font-size: 20px;
     line-height: 1.1;
   }
