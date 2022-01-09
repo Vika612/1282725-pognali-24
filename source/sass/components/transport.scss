@@ -120,5 +120,23 @@
       width: 44px;
       height: 44px;
     }
+
+    &--catalog {
+      flex-direction: column;
+    }
+  }
+
+  .transport--catalog .transport__item {
+    background-color: transparent;
+
+    &::after {
+      top: 0;
+      right: 40px;
+    }
+
+    &::before {
+      top: 12px;
+      right: 35px;
+    }
   }
 }

@@ -79,7 +79,8 @@
   justify-content: space-between;
 }
 
-.profile__transport-block {
+.profile__transport-block,
+.profile__progress-block {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -87,12 +88,89 @@
 }
 
 .profile__progress-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-end;
 }
 
 .profile__progress-block .profile__subtitle {
   margin-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .profile {
+    padding: 35px 25px 20px 35px;
+    display: grid;
+    grid-template-columns: 190px auto min-content;
+    grid-template-rows: auto;
+    grid-template-areas: "photo title panel"
+      "photo hashtags panel"
+      "photo . panel"
+      "photo feedback panel"
+      "subtitle subtitle subtitle"
+      "countries countries countries";
+    gap: 10px 30px;
+  }
+
+  .profile__img {
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+    grid-area: photo;
+  }
+
+  .profile__img img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .profile__title {
+    min-height: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 30px;
+    grid-area: title;
+  }
+
+  .profile__hashtags {
+    margin: 0;
+    grid-area: hashtags;
+  }
+
+  .profile__subtitle--transport,
+  .profile__subtitle--progress {
+    display: none;
+  }
+
+  .profile__subtitle--countries {
+    margin-left: 45px;
+    grid-area: subtitle;
+  }
+
+  .profile__flags {
+    grid-area: countries;
+  }
+
+  .profile__link,
+  .profile__likes {
+    grid-area: feedback;
+  }
+
+  .profile__likes {
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
+    padding: 0;
+  }
+
+  .profile__panel {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    grid-area: panel;
+  }
+
+  .profile__transport-block {
+    margin-bottom: 5px;
+  }
 }

@@ -60,3 +60,19 @@
   line-height: 1.1;
   color: $blue-dark-deep;
 }
+
+@media (min-width: $tablet-width) {
+  .likes__button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .likes__button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .likes__amount {
+    font-size: 20px;
+  }
+}
