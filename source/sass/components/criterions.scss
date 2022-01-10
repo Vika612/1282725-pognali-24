@@ -192,3 +192,43 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .criterions__title {
+    padding: 10px 0 10px;
+    font-size: 20px;
+    border-top: none;
+  }
+
+  .criterions__list {
+    padding-top: 14px;
+
+    &--transport {
+      padding-top: 0;
+      margin-bottom: 25px;
+    }
+
+    &--range {
+      margin-bottom: 42px;
+    }
+  }
+
+  .criterions__item {
+    margin-bottom: 14px;
+  }
+
+  .criterions__label {
+    padding-left: 38px;
+    font-size: 20px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      top: 8px;
+      left: 8px;
+    }
+  }
+}

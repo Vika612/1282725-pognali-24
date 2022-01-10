@@ -166,3 +166,23 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .transport {
+    &--catalog {
+      flex-direction: row;
+    }
+  }
+
+  .transport--catalog .transport__item {
+    &::before {
+      top: 35px;
+      right: unset;
+    }
+
+    &::after {
+      top: 40px;
+      right: unset;
+    }
+  }
+}

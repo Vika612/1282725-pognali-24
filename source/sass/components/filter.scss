@@ -65,7 +65,7 @@
 
 @media (min-width: $tablet-width) {
   .filter__container {
-    margin: -50px 0 44px;
+    margin: -50px 0 45px;
     padding: 114px 73px 52px;
   }
 
@@ -123,6 +123,7 @@
   }
 
   .filter__container--js .filter__dropdown-filter {
+    position: relative;
     margin-top: 0;
     padding: 0;
     background-color: $grey-basic;

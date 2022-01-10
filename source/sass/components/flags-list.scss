@@ -54,3 +54,19 @@
     font-size: 20px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .flags-list--catalog {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flags-list--catalog .flags-list__item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .flags-list--catalog .flags-list__item img {
+    margin-right: 18px;
+  }
+}

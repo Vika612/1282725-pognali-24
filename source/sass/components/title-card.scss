@@ -50,3 +50,13 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .title-card {
+    max-width: 240px;
+
+    &::before {
+      left: -23px;
+    }
+  }
+}

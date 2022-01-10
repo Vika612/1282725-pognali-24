@@ -106,7 +106,7 @@
       "photo feedback panel"
       "subtitle subtitle subtitle"
       "countries countries countries";
-    gap: 10px 30px;
+    gap: 10px 32px;
   }
 
   .profile__img {
@@ -171,5 +171,55 @@
 
   .profile__transport-block {
     margin-bottom: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile {
+    padding: 0 41px 0 0;
+    display: grid;
+    grid-template-columns: 285px auto auto;
+    grid-template-rows: 35px auto auto 24px auto 32px;
+    grid-template-areas: "photo . ."
+      "photo title countries"
+      "photo hashtags countries"
+      "photo . countries"
+      "photo feedback panel"
+      "photo . .";
+    gap: 10px 60px;
+  }
+
+  .profile__img {
+    width: 285px;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .profile__img img {
+    width: 285px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .profile__likes {
+    top: 45%;
+    left: 145px;
+  }
+
+  .profile__panel {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .profile__subtitle--countries {
+    display: none;
+  }
+
+  .profile__transport-block {
+    margin: 0 20px 0 0;
+  }
+
+  .profile__link {
+    margin-left: -5px;
   }
 }

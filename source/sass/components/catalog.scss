@@ -85,3 +85,27 @@
     margin-bottom: 60px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    padding-bottom: 108px;
+  }
+
+  .catalog__container {
+    padding-right: 30px;
+  }
+
+  .catalog__list {
+    margin-bottom: 60px;
+  }
+
+  .catalog__item {
+    margin-bottom: 31px;
+  }
+
+  .catalog__link-more {
+    max-width: 250px;
+    margin: 0 auto 66px;
+    padding-left: 50px;
+  }
+}

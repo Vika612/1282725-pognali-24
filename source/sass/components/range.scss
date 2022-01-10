@@ -145,3 +145,36 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .range__value-group input {
+    font-size: 20px;
+  }
+
+  .range__input {
+    padding: 10px 25px;
+  }
+
+  .range__scale {
+    width: 192px;
+    margin-top: 33px;
+  }
+
+  .range__bar {
+    width: 118px;
+    height: 3px;
+  }
+
+  .range__toggle {
+    width: 13px;
+    height: 13px;
+
+    &--min {
+      left: -5px;
+    }
+
+    &--max {
+      left: 115px;
+    }
+  }
+}
