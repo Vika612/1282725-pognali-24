@@ -71,7 +71,12 @@
   }
 
   .header-inner--catalog a {
-    display: block;
+    padding-right: 60px;
+    display: flex;
+    background-image: url("../img/arrow-go-back.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 16px;
+    background-position: 100% 0;
   }
 
   .header-inner--form {
@@ -88,6 +93,7 @@
 @media (min-width: $desktop-width) {
   .header-inner {
     padding: 47px 124px 68px 124px;
+    background-color: $blue-dark-deep;
 
     &::after {
       left: 126px;
