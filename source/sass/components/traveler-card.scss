@@ -22,6 +22,8 @@
 }
 
 .traveler-card__img img {
+  width: 270px;
+  height: auto;
   display: block;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease;
@@ -98,6 +100,11 @@
 
   .traveler-card__hashtags {
     margin-bottom: 20px;
+  }
+
+  .traveler-card__progress {
+    top: 21px;
+    left: 21px;
   }
 }
 

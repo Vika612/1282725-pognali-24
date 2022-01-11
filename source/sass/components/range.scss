@@ -1,25 +1,12 @@
 .range__inputs {
+  position: relative;
   max-width: 220px;
   display: flex;
-}
-
-.range__value-group {
-  display: flex;
-  justify-content: center;
-  background-color: $white-basic;
-  border: 1px solid $grey-alphabet;
-  border-radius: 0 4px 4px 0;
-
-  &--min {
-    position: relative;
-    border-radius: 4px 0 0 4px;
-    border-right: none;
-  }
 
   &::before {
     position: absolute;
     top: 50%;
-    right: -2.5px;
+    left: 48%;
     transform: translateY(-50%);
     width: 5px;
     height: 15px;
@@ -30,7 +17,8 @@
   &::after {
     position: absolute;
     top: 50%;
-    right: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 20px;
     height: 1px;
     background-color: $grey-alphabet;
@@ -40,13 +28,36 @@
 
 .range__input {
   width: 100%;
-  padding: 10px 35px;
+  padding: 10px 40px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.07em;
   border: none;
   outline: none;
-  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $grey-border-hover;
+  }
+
+  &:active {
+    border: 1px solid $blue-dark-deep;
+  }
+}
+
+.range__input--min {
+  border: 1px solid $grey-alphabet;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+
+  &--min:hover ~ .range__input--max {
+    border-left: none;
+  }
+}
+
+.range__input--max {
+  border: 1px solid $grey-alphabet;
+  border-radius: 0 4px 4px 0;
 }
 
 .range__input::-webkit-outer-spin-button,
@@ -112,8 +123,8 @@
     margin-left: 61px;
   }
 
-  .range__value-group input {
-    padding: 10px 0;
+  .range__input {
+    padding: 10px 17px;
     font-size: 20px;
     letter-spacing: 0.04em;
   }
@@ -147,11 +158,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .range__value-group input {
-    font-size: 20px;
-  }
-
   .range__input {
+    font-size: 20px;
     padding: 10px 25px;
   }
 

@@ -221,6 +221,12 @@
     right: 60px;
     margin: 0;
     z-index: 100;
+
+    &--scroll {
+      position: fixed;
+      top: 20px;
+      right: 180px;
+    }
   }
 
   .intro__title {
@@ -245,7 +251,7 @@
   }
 
   .intro__process {
-    margin-top: 100px;
+    margin-top: 98px;
     padding: 0;
     z-index: 40;
   }

@@ -3,12 +3,22 @@
 /* SCROLL */
 
 const header = document.querySelector('.header');
+const introUserMenu = document.querySelector('.intro__user-menu');
 
   window.onscroll = () => {
-    if (window.pageYOffset > 750) {
+    if (window.pageYOffset > 50) {
       header.classList.add('header--scroll');
+
+      if (introUserMenu) {
+        introUserMenu.classList.add('intro__user-menu--scroll');
+      }
+
     } else {
       header.classList.remove('header--scroll');
+
+      if (introUserMenu) {
+        introUserMenu.classList.remove('intro__user-menu--scroll');
+      }
     }
   };
 

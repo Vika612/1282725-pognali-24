@@ -48,7 +48,6 @@
     &::after {
       top: 4px;
       right: 0;
-      width: 30px;
     }
   }
 
@@ -65,6 +64,11 @@
 
   .filter-toggle.active::before {
     content: "свернуть";
+  }
+
+  .filter-toggle.active::after {
+    top: -4px;
+    height: 18px;
   }
 }
 
