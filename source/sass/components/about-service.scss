@@ -89,6 +89,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .about-service {
+    margin-top: -103px;
+  }
+
   .about-service__container {
     padding: 130px 50px 163px 131px;
     background-image: url("../img/about-desk.png");
