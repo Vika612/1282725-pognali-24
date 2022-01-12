@@ -1,0 +1,78 @@
+.likes {
+  padding: 0 48px 0;
+}
+
+.likes__button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: $grey-basic;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-dropdown;
+  }
+
+  &:active {
+    svg {
+      opacity: 0.1;
+    }
+  }
+}
+
+.likes__button svg {
+  width: 12px;
+  height: 11px;
+  fill: $blue-dark-main;
+  fill-rule: evenodd;
+  opacity: 0.5;
+}
+
+.likes__button--active {
+  background-color: $pink;
+
+  &:hover,
+  &:focus {
+    background-color: $red-heart-hover;
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.likes__button--active svg {
+  fill: $red-heart;
+  fill-rule: nonzero;
+  opacity: 1;
+}
+
+.likes__amount {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  color: $blue-dark-deep;
+}
+
+@media (min-width: $tablet-width) {
+  .likes__button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .likes__button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .likes__amount {
+    font-size: 20px;
+  }
+}

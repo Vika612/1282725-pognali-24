@@ -1,6 +1,11 @@
 .flags-list {
   @include reset-list;
   max-width: 270px;
+
+  &--catalog {
+    min-height: 65px;
+    padding: 0 5px;
+  }
 }
 
 .flags-list__item {
@@ -9,9 +14,61 @@
 }
 
 .flags-list__item span {
+  display: inline-block;
+  vertical-align: bottom;
   font-weight: 500;
   font-size: 15px;
-  line-height: 1.1;
+  line-height: 1;
   color: $blue-btn;
   text-transform: uppercase;
+}
+
+.flags-list--catalog .flags-list__item {
+  width: 100%;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flags-list--catalog .flags-list__item img {
+  width: 26px;
+  height: 18px;
+  margin-right: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .flags-list--catalog {
+    max-width: 490px;
+    min-height: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .flags-list--catalog .flags-list__item img {
+    width: 35px;
+    height: 24px;
+    margin-right: 14px;
+  }
+
+  .flags-list--catalog .flags-list__item span {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .flags-list--catalog {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flags-list--catalog .flags-list__item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .flags-list--catalog .flags-list__item img {
+    margin-right: 18px;
+  }
 }

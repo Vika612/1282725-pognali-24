@@ -1,0 +1,63 @@
+.title-card {
+  position: relative;
+  display: block;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1;
+  color: $blue-btn;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: $red;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--catalog {
+    &::before {
+      top: 9px;
+      left: unset;
+      right: 0;
+    }
+  }
+}
+
+.title-card--online::before {
+  background-color: $green;
+}
+
+@media (min-width: $tablet-width) {
+  .title-card {
+    max-width: 255px;
+    padding-right: 30px;
+
+    &::before {
+      top: 10px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title-card {
+    max-width: 240px;
+
+    &::before {
+      left: -23px;
+    }
+  }
+}

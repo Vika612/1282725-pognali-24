@@ -1,17 +1,225 @@
 .profile {
+  position: relative;
+  padding: 15px 20px 20px;
   background-color: $white-basic;
-  border-radius: 30px;
+  border-radius: 20px;
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+  }
+}
+
+.profile:hover .profile__img img {
+  transform: scale(1.1);
+}
+
+.profile__img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile__img img {
+  display: block;
+  transition: all 0.3s ease;
 }
 
 .profile__title {
+  min-height: 40px;
+  margin: -70px 0 0;
+  padding: 0 84px 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1;
   color: $blue-btn;
 }
 
+.profile__hashtags {
+  margin: 15px 0 9px;
+}
+
 .profile__subtitle {
+  position: relative;
+  margin: 0;
+  margin-bottom: 8px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 1px;
+    border-top: 1px solid $grey-basic;
+    content: "";
+  }
+}
+
+.profile__subtitle span {
+  position: relative;
+  padding: 0 5px;
+  display: inline-block;
+  vertical-align: middle;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.1;
+  background-color: $white-basic;
+  z-index: 10;
+}
+
+.profile__countries {
+  min-height: 63px;
+}
+
+.profile__panel {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__transport-block,
+.profile__progress-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.profile__progress-block {
+  align-items: flex-end;
+}
+
+.profile__progress-block .profile__subtitle {
+  margin-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .profile {
+    padding: 35px 25px 20px 35px;
+    display: grid;
+    grid-template-columns: 190px auto min-content;
+    grid-template-rows: auto;
+    grid-template-areas: "photo title panel"
+      "photo hashtags panel"
+      "photo . panel"
+      "photo feedback panel"
+      "subtitle subtitle subtitle"
+      "countries countries countries";
+    gap: 10px 32px;
+  }
+
+  .profile__img {
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+    grid-area: photo;
+  }
+
+  .profile__img img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .profile__title {
+    min-height: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 30px;
+    grid-area: title;
+  }
+
+  .profile__hashtags {
+    margin: 0;
+    grid-area: hashtags;
+  }
+
+  .profile__subtitle--transport,
+  .profile__subtitle--progress {
+    display: none;
+  }
+
+  .profile__subtitle--countries {
+    margin-left: 45px;
+    grid-area: subtitle;
+  }
+
+  .profile__flags {
+    grid-area: countries;
+  }
+
+  .profile__link,
+  .profile__likes {
+    grid-area: feedback;
+  }
+
+  .profile__likes {
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
+    padding: 0;
+  }
+
+  .profile__panel {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    grid-area: panel;
+  }
+
+  .profile__transport-block {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile {
+    padding: 0 41px 0 0;
+    display: grid;
+    grid-template-columns: 285px auto auto;
+    grid-template-rows: 35px auto auto 24px auto 32px;
+    grid-template-areas: "photo . ."
+      "photo title countries"
+      "photo hashtags countries"
+      "photo . countries"
+      "photo feedback panel"
+      "photo . .";
+    gap: 10px 60px;
+  }
+
+  .profile__img {
+    width: 285px;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .profile__img img {
+    width: 285px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .profile__likes {
+    top: 45%;
+    left: 145px;
+  }
+
+  .profile__panel {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .profile__subtitle--countries {
+    display: none;
+  }
+
+  .profile__transport-block {
+    margin: 0 20px 0 0;
+  }
+
+  .profile__link {
+    margin-left: -5px;
+  }
 }

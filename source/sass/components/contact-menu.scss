@@ -1,8 +1,7 @@
 .contact-menu {
   display: flex;
 
-  &--catalog,
-  &--form {
+  &--inner {
     display: none;
   }
 }
@@ -80,15 +79,7 @@
 
 @media (min-width: $desktop-width) {
   .contact-menu {
-    position: fixed;
-    top: 71px;
-    right: 181px;
     display: flex;
-    z-index: 100;
-
-    &--catalog {
-      top: 45px;
-    }
   }
 
   .contact-menu__link {

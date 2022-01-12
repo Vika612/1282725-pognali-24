@@ -3,6 +3,40 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  &--catalog .transport__item,
+  &--filter .transport__item {
+    width: 32px;
+    height: 32px;
+    background-color: $grey-basic;
+    border-radius: 50%;
+
+    &::after {
+      top: 40px;
+    }
+
+    &::before {
+      top: 35px;
+    }
+  }
+
+  &--filter .transport__item {
+    width: 32px;
+    height: 32px;
+    background-color: $white-basic;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+    }
+
+    &:active {
+      background-color: $grey-dropdown;
+      filter: none;
+    }
+  }
 }
 
 .transport__item {
@@ -15,6 +49,19 @@
 
   svg {
     opacity: 0.15;
+  }
+
+  & > input:checked + svg {
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--active svg {
@@ -43,7 +90,7 @@
 
   &::after {
     position: absolute;
-    top: 40px;
+    top: -37px;
     padding: 10px;
     font-weight: 400;
     font-size: 16px;
@@ -54,12 +101,11 @@
     border-radius: 4px;
     display: none;
     content: attr(data-transport);
-    z-index: 50;
   }
 
   &::before {
     position: absolute;
-    top: 35px;
+    top: -5px;
     width: 10px;
     height: 10px;
     background-color: $blue-tooltip;
@@ -73,5 +119,70 @@
   &::after,
   &::before {
     display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .transport {
+    &--catalog {
+      flex-direction: column;
+    }
+  }
+
+  .transport__item {
+    &::before {
+      top: 27px;
+    }
+
+    &::after {
+      top: 32px;
+    }
+  }
+
+  .transport--filter .transport__item {
+    width: 44px;
+    height: 44px;
+
+    &::after {
+      top: 50px;
+    }
+
+    &::before {
+      top: 45px;
+    }
+  }
+
+  .transport--catalog .transport__item {
+    background-color: transparent;
+
+    &::after {
+      top: 0;
+      right: 40px;
+    }
+
+    &::before {
+      top: 12px;
+      right: 35px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transport {
+    &--catalog {
+      flex-direction: row;
+    }
+  }
+
+  .transport--catalog .transport__item {
+    &::before {
+      top: 35px;
+      right: unset;
+    }
+
+    &::after {
+      top: 40px;
+      right: unset;
+    }
   }
 }

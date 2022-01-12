@@ -7,6 +7,7 @@
 @import "components/container.scss";
 @import "components/title.scss";
 @import "components/subtitle.scss";
+@import "components/title-card.scss";
 @import "components/button.scss";
 @import "components/transport.scss";
 @import "components/hashtags.scss";
@@ -44,11 +45,14 @@
 @import "components/address.scss";
 @import "components/map.scss";
 /* CATALOG */
+@import "components/inner-wrapper.scss";
 @import "components/continents.scss";
 @import "components/companion-select.scss";
 @import "components/criterions.scss";
 @import "components/filter-toggle.scss";
 @import "components/filter.scss";
+@import "components/range.scss";
+@import "components/likes.scss";
 @import "components/catalog.scss";
 @import "components/profile.scss";
 @import "components/paginator.scss";

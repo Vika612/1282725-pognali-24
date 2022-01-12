@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   background-color: $blue-dark-deep;
-  z-index: -1;
+  z-index: 0;
 }
 
 .intro__title-wrapper {
@@ -168,7 +168,7 @@
 
   .intro__container {
     position: relative;
-    margin-bottom: -100px;
+    // margin-bottom: -100px;
     padding: 0 33px 224px 60px;
     display: flex;
     flex-wrap: wrap;
@@ -215,6 +215,20 @@
     }
   }
 
+  .intro__user-menu {
+    position: absolute;
+    top: -130px;
+    right: 60px;
+    margin: 0;
+    z-index: 100;
+
+    &--scroll {
+      position: fixed;
+      top: 20px;
+      right: 180px;
+    }
+  }
+
   .intro__title {
     max-width: 600px;
     padding: 0 100px 0 67px;
@@ -237,7 +251,7 @@
   }
 
   .intro__process {
-    margin-top: 100px;
+    margin-top: 98px;
     padding: 0;
     z-index: 40;
   }

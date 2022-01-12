@@ -4,22 +4,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  &--catalog {
+    padding: 0 5px;
+    justify-content: flex-start;
+  }
 }
 
 .hashtags__item {
-  margin-right: 5px;
+  margin-right: 3px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.1;
   color: $grey-special;
 }
 
 @media (min-width: $tablet-width) {
   .hashtags {
-    max-width: 230px;
+    max-width: 240px;
   }
 
   .hashtags__item {
+    margin-right: 6px;
     font-size: 20px;
     line-height: 1.1;
   }

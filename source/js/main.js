@@ -3,12 +3,22 @@
 /* SCROLL */
 
 const header = document.querySelector('.header');
+const introUserMenu = document.querySelector('.intro__user-menu');
 
   window.onscroll = () => {
     if (window.pageYOffset > 50) {
       header.classList.add('header--scroll');
+
+      if (introUserMenu) {
+        introUserMenu.classList.add('intro__user-menu--scroll');
+      }
+
     } else {
       header.classList.remove('header--scroll');
+
+      if (introUserMenu) {
+        introUserMenu.classList.remove('intro__user-menu--scroll');
+      }
     }
   };
 
@@ -102,13 +112,30 @@ if (openBtn) {
 }
 
 
+/* ACCORDION */
+
+const accTitles = document.querySelectorAll('.criterions__title');
+
+for (let i = 0; i < accTitles.length; i++) {
+  let acc = accTitles[i];
+  acc.addEventListener('click', function (evt) {
+    if (evt.target.checked) {
+      for (let j = 0; j < accTitles.length; j++) {
+        accTitles[j].checked = accTitles[j] === evt.target ? true : false;
+      }
+    }
+  });
+}
+
+
 /* FILTER */
 
 const filterContainer = document.querySelector('.filter__container');
 const filterToggle = document.querySelector('.filter-toggle');
 const filterClose = document.querySelector('.dropdown-filter__close');
 
-filterContainer.classList.add('filter__container--closed');
+if (filterContainer) {
+  filterContainer.classList.add('filter__container--closed');
 filterContainer.classList.add('filter__container--js');
 
 filterToggle.addEventListener('click', () => {
@@ -120,3 +147,4 @@ filterClose.addEventListener('click', () => {
   filterContainer.classList.add('filter__container--closed');
   filterToggle.classList.toggle('active');
 });
+}

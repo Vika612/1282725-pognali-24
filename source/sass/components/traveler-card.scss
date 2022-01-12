@@ -4,6 +4,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+  }
+}
+
+.traveler-card:hover .traveler-card__img img {
+  transform: scale(1.1);
 }
 
 .traveler-card__img {
@@ -14,13 +22,11 @@
 }
 
 .traveler-card__img img {
+  width: 270px;
+  height: auto;
   display: block;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 }
 
 .traveler-card__info {
@@ -54,21 +60,7 @@
 .traveler-card__title {
   max-width: 250px;
   margin-bottom: 15px;
-  display: block;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 1;
-  color: $blue-btn;
-  text-align: center;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  padding: 0 15px;
 }
 
 .traveler-card__hashtags {
@@ -101,12 +93,18 @@
 
   .traveler-card__title {
     margin-bottom: 23px;
+    padding: 0 24px;
     font-size: 24px;
     line-height: 1;
   }
 
   .traveler-card__hashtags {
     margin-bottom: 20px;
+  }
+
+  .traveler-card__progress {
+    top: 21px;
+    left: 21px;
   }
 }
 

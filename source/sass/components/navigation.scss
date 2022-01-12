@@ -20,6 +20,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  .navigation--inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .navigation__user-menu {
     display: none;
   }

@@ -80,7 +80,7 @@
 
 @media (min-width: $desktop-width) {
   .directions__container {
-    padding: 160px 130px 137px;
+    padding: 163px 130px 137px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -99,7 +99,8 @@
   }
 
   .directions__title {
-    margin-bottom: 66px;
+    margin-bottom: 58px;
+    padding-top: 7px;
   }
 
   .directions__text {
