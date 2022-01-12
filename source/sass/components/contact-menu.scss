@@ -1,8 +1,7 @@
 .contact-menu {
   display: flex;
 
-  &--catalog,
-  &--form {
+  &--inner {
     display: none;
   }
 }
