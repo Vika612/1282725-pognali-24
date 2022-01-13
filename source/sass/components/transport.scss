@@ -130,6 +130,11 @@
   }
 
   .transport__item {
+    svg {
+      width: 23px;
+      height: 22px;
+    }
+
     &::before {
       top: 27px;
     }

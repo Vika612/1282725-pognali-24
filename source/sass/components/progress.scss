@@ -25,6 +25,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &--form {
+    top: 48%;
+  }
 }
 
 .progress__result-num {
@@ -66,6 +70,7 @@
   }
 
   &--form {
+    padding-top: 4px;
     font-size: 18px;
     color: $grey-special;
 
@@ -128,6 +133,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .progress__result--form {
+    top: 55%;
+  }
+
   .progress__result-num--form {
     color: $white-basic;
   }
