@@ -21,6 +21,10 @@
     content: "";
   }
 
+  &--catalog {
+    z-index: 10;
+  }
+
   &--form {
     &::before {
       position: absolute;

@@ -1,0 +1,194 @@
+.profile-form__container {
+  padding: 24px 25px 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "level avatar"
+    "button button"
+    "hashtags hashtags"
+    "transport transport";
+}
+
+.profile-form__progress {
+  justify-self: center;
+  grid-area: level;
+}
+
+.profile-form__avatar {
+  width: 100px;
+  height: 100px;
+  justify-self: center;
+  grid-area: avatar;
+}
+
+.profile-form__avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-form__avatar-link {
+  width: 100%;
+  margin: 15px 0 30px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  color: $blue-dark-deep;
+  background-color: $grey-light;
+  border-radius: 20px;
+  text-transform: uppercase;
+  grid-area: button;
+
+  &:hover,
+  &:focus {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    color: rgba($blue-dark-deep, 0.3);
+  }
+
+  span::before {
+    content: "сменить фото";
+  }
+}
+
+.profile-form__hashtags,
+.profile-form__transport-block {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $grey-alphabet;
+  border-radius: 10px;
+}
+
+.profile-form__hashtags {
+  margin-bottom: 28px;
+  grid-area: hashtags;
+
+  &:hover {
+    border: 1px solid $grey-textarea-hover;
+  }
+}
+
+.profile-form__textarea {
+  width: 100%;
+  padding: 12px 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  color: $grey-special;
+  opacity: 0.6;
+  border: none;
+  outline: none;
+  resize: none;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1;
+  }
+}
+
+.profile-form__transport-block {
+  grid-area: transport;
+}
+
+@media (min-width: $tablet-width) {
+  .profile-form__container {
+    padding: 66px 75px 55px;
+    display: grid;
+    grid-template-columns: auto 308px auto;
+    grid-template-rows: auto;
+    grid-template-areas: "level transport avatar"
+      "button button button"
+      "hashtags hashtags hashtags";
+  }
+
+  .profile-form__progress {
+    justify-self: start;
+  }
+
+  .profile-form__avatar {
+    width: 94px;
+    height: 94px;
+    justify-self: end;
+  }
+
+  .profile-form__avatar-link {
+    width: 100%;
+    margin: 48px 0;
+    padding: 22px;
+    letter-spacing: 0.09em;
+  }
+
+  .profile-form__textarea {
+    padding: 17px 24px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile-form__container {
+    position: relative;
+    margin-top: -190px;
+    padding: 0 60px 55px;
+    grid-template-columns: auto auto 384px;
+    grid-template-areas: ". level avatar"
+      ". . button"
+      "hashtags hashtags transport";
+    gap: 0;
+    z-index: 10;
+  }
+
+  .profile-form__progress {
+    margin: -13px -55px 0 0;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .profile-form__avatar {
+    width: 190px;
+    height: 190px;
+    justify-self: center;
+  }
+
+  .profile-form__avatar-link {
+    width: 190px;
+    margin: 0 0 23px 0;
+    padding: 12px;
+    border-radius: 0 0 10px 10px;
+    letter-spacing: normal;
+    justify-self: center;
+
+    span::before {
+      content: "фото";
+    }
+  }
+
+  .profile-form__textarea {
+    padding: 8px 4px;
+  }
+
+  .profile-form__hashtags {
+    width: 732px;
+    margin: 0 0 0 60px;
+    padding: 26px 40px;
+  }
+
+  .profile-form__transport-block {
+    padding: 26px;
+    justify-self: end;
+  }
+}
