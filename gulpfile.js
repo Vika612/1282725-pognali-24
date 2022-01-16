@@ -117,6 +117,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    open: true
   });
   done();
 }

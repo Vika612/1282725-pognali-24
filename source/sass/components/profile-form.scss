@@ -104,7 +104,7 @@
 
 @media (min-width: $tablet-width) {
   .profile-form__container {
-    padding: 66px 75px 55px;
+    padding: 66px 75px 30px;
     display: grid;
     grid-template-columns: auto 308px auto;
     grid-template-rows: auto;
@@ -143,7 +143,7 @@
   .profile-form__container {
     position: relative;
     margin-top: -190px;
-    padding: 0 60px 55px;
+    padding: 0 60px 65px;
     grid-template-columns: auto auto 384px;
     grid-template-areas: ". level avatar"
       ". . button"
