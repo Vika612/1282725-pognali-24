@@ -3,6 +3,7 @@
 }
 
 .steps__item {
+  padding: 23px 25px;
   background-color: $white-basic;
   border-radius: 10px;
 }
@@ -16,4 +17,16 @@
 
 .steps__text {
   font-weight: 400;
+}
+
+@media (min-width: $tablet-width) {
+  .steps__item {
+    padding: 50px 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .steps__item {
+    padding: 100px 160px;
+  }
 }

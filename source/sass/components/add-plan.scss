@@ -13,3 +13,15 @@
 .add-plan__submit {
   border: none;
 }
+
+@media (min-width: $tablet-width) {
+  .add-plan__container {
+    padding: 30px 75px 100px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-plan__container {
+    padding: 30px 60px 100px;
+  }
+}

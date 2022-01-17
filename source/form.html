@@ -279,168 +279,297 @@
                       <label for="accept">Можно с детьми</label>
                     </p>
                     <div class="date-step__calendar calendar">
-                      <div class="calendar__slider">
-                        <p class="calendar__date">Март 2019
-                          <button class="calendar__button" type="button" aria-label="Переключить на предыдущий месяц"></button>
-                          <button class="calendar__button" type="button" aria-label="Переключить на следующий месяц"></button>
-                        </p>
+                      <div class="calendar__slider calendar-slider">
+                        <ul class="calendar-slider__list">
+                          <li class="calendar-slider__item">Март 2019</li>
+                          <li class="calendar-slider__item">Апрель 2019</li>
+                          <li class="calendar-slider__item">Май 2019</li>
+                        </ul>
+                        <button class="calendar__button" type="button" aria-label="Переключить на предыдущий месяц"></button>
+                        <button class="calendar__button" type="button" aria-label="Переключить на следующий месяц"></button>
                       </div>
-                      <ul class="calendar__week" aria-label="дни недели">
-                        <li class="calendar__day-of-week">
-                          <span class="calendar__day-of-week--mobile">П</span>
-                          <span class="calendar__day-of-week--desk">Пн</span>
+                      <ul class="calendar__week calendar-week" aria-label="дни недели">
+                        <li class="calendar-week__day">
+                          <span class="calendar-week__day--mobile">П</span>
+                          <span class="calendar-week__day--desk">Пн</span>
                         </li>
-                        <li class="calendar__day-of-week">
-                          <span class="calendar__day-of-week--mobile">В</span>
-                          <span class="calendar__day-of-week--desk">Вт</span>
+                        <li class="calendar-week__day">
+                          <span class="calendar-week__day--mobile">В</span>
+                          <span class="calendar-week__day--desk">Вт</span>
                         </li>
-                        <li class="calendar__day-of-week">
-                          <span class="calendar__day-of-week--mobile">С</span>
-                          <span class="calendar__day-of-week--desk">Ср</span>
+                        <li class="calendar-week__day">
+                          <span class="calendar-week__day--mobile">С</span>
+                          <span class="calendar-week__day--desk">Ср</span>
                         </li>
-                        <li class="calendar__day-of-week">
-                          <span class="calendar__day-of-week--mobile">Ч</span>
-                          <span class="calendar__day-of-week--desk">Чт</span>
+                        <li class="calendar-week__day">
+                          <span class="calendar-week__day--mobile">Ч</span>
+                          <span class="calendar-week__day--desk">Чт</span>
                         </li>
-                        <li class="calendar__day-of-week">
-                          <span class="calendar__day-of-week--mobile">П</span>
-                          <span class="calendar__day-of-week--desk">Пт</span>
+                        <li class="calendar-week__day">
+                          <span class="calendar-week__day--mobile">П</span>
+                          <span class="calendar-week__day--desk">Пт</span>
                         </li>
-                        <li class="calendar__day-of-week">
-                          <span class="calendar__day-of-week--mobile">С</span>
-                          <span class="calendar__day-of-week--desk">Сб</span>
+                        <li class="calendar-week__day calendar-week__day--week-end">
+                          <span class="calendar-week__day--mobile">С</span>
+                          <span class="calendar-week__day--desk">Сб</span>
                         </li>
-                        <li class="calendar__day-of-week">
-                          <span class="calendar__day-of-week--mobile">В</span>
-                          <span class="calendar__day-of-week--desk">Вс</span>
+                        <li class="calendar-week__day calendar-week__day--week-end">
+                          <span class="calendar-week__day--mobile">В</span>
+                          <span class="calendar-week__day--desk">Вс</span>
                         </li>
                       </ul>
                       <ul class="calendar__table">
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="02-23">23 <span class="visually-hidden">февраля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="feb23" disabled>
+                            <span class="calendar-day__date">23</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="02-24">24 <span class="visually-hidden">февраля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="feb24" disabled>
+                            <span class="calendar-day__date">24</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="02-25">25 <span class="visually-hidden">февраля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="feb25" disabled>
+                            <span class="calendar-day__date">25</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="02-26">26 <span class="visually-hidden">февраля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="feb26" disabled>
+                            <span class="calendar-day__date">26</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="02-27">27 <span class="visually-hidden">февраля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="feb27" disabled>
+                            <span class="calendar-day__date">27</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="02-28">28 <span class="visually-hidden">февраля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="feb28" disabled>
+                            <span class="calendar-day__date">28</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-01">1 <span>мар</span> <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar1" disabled>
+                            <span class="calendar-day__date calendar-day__date--first-day">1 <em>мар</em></span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-02">2 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar2" disabled>
+                            <span class="calendar-day__date">2</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-03">3 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar3" disabled>
+                            <span class="calendar-day__date">3</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-04">4 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar4" disabled>
+                            <span class="calendar-day__date">4</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-05">5 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar5" disabled>
+                            <span class="calendar-day__date">5</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-06">6 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar6" disabled>
+                            <span class="calendar-day__date">6</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-07">7 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar7" disabled>
+                            <span class="calendar-day__date">7</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-08">8 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar8" disabled>
+                            <span class="calendar-day__date">8</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-09">9 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar9" disabled>
+                            <span class="calendar-day__date">9</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-10">10 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar10" disabled>
+                            <span class="calendar-day__date">10</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-11">11 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar11" disabled>
+                            <span class="calendar-day__date">11</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-12">12 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar12" disabled>
+                            <span class="calendar-day__date">12</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-13">13 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar13" disabled>
+                            <span class="calendar-day__date">13</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-14">14 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar14" disabled>
+                            <span class="calendar-day__date">14</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-15">15 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar15" disabled>
+                            <span class="calendar-day__date">15</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-16">16 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar16" disabled>
+                            <span class="calendar-day__date">16</span>
+                          </label>
                         </li>
-                        <li class="calendar-days__day calendar-days__day--disabled">
-                          <time datetime="03-17">17 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar17" disabled>
+                            <span class="calendar-day__date">17</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-18">18 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar18" disabled>
+                            <span class="calendar-day__date">18</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-19">19 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar19" disabled>
+                            <span class="calendar-day__date">19</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-20">20 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar20" disabled>
+                            <span class="calendar-day__date">20</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-21">21 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar21" disabled>
+                            <span class="calendar-day__date">21</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-22">22 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar22" disabled>
+                            <span class="calendar-day__date">22</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-23">23 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar23" disabled>
+                            <span class="calendar-day__date">23</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-24">24 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar24" disabled>
+                            <span class="calendar-day__date">24</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--disabled">
-                          <time datetime="03-25">25 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar25" disabled>
+                            <span class="calendar-day__date">25</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--selected" tabindex="0">
-                          <time datetime="03-26">26 <span>Заезд</span><span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar26" checked>
+                            <span class="calendar-day__date calendar-day__date--check">26<em>Заезд</em></span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--selected" tabindex="0">
-                          <time datetime="03-27">27 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar27" checked>
+                            <span class="calendar-day__date">27</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--selected" tabindex="0">
-                          <time datetime="03-28">28 <span>Выезд</span><span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar28" checked>
+                            <span class="calendar-day__date calendar-day__date--check">28<em>Выезд</em></span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="03-29">29 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar29">
+                            <span class="calendar-day__date">29</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="03-30">30 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar30">
+                            <span class="calendar-day__date">30</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="03-31">31 <span class="visually-hidden">марта</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="mar31">
+                            <span class="calendar-day__date">31</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="04-01">1 <span>апр</span><span class="visually-hidden">апреля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="apr1">
+                            <span class="calendar-day__date calendar-day__date--first-day">1 <em>апр</em></span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="04-02">02 <span class="visually-hidden">апреля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="apr2">
+                            <span class="calendar-day__date">2</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="04-03">03 <span class="visually-hidden">апреля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="apr3">
+                            <span class="calendar-day__date">3</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="04-04">04 <span class="visually-hidden">апреля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="apr4">
+                            <span class="calendar-day__date">4</span>
+                          </label>
                         </li>
-                        <li class="calendar__cell calendar-day calendar-day--active" tabindex="0">
-                          <time datetime="04-05">05 <span class="visually-hidden">апреля</span></time>
+                        <li class="calendar__cell calendar-day">
+                          <label class="calendar-day__label">
+                            <input class="calendar-day__input visually-hidden" type="checkbox" name="apr5">
+                            <span class="calendar-day__date">5</span>
+                          </label>
                         </li>
                       </ul>
                     </div>
