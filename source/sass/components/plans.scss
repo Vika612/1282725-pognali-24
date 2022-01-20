@@ -18,7 +18,7 @@
 
 @media (min-width: $tablet-width) {
   .plans__container {
-    padding: 57px 75px 76px;
+    padding: 57px 75px 95px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
   }
@@ -31,7 +31,7 @@
 @media (min-width: $desktop-width) {
   .plans__container {
     @include border-radius-top;
-    padding: 55px 58px 64px 124px;
+    padding: 55px 58px 90px 124px;
   }
 
   .plans__title {

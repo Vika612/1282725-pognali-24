@@ -10,18 +10,37 @@
   background-color: $grey-dark;
 }
 
+.add-plan__header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .add-plan__submit {
   border: none;
 }
 
 @media (min-width: $tablet-width) {
   .add-plan__container {
-    padding: 30px 75px 100px;
+    padding: 52px 75px 100px;
+  }
+
+  .add-plan__header {
+    margin-bottom: 57px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .add-plan {
+    margin-top: -41px;
+  }
+
   .add-plan__container {
-    padding: 30px 60px 100px;
+    padding: 52px 60px 100px;
+  }
+
+  .add-plan__header {
+    padding: 0 69px;
   }
 }

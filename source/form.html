@@ -236,32 +236,34 @@
         <section class="add-plan">
           <form class="main-form__form" action="http://echo.htmlacademy.ru" method="POST">
             <div class="add-plan__container container">
-              <h2 class="add-plan__title subtitle subtitle--form">Добавить план:</h2>
-              <ul class="add-plan__indicators indicators">
-                <li class="indicators__point"><span>Даты</span></li>
-                <li class="indicators__point"><span>Маршрут</span></li>
-                <li class="indicators__point"><span>Развлечения</span></li>
-              </ul>
+              <div class="add-plan__header">
+                <h2 class="add-plan__title subtitle subtitle--form">Добавить план:</h2>
+                <ul class="add-plan__indicators indicators indicators--add-plan">
+                  <li class="indicators__point indicators__point--active"></li>
+                  <li class="indicators__point"></li>
+                  <li class="indicators__point"></li>
+                </ul>
+              </div>
               <ol class="add-plan__steps steps">
                 <li class="steps__item" id="date-step">
                   <div class="steps__header">
-                    <h3 class="steps__subtitle"><span>Шаг 1.</span> Даты пребывания</h3>
-                    <p class="steps__text">
-                      Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
-                    </p>
+                    <h3 class="steps__subtitle"><span>Шаг 1.<br></span> Даты пребывания</h3>
                     <ul class="steps__indicators indicators">
-                      <li class="indicators__point--active"><span>Даты</span></li>
+                      <li class="indicators__point indicators__point--active"><span>Даты</span></li>
                       <li class="indicators__point"><span>Маршрут</span></li>
                       <li class="indicators__point"><span>Развлечения</span></li>
                     </ul>
+                    <p class="steps__text">
+                      Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.
+                    </p>
                   </div>
                   <div class="steps__content date-step">
                     <div class="date-step__number-travelers counter">
                       <label class="counter__label" for="number-travelers">Ищу попутчиков:</label>
                       <span class="counter__note">чел.</span>
                       <div class="counter__quantity">
-                        <button class="counter__button counter__button--decrease" type="button" aria-label="убавить количество попутчиков"></button>
                         <input class="counter__input" type="text" name="number-travelers" id="number-travelers" value="2" readonly>
+                        <button class="counter__button counter__button--decrease" type="button" aria-label="убавить количество попутчиков"></button>
                         <button class="counter__button counter__button--increase" type="button" aria-label="прибавить количество попутчиков"></button>
                       </div>
                     </div>
@@ -269,14 +271,14 @@
                       <label class="counter__label" for="number-days">Длительность:</label>
                       <span class="counter__note">дн.</span>
                       <div class="counter__quantity">
-                        <button class="counter__button counter__button--decrease" type="button" aria-label="убавить количество дней"></button>
                         <input class="counter__input" type="text" name="number-days" id="number-days" value="3" readonly>
+                        <button class="counter__button counter__button--decrease" type="button" aria-label="убавить количество дней"></button>
                         <button class="counter__button counter__button--increase" type="button" aria-label="прибавить количество дней"></button>
                       </div>
                     </div>
-                    <p class="date-step__accept-checkbox">
-                      <input type="checkbox" name="accept" id="accept" checked>
-                      <label for="accept">Можно с детьми</label>
+                    <p class="date-step__accept-checkbox accept-checkbox">
+                      <input class="accept-checkbox__input visually-hidden" type="checkbox" name="accept" id="accept" checked>
+                      <label class="accept-checkbox__label" for="accept">Можно с детьми</label>
                     </p>
                     <div class="date-step__calendar calendar">
                       <div class="calendar__slider calendar-slider">
@@ -579,13 +581,13 @@
 
                 <li class="steps__item" id="route-step">
                   <div class="steps__header">
-                    <h3 class="steps__subtitle"><span>Шаг 2.</span> Маршрут</h3>
+                    <h3 class="steps__subtitle"><span>Шаг 2.<br></span> Маршрут</h3>
                     <p class="steps__text">
                       Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
                     </p>
                     <ul class="steps__indicators indicators">
                       <li class="indicators__point"><span>Даты</span></li>
-                      <li class="indicators__point--active"><span>Маршрут</span></li>
+                      <li class="indicators__point indicators__point--active"><span>Маршрут</span></li>
                       <li class="indicators__point"><span>Развлечения</span></li>
                     </ul>
                   </div>
@@ -936,14 +938,14 @@
 
                 <li class="steps__item" id="entertainment-step">
                   <div class="steps__header">
-                    <h3 class="steps__subtitle"><span>Шаг 3.</span> Развлечения</h3>
+                    <h3 class="steps__subtitle"><span>Шаг 3.<br></span> Развлечения</h3>
                     <p class="steps__text">
                       Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
                     </p>
                     <ul class="steps__indicators indicators">
                       <li class="indicators__point"><span>Даты</span></li>
                       <li class="indicators__point"><span>Маршрут</span></li>
-                      <li class="indicators__point--active"><span>Развлечения</span></li>
+                      <li class="indicators__point indicators__point--active"><span>Развлечения</span></li>
                     </ul>
                   </div>
                   <div class="steps__content entertainment-step">

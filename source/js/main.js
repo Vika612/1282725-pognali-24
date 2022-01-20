@@ -149,6 +149,43 @@ filterClose.addEventListener('click', () => {
 });
 }
 
+
+/* COUNTER */
+
+const counter = document.querySelector('.counter');
+const input = document.querySelector('.counter__input');
+
+const ACTION = {
+  PLUS: 'plus',
+  MINUS: 'minus'
+};
+
+const calculateItem = (action) => {
+
+switch (action) {
+  case ACTION.PLUS:
+    input.value++;
+    break;
+  case ACTION.MINUS:
+    input.value--;
+    break;
+  }
+};
+
+counter.addEventListener('click', (e) => {
+  if (e.target.classList.contains('counter__button--increase')) {
+    calculateItem(ACTION.PLUS);
+  }
+
+  if (e.target.classList.contains('counter__button--decrease')) {
+
+    if (Number(input.value)) {
+    calculateItem(ACTION.MINUS);
+    }
+  }
+});
+
+
 /* SLIDER */
 
 let position = 0;

@@ -1,0 +1,80 @@
+.accept-checkbox__label {
+  position: relative;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  color: $blue-light;
+  cursor: pointer;
+}
+
+.accept-checkbox__label::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid $grey-alphabet;
+  content: "";
+}
+
+.accept-checkbox__label::after {
+  position: absolute;
+  top: 1px;
+  left: 9px;
+  width: 11px;
+  height: 11px;
+  background: url("../img/accept.svg") no-repeat;
+  display: none;
+  content: "";
+}
+
+.accept-checkbox__input:checked + .accept-checkbox__label::after {
+  display: block;
+}
+
+.accept-checkbox__input:hover:not(:checked) + .accept-checkbox__label::before,
+.accept-checkbox__input:hover:checked + .accept-checkbox__label::before {
+  border: 1px solid $grey-border-hover;
+}
+
+.accept-checkbox__input:focus:not(:checked) + .accept-checkbox__label::before,
+.accept-checkbox__input:focus:checked + .accept-checkbox__label::before {
+  background-color: $grey-dropdown;
+}
+
+.accept-checkbox__input:focus:checked + .accept-checkbox__label::after {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .accept-checkbox {
+    margin-top: -13px;
+  }
+
+  .accept-checkbox__label {
+    padding-left: 58px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .accept-checkbox__label::before {
+    width: 36px;
+    height: 36px;
+  }
+
+  .accept-checkbox__label::after {
+    position: absolute;
+    top: 4px;
+    left: 13px;
+    width: 18px;
+    height: 17px;
+  }
+}
