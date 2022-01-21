@@ -86,7 +86,6 @@ if (tabNavs) {
   });
 }
 
-
   /* MODAL */
 
 const openBtn = document.querySelector('.add-profile__link');
@@ -155,35 +154,38 @@ filterClose.addEventListener('click', () => {
 const counter = document.querySelector('.counter');
 const input = document.querySelector('.counter__input');
 
-const ACTION = {
-  PLUS: 'plus',
-  MINUS: 'minus'
-};
+if (counter) {
 
-const calculateItem = (action) => {
+  const ACTION = {
+    PLUS: 'plus',
+    MINUS: 'minus'
+  };
 
-switch (action) {
-  case ACTION.PLUS:
-    input.value++;
-    break;
-  case ACTION.MINUS:
-    input.value--;
-    break;
-  }
-};
+  const calculateItem = (action) => {
 
-counter.addEventListener('click', (e) => {
-  if (e.target.classList.contains('counter__button--increase')) {
-    calculateItem(ACTION.PLUS);
-  }
-
-  if (e.target.classList.contains('counter__button--decrease')) {
-
-    if (Number(input.value)) {
-    calculateItem(ACTION.MINUS);
+  switch (action) {
+    case ACTION.PLUS:
+      input.value++;
+      break;
+    case ACTION.MINUS:
+      input.value--;
+      break;
     }
-  }
-});
+  };
+
+  counter.addEventListener('click', (e) => {
+    if (e.target.classList.contains('counter__button--increase')) {
+      calculateItem(ACTION.PLUS);
+    }
+
+    if (e.target.classList.contains('counter__button--decrease')) {
+
+      if (Number(input.value)) {
+      calculateItem(ACTION.MINUS);
+      }
+    }
+  });
+}
 
 
 /* SLIDER */

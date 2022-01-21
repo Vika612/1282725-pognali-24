@@ -1,0 +1,16 @@
+.route-step__country-choise {
+  position: relative;
+}
+
+.route-step__dropdown {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  z-index: 10;
+  // visibility: hidden;
+}
+
+.route-step__button-choice:hover ~ .route-step__dropdown,
+.route-step__button-choice:focus-within ~ .route-step__dropdown {
+  visibility: visible;
+}
