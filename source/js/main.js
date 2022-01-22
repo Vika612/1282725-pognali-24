@@ -65,7 +65,7 @@ if (progressBars) {
 
 /* TABS */
 
-const tabNavs = document.querySelectorAll('.alphabet-filter__link');
+const tabNavs = document.querySelectorAll('.alphabet-js');
 
 if (tabNavs) {
   tabNavs.forEach((tabNav) => {
@@ -74,17 +74,18 @@ if (tabNavs) {
       e.preventDefault();
       const activeTabAttr = e.target.dataset.tab;
 
-      document.querySelector('.alphabet-filter__link.active').classList.remove('active');
-      document.querySelector('.countries-filter__item.active').classList.remove('active');
+      document.querySelector('.alphabet-js.active').classList.remove('active');
+      document.querySelector('.countries-js.active').classList.remove('active');
 
       tabNav.classList.add('active');
 
-      const activeScreen = `.countries-filter__item--${activeTabAttr}`;
+      const activeScreen = `.countries-js--${activeTabAttr}`;
 
       document.querySelector(activeScreen).classList.add('active');
     });
   });
 }
+
 
   /* MODAL */
 
@@ -135,7 +136,7 @@ const filterClose = document.querySelector('.dropdown-filter__close');
 
 if (filterContainer) {
   filterContainer.classList.add('filter__container--closed');
-filterContainer.classList.add('filter__container--js');
+  filterContainer.classList.add('filter__container--js');
 
 filterToggle.addEventListener('click', () => {
   filterContainer.classList.toggle('filter__container--closed');
@@ -151,39 +152,40 @@ filterClose.addEventListener('click', () => {
 
 /* COUNTER */
 
-const counter = document.querySelector('.counter');
-const input = document.querySelector('.counter__input');
+const counters = document.querySelectorAll('.counter');
+const inputs = document.querySelectorAll('.counter__input');
 
-if (counter) {
+if (counters) {
 
   const ACTION = {
     PLUS: 'plus',
     MINUS: 'minus'
   };
 
-  const calculateItem = (action) => {
+  const calculateItem = (action, input) => {
 
   switch (action) {
     case ACTION.PLUS:
       input.value++;
       break;
     case ACTION.MINUS:
-      input.value--;
+      let inputValue = 1 * input.value;
+      inputValue = inputValue > 0 ? --inputValue : inputValue;
+      input.value = inputValue;
       break;
     }
   };
 
-  counter.addEventListener('click', (e) => {
-    if (e.target.classList.contains('counter__button--increase')) {
-      calculateItem(ACTION.PLUS);
-    }
-
-    if (e.target.classList.contains('counter__button--decrease')) {
-
-      if (Number(input.value)) {
-      calculateItem(ACTION.MINUS);
+  counters.forEach((counter, i) => {
+    counter.addEventListener('click', (e) => {
+      if (e.target.classList.contains('counter__button--increase')) {
+        calculateItem(ACTION.PLUS, inputs[i]);
       }
-    }
+
+      if (e.target.classList.contains('counter__button--decrease')) {
+        calculateItem(ACTION.MINUS, inputs[i]);
+      }
+    });
   });
 }
 
@@ -199,36 +201,35 @@ const btnPrev = document.querySelector('.calendar-slider__button--prev');
 const btnNext = document.querySelector('.calendar-slider__button--next');
 const items = document.querySelectorAll('.calendar-slider__item');
 const itemsCount = items.length;
-const itemWidth = container.clientWidth / slidesToShow;
-const movePosition = slidesToScroll * itemWidth;
 
-items.forEach((item) => {
-  item.style.minWidth = `${itemWidth}px`;
-});
+if (container) {
 
-btnNext.addEventListener('click', () => {
-  const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+  btnNext.addEventListener('click', () => {
+    const sliderItemWidth = document.querySelector('.calendar-slider__item').clientWidth;
 
-  position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft *itemWidth;
-  setPosition();
+    position = position - sliderItemWidth;
+    setPosition();
+    checkBtns();
+  });
+
+  btnPrev.addEventListener('click', () => {
+    const sliderItemWidth = document.querySelector('.calendar-slider__item').clientWidth;
+
+    position = position + sliderItemWidth;
+    setPosition();
+    checkBtns();
+  });
+
+  const setPosition = () => {
+    track.style.transform = `translateX(${position}px)`;
+  };
+
+  const checkBtns = () => {
+    const sliderItemWidth = document.querySelector('.calendar-slider__item').clientWidth;
+
+    btnPrev.disabled = position === 0;
+    btnNext.disabled = position <= -(itemsCount - slidesToShow) * sliderItemWidth;
+  };
+
   checkBtns();
-});
-
-btnPrev.addEventListener('click', () => {
-  const itemsLeft = Math.abs(position) / itemWidth;
-
-  position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft *itemWidth;
-  setPosition();
-  checkBtns();
-});
-
-const setPosition = () => {
-  track.style.transform = `translateX(${position}px)`;
-};
-
-const checkBtns = () => {
-  btnPrev.disabled = position === 0;
-  btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-};
-
-checkBtns();
+}

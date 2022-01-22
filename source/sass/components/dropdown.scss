@@ -76,7 +76,7 @@
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    color: $blue-light;
   }
 
   &:active {
@@ -118,6 +118,7 @@
   }
 
   .dropdown__countries {
+    width: 155px;
     border: none;
   }
 

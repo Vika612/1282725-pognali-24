@@ -20,6 +20,7 @@ export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('build/css'))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -42,7 +43,9 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(gulp.dest('build/js'))
     .pipe(terser())
+    .pipe(rename('main.min.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
