@@ -6,7 +6,7 @@
 
 .add-plan__container {
   @include border-radius-top;
-  padding: 30px 25px 100px;
+  padding: 30px 25px 123px;
   background-color: $grey-dark;
 }
 
@@ -24,7 +24,7 @@
 
 @media (min-width: $tablet-width) {
   .add-plan__container {
-    padding: 52px 75px 100px;
+    padding: 52px 75px 115px;
   }
 
   .add-plan__header {
@@ -38,7 +38,7 @@
   }
 
   .add-plan__container {
-    padding: 52px 60px 100px;
+    padding: 52px 60px 119px;
   }
 
   .add-plan__header {

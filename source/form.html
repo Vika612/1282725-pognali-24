@@ -606,7 +606,6 @@
                     </ul>
                     <div class="route-step__country-choise">
                       <button class="route-step__button-choice" type="button">Выберите страну</button>
-                      <button class="route-step__delete-choice" aria-label="Удалить список выбора стран"></button>
                       <div class="route-step__dropdown dropdown">
                         <ul class="dropdown__alphabet">
                           <li><a class="dropdown__link alphabet-js active" data-tab="А" href="#!" aria-label="Открыть список стран на букву А">А</a></li>
@@ -901,6 +900,7 @@
                           </li>
                         </ul>
                       </div>
+                      <button class="route-step__delete-choice" aria-label="Удалить список выбора стран"></button>
                     </div>
                     <button class="route-step__button-add" type="button">Добавить страну</button>
                   </div>
@@ -913,7 +913,7 @@
                 <li class="steps__item" id="entertainment-step">
                   <div class="steps__header">
                     <h3 class="steps__subtitle"><span>Шаг 3.<br></span> Развлечения</h3>
-                    <p class="steps__text">
+                    <p class="steps__text steps__text--step-3">
                       Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
                     </p>
                     <ul class="steps__indicators indicators">
@@ -923,16 +923,20 @@
                     </ul>
                   </div>
                   <div class="steps__content entertainment-step">
-                    <ul class="entertainment-step__list action-plan">
-                      <li class="action-plan__item">
-                        <label for="bosnia">Босния и Герцеговина</label>
+                    <ul class="entertainment-step__list">
+                      <li class="entertainment-step__item">
+                        <div class="entertainment-step__title entertainment-step__title--first">
+                          <label class="entertainment-step__label entertainment-step__label--bosnia" for="bosnia">Босния и Герцеговина</label>
+                          <img src="img/flag-svg/bosnia-and-herzegovina.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                        </div>
                         <textarea name="bosnia" id="bosnia" placeholder="План действий"></textarea>
-                        <img src="img/flag-svg/bosnia-and-herzegovina.svg" width="70" height="47" alt="Флаг Боснии и Герцеговины">
                       </li>
-                      <li class="selected-countries__item">
-                        <label for="czechia">Чехия</label>
-                        <textarea name="czechia" id="czechia">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                        <img src="img/flag-svg/czechia.svg" alt="Флаг Чехии">
+                      <li class="entertainment-step__item">
+                        <div class="entertainment-step__title">
+                          <label class="entertainment-step__label" for="czechia">Чехия</label>
+                          <img src="img/flag-svg/czechia.svg" width="35" height="24" alt="Флаг Чехии">
+                        </div>
+                        <textarea name="czechia" id="czechia">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                       </li>
                     </ul>
                   </div>
