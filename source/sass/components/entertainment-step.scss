@@ -84,12 +84,11 @@
   outline: none;
   resize: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid $grey-border-hover;
   }
 
-  &:active {
+  &:focus {
     border: 1px solid $blue-dark-deep;
   }
 

@@ -56,7 +56,49 @@
   }
 }
 
-.profile-form__hashtags,
+.profile-form__hashtags {
+  position: relative;
+  width: 100%;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: hashtags;
+}
+
+.profile-form__textarea {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.1;
+  background-color: transparent;
+  color: $grey-special;
+  border: 1px solid $grey-alphabet;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+
+  &:hover {
+    border: 1px solid $grey-textarea-hover;
+  }
+
+  &:focus {
+    border: 1px solid $blue-light;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1;
+    opacity: 0.6;
+  }
+}
+
 .profile-form__transport-block {
   position: relative;
   width: 100%;
@@ -67,38 +109,6 @@
   align-items: center;
   border: 1px solid $grey-alphabet;
   border-radius: 10px;
-}
-
-.profile-form__hashtags {
-  margin-bottom: 28px;
-  grid-area: hashtags;
-
-  &:hover {
-    border: 1px solid $grey-textarea-hover;
-  }
-}
-
-.profile-form__textarea {
-  width: 100%;
-  padding: 12px 8px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: transparent;
-  color: $grey-special;
-  opacity: 0.6;
-  border: none;
-  outline: none;
-  resize: none;
-
-  &::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.1;
-  }
-}
-
-.profile-form__transport-block {
   grid-area: transport;
 }
 
@@ -131,7 +141,7 @@
   }
 
   .profile-form__textarea {
-    padding: 17px 24px;
+    padding: 28px 40px;
 
     &::placeholder {
       font-size: 20px;
@@ -143,7 +153,7 @@
   .profile-form__container {
     position: relative;
     margin-top: -190px;
-    padding: 0 60px 65px;
+    padding: 0 60px 60px;
     grid-template-columns: auto auto 384px;
     grid-template-areas: ". level avatar"
       ". . button"
@@ -166,7 +176,7 @@
 
   .profile-form__avatar-link {
     width: 190px;
-    margin: 0 0 23px 0;
+    margin: 0 0 27px 0;
     padding: 12px;
     border-radius: 0 0 10px 10px;
     letter-spacing: normal;
@@ -178,13 +188,12 @@
   }
 
   .profile-form__textarea {
-    padding: 8px 4px;
+    padding: 35px 39px 25px;
   }
 
   .profile-form__hashtags {
     width: 732px;
     margin: 0 0 0 60px;
-    padding: 26px 40px;
   }
 
   .profile-form__transport-block {
