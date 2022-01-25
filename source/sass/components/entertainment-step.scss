@@ -42,23 +42,20 @@
 
 .entertainment-step__label {
   position: relative;
+  width: 100%;
   padding-left: 11px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
   color: $blue-light;
-}
 
-.entertainment-step__label--bosnia {
   &::after {
     position: absolute;
     top: 0;
     right: 0;
     width: 43px;
-    height: 24px;
-    background-image: url("../img/fade-form.png");
-    background-repeat: no-repeat;
-    z-index: 10;
+    height: 100%;
+    background-image: linear-gradient(to left, $white-basic 60%, transparent);
     content: "";
   }
 }
@@ -98,8 +95,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .entertainment-step__list {
-    margin-top: 59px;
+  .entertainment-step {
+    margin-top: 30px;
   }
 
   .entertainment-step__item {
