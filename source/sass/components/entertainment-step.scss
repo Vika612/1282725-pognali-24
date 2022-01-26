@@ -93,9 +93,9 @@
     border: 1px solid $blue-dark-deep;
   }
 
-  // &:invalid {
-  //   border: 1px solid $border-error;
-  // }
+  &--invalid {
+    border: 1px solid $border-error;
+  }
 
   &::placeholder {
     opacity: 0.3;
