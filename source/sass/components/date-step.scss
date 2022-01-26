@@ -1,0 +1,71 @@
+.date-step__number-travelers {
+  margin-bottom: 20px;
+}
+
+.date-step__number-days {
+  margin-bottom: 28px;
+}
+
+.date-step__accept-checkbox {
+  margin: 0 0 26px;
+}
+
+.date-step__calendar {
+  margin-bottom: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .date-step {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date-step__number-travelers {
+    order: 1;
+    margin-bottom: 47px;
+  }
+
+  .date-step__number-days {
+    order: 3;
+    margin-bottom: 60px;
+  }
+
+  .date-step__accept-checkbox {
+    order: 2;
+    margin: 0 0 32px;
+  }
+
+  .date-step__calendar {
+    order: 4;
+    margin-bottom: 47px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .date-step {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .date-step__number-travelers {
+    width: 47.5%;
+    margin-bottom: 14px;
+  }
+
+  .date-step__number-days {
+    width: 47.5%;
+    margin: 0;
+  }
+
+  .date-step__accept-checkbox {
+    margin: 0;
+  }
+
+  .date-step__calendar {
+    width: 100%;
+    margin: 33px 0 56px;
+  }
+}

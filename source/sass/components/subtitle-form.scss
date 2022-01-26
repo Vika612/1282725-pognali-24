@@ -46,7 +46,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .profile-form__subtitle--hashtags {
-    left: 9%;
+  .profile-form__subtitle {
+    bottom: -8px;
+
+    &--hashtags {
+      left: 9%;
+    }
   }
 }

@@ -1,6 +1,26 @@
-.calendar__date {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1;
-  color: $blue-btn;
+.calendar__week,
+.calendar__table {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__week {
+  margin-bottom: 7px;
+}
+
+.calendar__table {
+  border: 1px solid $grey-calendar;
+  border-right: none;
+}
+
+.calendar__cell {
+  border-bottom: 1px solid $grey-calendar;
+  border-right: 1px solid $grey-calendar;
+}
+
+@media (min-width: $desktop-width) {
+  .calendar__week {
+    margin-bottom: 19px;
+  }
 }

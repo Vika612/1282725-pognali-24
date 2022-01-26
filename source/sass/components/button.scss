@@ -75,4 +75,19 @@
     align-items: center;
     font-size: 20px;
   }
+
+  .button--form {
+    &::after {
+      width: 14px;
+      height: 13px;
+      background-image: url("../img/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
+
+  .button--form:active::after {
+    opacity: 0.3;
+  }
 }

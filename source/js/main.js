@@ -65,7 +65,7 @@ if (progressBars) {
 
 /* TABS */
 
-const tabNavs = document.querySelectorAll('.alphabet-filter__link');
+const tabNavs = document.querySelectorAll('.alphabet-js');
 
 if (tabNavs) {
   tabNavs.forEach((tabNav) => {
@@ -74,12 +74,12 @@ if (tabNavs) {
       e.preventDefault();
       const activeTabAttr = e.target.dataset.tab;
 
-      document.querySelector('.alphabet-filter__link.active').classList.remove('active');
-      document.querySelector('.countries-filter__item.active').classList.remove('active');
+      document.querySelector('.alphabet-js.active').classList.remove('active');
+      document.querySelector('.countries-js.active').classList.remove('active');
 
       tabNav.classList.add('active');
 
-      const activeScreen = `.countries-filter__item--${activeTabAttr}`;
+      const activeScreen = `.countries-js--${activeTabAttr}`;
 
       document.querySelector(activeScreen).classList.add('active');
     });
@@ -136,7 +136,7 @@ const filterClose = document.querySelector('.dropdown-filter__close');
 
 if (filterContainer) {
   filterContainer.classList.add('filter__container--closed');
-filterContainer.classList.add('filter__container--js');
+  filterContainer.classList.add('filter__container--js');
 
 filterToggle.addEventListener('click', () => {
   filterContainer.classList.toggle('filter__container--closed');
@@ -147,4 +147,89 @@ filterClose.addEventListener('click', () => {
   filterContainer.classList.add('filter__container--closed');
   filterToggle.classList.toggle('active');
 });
+}
+
+
+/* COUNTER */
+
+const counters = document.querySelectorAll('.counter');
+const inputs = document.querySelectorAll('.counter__input');
+
+if (counters) {
+
+  const ACTION = {
+    PLUS: 'plus',
+    MINUS: 'minus'
+  };
+
+  const calculateItem = (action, input) => {
+
+  switch (action) {
+    case ACTION.PLUS:
+      input.value++;
+      break;
+    case ACTION.MINUS:
+      let inputValue = 1 * input.value;
+      inputValue = inputValue > 0 ? --inputValue : inputValue;
+      input.value = inputValue;
+      break;
+    }
+  };
+
+  counters.forEach((counter, i) => {
+    counter.addEventListener('click', (e) => {
+      if (e.target.classList.contains('counter__button--increase')) {
+        calculateItem(ACTION.PLUS, inputs[i]);
+      }
+
+      if (e.target.classList.contains('counter__button--decrease')) {
+        calculateItem(ACTION.MINUS, inputs[i]);
+      }
+    });
+  });
+}
+
+
+/* SLIDER */
+
+let position = 0;
+const slidesToShow = 1;
+const slidesToScroll = 1;
+const container = document.querySelector('.calendar-slider');
+const track = document.querySelector('.calendar-slider__list');
+const btnPrev = document.querySelector('.calendar-slider__button--prev');
+const btnNext = document.querySelector('.calendar-slider__button--next');
+const items = document.querySelectorAll('.calendar-slider__item');
+const itemsCount = items.length;
+
+if (container) {
+
+  btnNext.addEventListener('click', () => {
+    const sliderItemWidth = document.querySelector('.calendar-slider__item').clientWidth;
+
+    position = position - sliderItemWidth;
+    setPosition();
+    checkBtns();
+  });
+
+  btnPrev.addEventListener('click', () => {
+    const sliderItemWidth = document.querySelector('.calendar-slider__item').clientWidth;
+
+    position = position + sliderItemWidth;
+    setPosition();
+    checkBtns();
+  });
+
+  const setPosition = () => {
+    track.style.transform = `translateX(${position}px)`;
+  };
+
+  const checkBtns = () => {
+    const sliderItemWidth = document.querySelector('.calendar-slider__item').clientWidth;
+
+    btnPrev.disabled = position === 0;
+    btnNext.disabled = position <= -(itemsCount - slidesToShow) * sliderItemWidth;
+  };
+
+  checkBtns();
 }

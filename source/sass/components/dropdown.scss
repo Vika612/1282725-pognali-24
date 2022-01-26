@@ -1,0 +1,159 @@
+.dropdown {
+  width: 220px;
+  background-color: $white-basic;
+  box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
+}
+
+.dropdown ul {
+  @include reset-list;
+}
+
+.dropdown__alphabet {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid $grey-alphabet;
+  border-left: 1px solid $grey-alphabet;
+}
+
+.dropdown__alphabet li {
+  height: 41px;
+}
+
+.dropdown__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $blue-light;
+  border-bottom: 1px solid $grey-alphabet;
+  border-right: 1px solid $grey-alphabet;
+  outline: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-basic;
+  }
+}
+
+.dropdown__link:active,
+.dropdown__link.active {
+  color: $white-basic;
+  background-color: $blue-light;
+}
+
+.dropdown__countries {
+  border: 1px solid $grey-alphabet;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown__countries ul {
+  padding: 19px;
+}
+
+.dropdown__item {
+  display: none;
+}
+
+.dropdown__item.active {
+  display: block;
+}
+
+.dropdown__item li {
+  margin-bottom: 3px;
+}
+
+.dropdown__item a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $grey-special;
+
+  &:hover,
+  &:focus {
+    color: $blue-light;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .dropdown {
+    width: 575px;
+    padding: 35px 23px 27px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 207px;
+      width: 1px;
+      height: 100%;
+      background-color: $grey-calendar;
+      content: "";
+    }
+  }
+
+  .dropdown__alphabet {
+    width: 262px;
+  }
+
+  .dropdown__alphabet li {
+    height: 70px;
+  }
+
+  .dropdown__link {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .dropdown__countries {
+    width: 155px;
+    border: none;
+  }
+
+  .dropdown__countries ul {
+    padding: 0;
+  }
+
+  .dropdown__item li {
+    margin-bottom: 8px;
+  }
+
+  .dropdown__item a {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .dropdown {
+    width: 730px;
+    padding: 35px 57px 36px 26px;
+
+    &::before {
+      right: 240px;
+    }
+  }
+
+  .dropdown__alphabet {
+    grid-template-columns: repeat(5, 60px);
+    gap: 14px 16px;
+    border: none;
+  }
+
+  .dropdown__link {
+    border: 1px solid $grey-calendar;
+    border-radius: 4px;
+  }
+}

@@ -1,13 +1,20 @@
 .program {
+  padding: 24px 25px 23px;
   background-color: $white-basic;
   border-radius: 10px;
 }
 
 .program__title {
+  margin: 0 0 20px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
   color: $blue-btn;
+}
+
+.program__title span {
+  margin-right: 4px;
+  font-weight: 500;
 }
 
 .program__companions,
@@ -20,7 +27,20 @@
   text-transform: uppercase;
 }
 
+.program__companions {
+  margin: 0;
+}
+
+.program__dates {
+  margin: 0 0 20px;
+  width: 126px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .program__link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
@@ -28,4 +48,107 @@
   color: $black-basic;
   opacity: 0.3;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .program {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &::after {
+      position: absolute;
+      bottom: 55px;
+      width: 100%;
+      border-bottom: 1px solid $grey-alphabet;
+      content: "";
+    }
+  }
+
+  .program__title {
+    width: 100%;
+    margin: 0;
+    padding: 40px 33px 34px 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .program__title span {
+    margin-right: 0;
+    font-size: 20px;
+  }
+
+  .program__content {
+    width: 100%;
+    padding: 19px 40px 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .program__companions,
+  .program__dates time {
+    font-size: 20px;
+  }
+
+  .program__companions {
+    width: 142px;
+    letter-spacing: 0.1em;
+  }
+
+  .program__dates {
+    width: 177px;
+    margin: 0;
+  }
+
+  .program__link {
+    margin-left: 38px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    padding: 36px 40px;
+    justify-content: space-between;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .program__title {
+    width: 50%;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .program__title span {
+    margin-right: 40px;
+  }
+
+  .program__content {
+    width: 50%;
+    padding: 0;
+  }
+
+  .program__link {
+    margin-left: 100px;
+  }
 }
