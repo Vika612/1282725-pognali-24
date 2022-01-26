@@ -8,6 +8,10 @@
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 <body>
@@ -486,115 +490,112 @@
 
     <div class="inner-wrapper">
       <section class="inner-wrapper__companion-select companion-select">
-        <div class="companion-select__container">
-
-          <form class="companion-select__form" action="http://echo.htmlacademy.ru" method="POST">
-            <h2 class="companion-select__title subtitle subtitle--catalog">Подберите идеального попутчика</h2>
-            <div class="companion-select__block criterions">
-              <input class="visually-hidden criterions__input-title" type="checkbox" name="hobby" id="hobby">
-              <label class="criterions__title" for="hobby">хобби</label>
-              <ul class="criterions__list">
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="sport" id="sport" checked>
-                  <label class="criterions__label" for="sport">Спортзал</label>
-                </li>
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="hooka" id="hooka">
-                  <label class="criterions__label" for="hooka">Кальян</label>
-                </li>
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="sofa" id="sofa">
-                  <label class="criterions__label" for="sofa">Диван</label>
-                </li>
-              </ul>
+        <form class="companion-select__form" action="http://echo.htmlacademy.ru" method="POST">
+          <h2 class="companion-select__title subtitle subtitle--catalog">Подберите идеального попутчика</h2>
+          <div class="companion-select__block criterions">
+            <input class="visually-hidden criterions__input-title" type="checkbox" name="hobby" id="hobby">
+            <label class="criterions__title" for="hobby">хобби</label>
+            <ul class="criterions__list">
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="sport" id="sport" checked>
+                <label class="criterions__label" for="sport">Спортзал</label>
+              </li>
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="hooka" id="hooka">
+                <label class="criterions__label" for="hooka">Кальян</label>
+              </li>
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="sofa" id="sofa">
+                <label class="criterions__label" for="sofa">Диван</label>
+              </li>
+            </ul>
+          </div>
+          <div class="companion-select__block criterions">
+            <input class="visually-hidden criterions__input-title" type="checkbox" name="music" id="music" checked>
+            <label class="criterions__title" for="music">музыка</label>
+            <ul class="criterions__list">
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="rock" id="rock" checked>
+                <label class="criterions__label" for="rock">Тяжелый рок</label>
+              </li>
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="rap" id="rap">
+                <label class="criterions__label" for="rap">Русский рэп</label>
+              </li>
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="dance" id="dance">
+                <label class="criterions__label" for="dance">Евроденс</label>
+              </li>
+            </ul>
+          </div>
+          <div class="companion-select__block criterions criterions--food">
+            <input class="visually-hidden criterions__input-title" type="checkbox" name="food" id="food">
+            <label class="criterions__title" for="food">еда</label>
+            <ul class="criterions__list">
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="meat-food" id="meat-food" checked>
+                <label class="criterions__label" for="meat-food">Мясоед</label>
+              </li>
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="healthy-food" id="healthy-food">
+                <label class="criterions__label" for="healthy-food">Сидит на ПП</label>
+              </li>
+              <li class="criterions__item">
+                <input class="visually-hidden criterions__input" type="checkbox" name="raw-food" id="raw-food">
+                <label class="criterions__label" for="raw-food">Веган-сыроед</label>
+              </li>
+            </ul>
+          </div>
+          <div class="companion-select__block criterions criterions--transport">
+            <input class="visually-hidden criterions__input-title" type="checkbox" name="transport" id="transport" checked>
+            <label class="criterions__title" for="transport">транспорт</label>
+            <div class="criterions__list criterions__list--transport transport transport--filter">
+              <label class="transport__item transport__item--plane" data-transport="Авиаперелет" for="plane" aria-label="Авиаперелет">
+                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+                <svg width="23" height="22" viewBox="0 0 23 22">
+                  <use xlink:href="#icon-plane"></use>
+                </svg>
+              </label>
+              <label class="transport__item transport__item--bus" data-transport="Автотранспорт" for="bus" aria-label="Автотранспорт">
+                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+                <svg width="14" height="16">
+                  <use xlink:href="#icon-bus"></use>
+                </svg>
+              </label>
+              <label class="transport__item transport__item--bike" data-transport="Велосипед" for="bike" aria-label="Велосипед">
+                <input class="visually-hidden" type="checkbox" name="bike" id="bike">
+                <svg width="15" height="17">
+                  <use xlink:href="#icon-bike"></use>
+                </svg>
+              </label>
+              <label class="transport__item transport__item--run" data-transport="Пешком" for="run" aria-label="Пешком">
+                <input class="visually-hidden" type="checkbox" name="run" id="run" checked>
+                <svg width="14" height="17">
+                  <use xlink:href="#icon-run"></use>
+                </svg>
+              </label>
             </div>
-            <div class="companion-select__block criterions">
-              <input class="visually-hidden criterions__input-title" type="checkbox" name="music" id="music" checked>
-              <label class="criterions__title" for="music">музыка</label>
-              <ul class="criterions__list">
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="rock" id="rock" checked>
-                  <label class="criterions__label" for="rock">Тяжелый рок</label>
-                </li>
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="rap" id="rap">
-                  <label class="criterions__label" for="rap">Русский рэп</label>
-                </li>
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="dance" id="dance">
-                  <label class="criterions__label" for="dance">Евроденс</label>
-                </li>
-              </ul>
-            </div>
-            <div class="companion-select__block criterions criterions--food">
-              <input class="visually-hidden criterions__input-title" type="checkbox" name="food" id="food">
-              <label class="criterions__title" for="food">еда</label>
-              <ul class="criterions__list">
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="meat-food" id="meat-food" checked>
-                  <label class="criterions__label" for="meat-food">Мясоед</label>
-                </li>
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="healthy-food" id="healthy-food">
-                  <label class="criterions__label" for="healthy-food">Сидит на ПП</label>
-                </li>
-                <li class="criterions__item">
-                  <input class="visually-hidden criterions__input" type="checkbox" name="raw-food" id="raw-food">
-                  <label class="criterions__label" for="raw-food">Веган-сыроед</label>
-                </li>
-              </ul>
-            </div>
-            <div class="companion-select__block criterions criterions--transport">
-              <input class="visually-hidden criterions__input-title" type="checkbox" name="transport" id="transport" checked>
-              <label class="criterions__title" for="transport">транспорт</label>
-              <div class="criterions__list criterions__list--transport transport transport--filter">
-                <label class="transport__item transport__item--plane" data-transport="Авиаперелет" for="plane" aria-label="Авиаперелет">
-                  <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
-                  <svg width="23" height="22" viewBox="0 0 23 22">
-                    <use xlink:href="#icon-plane"></use>
-                  </svg>
-                </label>
-                <label class="transport__item transport__item--bus" data-transport="Автотранспорт" for="bus" aria-label="Автотранспорт">
-                  <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
-                  <svg width="14" height="16">
-                    <use xlink:href="#icon-bus"></use>
-                  </svg>
-                </label>
-                <label class="transport__item transport__item--bike" data-transport="Велосипед" for="bike" aria-label="Велосипед">
-                  <input class="visually-hidden" type="checkbox" name="bike" id="bike">
-                  <svg width="15" height="17">
-                    <use xlink:href="#icon-bike"></use>
-                  </svg>
-                </label>
-                <label class="transport__item transport__item--run" data-transport="Пешком" for="run" aria-label="Пешком">
-                  <input class="visually-hidden" type="checkbox" name="run" id="run" checked>
-                  <svg width="14" height="17">
-                    <use xlink:href="#icon-run"></use>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="companion-select__block criterions">
-              <input class="visually-hidden criterions__input-title" type="checkbox" name="level" id="level" checked>
-              <label class="criterions__title" for="level">левел</label>
-              <div class="criterions__list criterions__list--range range">
-                <div class="range__scale">
-                  <div class="range__bar">
-                    <button class="range__toggle range__toggle--min" type="button" aria-label="минимальный уровень"></button>
-                    <button class="range__toggle range__toggle--max" type="button" aria-label="максимальный уровень"></button>
-                  </div>
-                </div>
-                <div class="range__inputs">
-                    <label class="range__label" for="min-value" aria-label="минимальный уровень"></label>
-                    <input class="range__input range__input--min" type="number" name="min-value" value="30" id="min-value">
-                    <label class="range__label" for="max-value" aria-label="максимальный уровень"></label>
-                    <input class="range__input range__input--max" type="number" name="max-value" value="100" id="max-value">
+          </div>
+          <div class="companion-select__block criterions">
+            <input class="visually-hidden criterions__input-title" type="checkbox" name="level" id="level" checked>
+            <label class="criterions__title" for="level">левел</label>
+            <div class="criterions__list criterions__list--range range">
+              <div class="range__scale">
+                <div class="range__bar">
+                  <button class="range__toggle range__toggle--min" type="button" aria-label="минимальный уровень"></button>
+                  <button class="range__toggle range__toggle--max" type="button" aria-label="максимальный уровень"></button>
                 </div>
               </div>
+              <div class="range__inputs">
+                  <label class="range__label" for="min-value" aria-label="минимальный уровень"></label>
+                  <input class="range__input range__input--min" type="number" name="min-value" value="30" id="min-value">
+                  <label class="range__label" for="max-value" aria-label="максимальный уровень"></label>
+                  <input class="range__input range__input--max" type="number" name="max-value" value="100" id="max-value">
+              </div>
             </div>
-            <button class="companion-select__button" type="submit">показать</button>
-          </form>
-        </div>
+          </div>
+          <button class="companion-select__button" type="submit">показать</button>
+        </form>
       </section>
 
       <section class="inner-wrapper__catalog catalog">
