@@ -31,12 +31,15 @@
   background-color: transparent;
   opacity: 0.3;
   border: none;
+  outline: none;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 
   &:hover,
   &:focus {
+    outline: 2px solid $orange-special;
+    border-radius: 4px;
     opacity: 0.5;
   }
 
@@ -99,11 +102,11 @@
     height: 28px;
 
     &--prev {
-      left: 0;
+      left: 5px;
     }
 
     &--next {
-      right: 0;
+      right: 5px;
     }
   }
 }

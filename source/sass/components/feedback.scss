@@ -25,6 +25,7 @@
 .feedback__text a {
   text-decoration: underline;
   color: $yellow-basic;
+  outline: none;
 
   &:hover,
   &:focus {
