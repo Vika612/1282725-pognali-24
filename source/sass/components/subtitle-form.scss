@@ -1,4 +1,4 @@
-.profile-form__subtitle {
+.subtitle-form {
   position: absolute;
   top: -8px;
   left: 50%;
@@ -24,7 +24,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .profile-form__subtitle {
+  .subtitle-form {
     top: unset;
     bottom: -11px;
     font-weight: 500;
@@ -46,7 +46,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .profile-form__subtitle {
+  .subtitle-form {
     bottom: -8px;
 
     &--hashtags {

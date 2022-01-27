@@ -8,24 +8,24 @@
   &--week-end {
     color: $red-calendar;
   }
+}
 
-  &--desk {
-    display: none;
-  }
+.calendar-week__day-desk {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
   .calendar-week__day {
     font-size: 18px;
     line-height: 1;
+  }
 
-    &--desk {
-      display: block;
-    }
+  .calendar-week__day-desk {
+    display: block;
+  }
 
-    &--mobile {
-      display: none;
-    }
+  .calendar-week__day-mobile {
+    display: none;
   }
 }
 
