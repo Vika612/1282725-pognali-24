@@ -25,6 +25,7 @@
 .feedback__text a {
   text-decoration: underline;
   color: $yellow-basic;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -74,10 +75,6 @@
   .feedback__note {
     margin-bottom: 46px;
     letter-spacing: 0.01em;
-
-    br {
-      display: none;
-    }
   }
 }
 

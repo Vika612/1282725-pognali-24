@@ -1,3 +1,14 @@
+.logo__link {
+  display: block;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $orange-special;
+    border-radius: 4px;
+  }
+}
+
 .logo--header {
   position: absolute;
   top: 20px;

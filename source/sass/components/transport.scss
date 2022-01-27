@@ -27,8 +27,7 @@
     border-radius: 50%;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
       filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
     }
 
@@ -37,6 +36,11 @@
       filter: none;
     }
   }
+}
+
+.transport__input:focus + svg {
+  outline: 1px solid $orange-special;
+  border-radius: 4px;
 }
 
 .transport__item {

@@ -1,5 +1,6 @@
 .catalog {
   padding-bottom: 90px;
+  overflow-x: hidden;
 }
 
 .catalog__list {
@@ -21,6 +22,7 @@
   font-size: 17px;
   line-height: 1.7;
   color: $blue-light;
+  outline: none;
   text-transform: uppercase;
 
   &::before,

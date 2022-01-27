@@ -37,6 +37,11 @@
   }
 }
 
+.criterions__input-title:focus + .criterions__title {
+  outline: 2px solid $orange-special;
+  border-radius: 4px;
+}
+
 .criterions__item {
   margin-bottom: 10px;
 }
@@ -74,6 +79,11 @@
     display: none;
     content: "";
   }
+}
+
+.criterions__input:focus + .criterions__label {
+  outline: 2px solid $orange-special;
+  border-radius: 4px;
 }
 
 .criterions__input:checked + .criterions__label::after {
