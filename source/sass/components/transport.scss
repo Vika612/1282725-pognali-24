@@ -38,6 +38,11 @@
   }
 }
 
+.transport__input:focus + svg {
+  outline: 1px solid $orange-special;
+  border-radius: 4px;
+}
+
 .transport__item {
   position: relative;
   display: flex;
